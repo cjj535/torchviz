@@ -1,0 +1,638 @@
+[
+    {
+        "id": 773,
+        "name": "aten::to",
+        "in_edges": [],
+        "out_edges": [
+            {
+                "id": 261,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 200704,
+                "category": "input"
+            }
+        ]
+    },
+    {
+        "id": 774,
+        "name": "aten::to",
+        "in_edges": [],
+        "out_edges": [
+            {
+                "id": 262,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "input"
+            }
+        ]
+    },
+    {
+        "id": 775,
+        "name": "aten::view",
+        "in_edges": [
+            {
+                "id": 261,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 200704,
+                "category": "input"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 776,
+        "name": "aten::linear",
+        "in_edges": [
+            {
+                "id": 261,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 200704,
+                "category": "input"
+            },
+            {
+                "id": 263,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 401408,
+                "category": "parameter"
+            },
+            {
+                "id": 264,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "parameter"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 265,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "activation"
+            }
+        ]
+    },
+    {
+        "id": 777,
+        "name": "aten::relu",
+        "in_edges": [
+            {
+                "id": 265,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "activation"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 266,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "activation"
+            }
+        ]
+    },
+    {
+        "id": 778,
+        "name": "aten::linear",
+        "in_edges": [
+            {
+                "id": 266,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "activation"
+            },
+            {
+                "id": 267,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 5120,
+                "category": "parameter"
+            },
+            {
+                "id": 268,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 40,
+                "category": "parameter"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 269,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 2560,
+                "category": "activation"
+            }
+        ]
+    },
+    {
+        "id": 779,
+        "name": "aten::cross_entropy_loss",
+        "in_edges": [
+            {
+                "id": 262,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "input"
+            },
+            {
+                "id": 269,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 2560,
+                "category": "activation"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 270,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 2560,
+                "category": "activation"
+            },
+            {
+                "id": 271,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "activation"
+            },
+            {
+                "id": 272,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "activation"
+            }
+        ]
+    },
+    {
+        "id": 780,
+        "name": "aten::ones_like",
+        "in_edges": [
+            {
+                "id": 271,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "activation"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 273,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "activation"
+            }
+        ]
+    },
+    {
+        "id": 781,
+        "name": "NllLossBackward0",
+        "in_edges": [
+            {
+                "id": 262,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "input"
+            },
+            {
+                "id": 270,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 2560,
+                "category": "activation"
+            },
+            {
+                "id": 272,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "activation"
+            },
+            {
+                "id": 273,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "activation"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 274,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 2560,
+                "category": "autograd_detail"
+            }
+        ]
+    },
+    {
+        "id": 782,
+        "name": "LogSoftmaxBackward0",
+        "in_edges": [
+            {
+                "id": 270,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 2560,
+                "category": "activation"
+            },
+            {
+                "id": 274,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 2560,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 275,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 2560,
+                "category": "autograd_detail"
+            }
+        ]
+    },
+    {
+        "id": 783,
+        "name": "AddmmBackward0",
+        "in_edges": [
+            {
+                "id": 266,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "activation"
+            },
+            {
+                "id": 267,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 5120,
+                "category": "parameter"
+            },
+            {
+                "id": 275,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 2560,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 276,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "autograd_detail"
+            },
+            {
+                "id": 277,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 5120,
+                "category": "gradient"
+            }
+        ]
+    },
+    {
+        "id": 784,
+        "name": "aten::sum",
+        "in_edges": [
+            {
+                "id": 275,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 2560,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 278,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "gradient"
+            }
+        ]
+    },
+    {
+        "id": 785,
+        "name": "aten::view",
+        "in_edges": [
+            {
+                "id": 278,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 786,
+        "name": "torch::autograd::AccumulateGrad",
+        "in_edges": [
+            {
+                "id": 278,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 787,
+        "name": "TBackward0",
+        "in_edges": [
+            {
+                "id": 277,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 5120,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 788,
+        "name": "torch::autograd::AccumulateGrad",
+        "in_edges": [
+            {
+                "id": 277,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 5120,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 789,
+        "name": "ReluBackward0",
+        "in_edges": [
+            {
+                "id": 266,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "activation"
+            },
+            {
+                "id": 276,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 279,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "autograd_detail"
+            }
+        ]
+    },
+    {
+        "id": 790,
+        "name": "AddmmBackward0",
+        "in_edges": [
+            {
+                "id": 261,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 200704,
+                "category": "input"
+            },
+            {
+                "id": 279,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 280,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 401408,
+                "category": "gradient"
+            }
+        ]
+    },
+    {
+        "id": 791,
+        "name": "aten::sum",
+        "in_edges": [
+            {
+                "id": 279,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 32768,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 281,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "gradient"
+            }
+        ]
+    },
+    {
+        "id": 792,
+        "name": "aten::view",
+        "in_edges": [
+            {
+                "id": 281,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 793,
+        "name": "torch::autograd::AccumulateGrad",
+        "in_edges": [
+            {
+                "id": 281,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 794,
+        "name": "TBackward0",
+        "in_edges": [
+            {
+                "id": 280,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 401408,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 795,
+        "name": "torch::autograd::AccumulateGrad",
+        "in_edges": [
+            {
+                "id": 280,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 401408,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 796,
+        "name": "aten::_foreach_add_",
+        "in_edges": [
+            {
+                "id": 263,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 401408,
+                "category": "parameter"
+            },
+            {
+                "id": 264,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "parameter"
+            },
+            {
+                "id": 267,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 5120,
+                "category": "parameter"
+            },
+            {
+                "id": 268,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 40,
+                "category": "parameter"
+            },
+            {
+                "id": 277,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 5120,
+                "category": "gradient"
+            },
+            {
+                "id": 278,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "gradient"
+            },
+            {
+                "id": 280,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 401408,
+                "category": "gradient"
+            },
+            {
+                "id": 281,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 263,
+                "version": 1,
+                "device": "cuda:0",
+                "size": 401408,
+                "category": "parameter"
+            },
+            {
+                "id": 264,
+                "version": 1,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "parameter"
+            },
+            {
+                "id": 267,
+                "version": 1,
+                "device": "cuda:0",
+                "size": 5120,
+                "category": "parameter"
+            },
+            {
+                "id": 268,
+                "version": 1,
+                "device": "cuda:0",
+                "size": 40,
+                "category": "parameter"
+            }
+        ]
+    },
+    {
+        "id": 797,
+        "name": "aten::item",
+        "in_edges": [
+            {
+                "id": 271,
+                "version": 0,
+                "device": "cuda:0",
+                "size": 512,
+                "category": "activation"
+            }
+        ],
+        "out_edges": []
+    }
+]
