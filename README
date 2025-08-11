@@ -9,3 +9,4 @@
 1、将tensor从边变成椭圆形节点，避免有的tensor不是算子输出时无法显示
 2、观察可视化结果与模型训练过程是否一致，是否可以达到可视化训练过程的效果
 3、将tensor生命周期和算子生命周期显示出来
+4、显示tensor的category、device、ptr（id，version）、shape、size、申请释放时间
