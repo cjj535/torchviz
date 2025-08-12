@@ -67,7 +67,7 @@ def graph_to_json(graph: DataFlowGraph, category: CategoryDict, sizeMap: SizeMap
 
 # 定义新的 __init__
 def my_init(self, *args, **kwargs):
-    print("💡 MemoryProfiler.__init__ 被调用了！")
+    print("Enter MemoryProfiler.__init__")
     # 最后调用原始 __init__
     _original_init(self, *args, **kwargs)
     

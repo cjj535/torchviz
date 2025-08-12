@@ -1,61 +1,118 @@
 digraph G {
-    773 [shape=box, label="aten::to"]
-    774 [shape=box, label="aten::to"]
-    775 [shape=box, label="aten::view"]
-    776 [shape=box, label="aten::linear"]
-    777 [shape=box, label="aten::relu"]
-    778 [shape=box, label="aten::linear"]
-    779 [shape=box, label="aten::cross_entropy_loss"]
-    780 [shape=box, label="aten::ones_like"]
-    781 [shape=box, label="NllLossBackward0"]
-    782 [shape=box, label="LogSoftmaxBackward0"]
-    783 [shape=box, label="AddmmBackward0"]
-    784 [shape=box, label="aten::sum"]
-    785 [shape=box, label="aten::view"]
-    786 [shape=box, label="torch::autograd::AccumulateGrad"]
-    787 [shape=box, label="TBackward0"]
-    788 [shape=box, label="torch::autograd::AccumulateGrad"]
-    789 [shape=box, label="ReluBackward0"]
-    790 [shape=box, label="AddmmBackward0"]
-    791 [shape=box, label="aten::sum"]
-    792 [shape=box, label="aten::view"]
-    793 [shape=box, label="torch::autograd::AccumulateGrad"]
-    794 [shape=box, label="TBackward0"]
-    795 [shape=box, label="torch::autograd::AccumulateGrad"]
-    796 [shape=box, label="aten::_foreach_add_"]
-    797 [shape=box, label="aten::item"]
-    773 -> 775 [label="200704"]
-    773 -> 776 [label="200704"]
-    776 -> 777 [label="32768"]
-    777 -> 778 [label="32768"]
-    774 -> 779 [label="512"]
-    778 -> 779 [label="2560"]
-    779 -> 780 [label="512"]
-    774 -> 781 [label="512"]
-    779 -> 781 [label="2560"]
-    779 -> 781 [label="512"]
-    780 -> 781 [label="512"]
-    779 -> 782 [label="2560"]
-    781 -> 782 [label="2560"]
-    777 -> 783 [label="32768"]
-    782 -> 783 [label="2560"]
-    782 -> 784 [label="2560"]
-    784 -> 785 [label="512"]
-    784 -> 786 [label="512"]
-    783 -> 787 [label="5120"]
-    783 -> 788 [label="5120"]
-    777 -> 789 [label="32768"]
-    783 -> 789 [label="32768"]
-    773 -> 790 [label="200704"]
-    789 -> 790 [label="32768"]
-    789 -> 791 [label="32768"]
-    791 -> 792 [label="512"]
-    791 -> 793 [label="512"]
-    790 -> 794 [label="401408"]
-    790 -> 795 [label="401408"]
-    783 -> 796 [label="5120"]
-    784 -> 796 [label="512"]
-    790 -> 796 [label="401408"]
-    791 -> 796 [label="512"]
-    779 -> 797 [label="512"]
+  rankdir=LR;
+  node [fontname="Arial"];
+  "op_773" [label="aten::to", shape=box];
+  "tensor_261_v0" [label="200704B", shape=ellipse];
+  "op_773" -> "tensor_261_v0";
+  "op_774" [label="aten::to", shape=box];
+  "tensor_262_v0" [label="512B", shape=ellipse];
+  "op_774" -> "tensor_262_v0";
+  "op_775" [label="aten::view", shape=box];
+  "tensor_261_v0" -> "op_775";
+  "op_776" [label="aten::linear", shape=box];
+  "tensor_261_v0" -> "op_776";
+  "tensor_263_v0" [label="401408B", shape=ellipse];
+  "tensor_263_v0" -> "op_776";
+  "tensor_264_v0" [label="512B", shape=ellipse];
+  "tensor_264_v0" -> "op_776";
+  "tensor_265_v0" [label="32768B", shape=ellipse];
+  "op_776" -> "tensor_265_v0";
+  "op_777" [label="aten::relu", shape=box];
+  "tensor_265_v0" -> "op_777";
+  "tensor_266_v0" [label="32768B", shape=ellipse];
+  "op_777" -> "tensor_266_v0";
+  "op_778" [label="aten::linear", shape=box];
+  "tensor_266_v0" -> "op_778";
+  "tensor_267_v0" [label="5120B", shape=ellipse];
+  "tensor_267_v0" -> "op_778";
+  "tensor_268_v0" [label="40B", shape=ellipse];
+  "tensor_268_v0" -> "op_778";
+  "tensor_269_v0" [label="2560B", shape=ellipse];
+  "op_778" -> "tensor_269_v0";
+  "op_779" [label="aten::cross_entropy_loss", shape=box];
+  "tensor_262_v0" -> "op_779";
+  "tensor_269_v0" -> "op_779";
+  "tensor_270_v0" [label="2560B", shape=ellipse];
+  "op_779" -> "tensor_270_v0";
+  "tensor_271_v0" [label="512B", shape=ellipse];
+  "op_779" -> "tensor_271_v0";
+  "tensor_272_v0" [label="512B", shape=ellipse];
+  "op_779" -> "tensor_272_v0";
+  "op_780" [label="aten::ones_like", shape=box];
+  "tensor_271_v0" -> "op_780";
+  "tensor_273_v0" [label="512B", shape=ellipse];
+  "op_780" -> "tensor_273_v0";
+  "op_781" [label="NllLossBackward0", shape=box];
+  "tensor_262_v0" -> "op_781";
+  "tensor_270_v0" -> "op_781";
+  "tensor_272_v0" -> "op_781";
+  "tensor_273_v0" -> "op_781";
+  "tensor_274_v0" [label="2560B", shape=ellipse];
+  "op_781" -> "tensor_274_v0";
+  "op_782" [label="LogSoftmaxBackward0", shape=box];
+  "tensor_270_v0" -> "op_782";
+  "tensor_274_v0" -> "op_782";
+  "tensor_275_v0" [label="2560B", shape=ellipse];
+  "op_782" -> "tensor_275_v0";
+  "op_783" [label="AddmmBackward0", shape=box];
+  "tensor_266_v0" -> "op_783";
+  "tensor_267_v0" -> "op_783";
+  "tensor_275_v0" -> "op_783";
+  "tensor_276_v0" [label="32768B", shape=ellipse];
+  "op_783" -> "tensor_276_v0";
+  "tensor_277_v0" [label="5120B", shape=ellipse];
+  "op_783" -> "tensor_277_v0";
+  "op_784" [label="aten::sum", shape=box];
+  "tensor_275_v0" -> "op_784";
+  "tensor_278_v0" [label="512B", shape=ellipse];
+  "op_784" -> "tensor_278_v0";
+  "op_785" [label="aten::view", shape=box];
+  "tensor_278_v0" -> "op_785";
+  "op_786" [label="torch::autograd::AccumulateGrad", shape=box];
+  "tensor_278_v0" -> "op_786";
+  "op_787" [label="TBackward0", shape=box];
+  "tensor_277_v0" -> "op_787";
+  "op_788" [label="torch::autograd::AccumulateGrad", shape=box];
+  "tensor_277_v0" -> "op_788";
+  "op_789" [label="ReluBackward0", shape=box];
+  "tensor_266_v0" -> "op_789";
+  "tensor_276_v0" -> "op_789";
+  "tensor_279_v0" [label="32768B", shape=ellipse];
+  "op_789" -> "tensor_279_v0";
+  "op_790" [label="AddmmBackward0", shape=box];
+  "tensor_261_v0" -> "op_790";
+  "tensor_279_v0" -> "op_790";
+  "tensor_280_v0" [label="401408B", shape=ellipse];
+  "op_790" -> "tensor_280_v0";
+  "op_791" [label="aten::sum", shape=box];
+  "tensor_279_v0" -> "op_791";
+  "tensor_281_v0" [label="512B", shape=ellipse];
+  "op_791" -> "tensor_281_v0";
+  "op_792" [label="aten::view", shape=box];
+  "tensor_281_v0" -> "op_792";
+  "op_793" [label="torch::autograd::AccumulateGrad", shape=box];
+  "tensor_281_v0" -> "op_793";
+  "op_794" [label="TBackward0", shape=box];
+  "tensor_280_v0" -> "op_794";
+  "op_795" [label="torch::autograd::AccumulateGrad", shape=box];
+  "tensor_280_v0" -> "op_795";
+  "op_796" [label="aten::_foreach_add_", shape=box];
+  "tensor_263_v0" -> "op_796";
+  "tensor_264_v0" -> "op_796";
+  "tensor_267_v0" -> "op_796";
+  "tensor_268_v0" -> "op_796";
+  "tensor_277_v0" -> "op_796";
+  "tensor_278_v0" -> "op_796";
+  "tensor_280_v0" -> "op_796";
+  "tensor_281_v0" -> "op_796";
+  "tensor_263_v1" [label="401408B", shape=ellipse];
+  "op_796" -> "tensor_263_v1";
+  "tensor_264_v1" [label="512B", shape=ellipse];
+  "op_796" -> "tensor_264_v1";
+  "tensor_267_v1" [label="5120B", shape=ellipse];
+  "op_796" -> "tensor_267_v1";
+  "tensor_268_v1" [label="40B", shape=ellipse];
+  "op_796" -> "tensor_268_v1";
+  "op_797" [label="aten::item", shape=box];
+  "tensor_271_v0" -> "op_797";
 }
