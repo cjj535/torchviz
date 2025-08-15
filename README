@@ -6,13 +6,14 @@
 2、初步完成从json到dot文件转换，并将dot转成png
 
 # 下一步目标
-1、将tensor从边变成椭圆形节点，避免有的tensor不是算子输出时无法显示
-2、观察可视化结果与模型训练过程是否一致，是否可以达到可视化训练过程的效果
-3、将tensor生命周期和算子生命周期显示出来
-4、显示tensor的category、device、ptr（id，version）、shape、size、申请释放时间
+1、将tensor生命周期和算子生命周期显示出来
+2、显示tensor的category、device、ptr（id，version）、shape、size、申请释放时间
+显示tensor的shape和显示生命周期：可以新建一个map，key是TensorKey和version，遍历tensor去获取shape；建一个map，key是TensorKey，遍历allocation事件去获取生命周期
+显示算子生命周期，直接取值即可
 
 # 图像内容设计
 1、第一类元素是tensor，相关的信息有category、device、ptr、shape、size、申请释放时间
 2、第二类元素是单算子op，相关信息有name、开始结束时间
 3、第三类元素是通信算子，相关信息有name、开始结束时间
 4、图中每个时间点可支配的资源有三种，一种是内存资源，同一时间内存在的内存大小总计不能超过内存资源；一种是处理器资源，同一时间一个处理器只运行一个op；一种是带宽资源，两个device之间的信道同一时间只传输一份数据。第三类和第二类在图上的本质是一样的，可以合并。对于单卡内计算，可以把通信算子切断
+
