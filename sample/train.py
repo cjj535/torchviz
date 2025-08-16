@@ -3,7 +3,6 @@ import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
 import torch.profiler as profiler
-import hijack_function.hijack_profiler
 
 # 定义两层全连接网络
 class TwoLayerNet(nn.Module):

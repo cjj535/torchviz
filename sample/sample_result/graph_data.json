@@ -2,13 +2,19 @@
     {
         "id": 773,
         "name": "aten::to",
+        "start_time": 1755353987054784530,
+        "end_time": 1755353987054907330,
         "in_edges": [],
         "out_edges": [
             {
                 "id": 261,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,1,28,28]",
+                "dtype": "torch.float32",
                 "size": 200704,
+                "start_time": 1755353987054799930,
+                "end_time": -1,
                 "category": "input"
             }
         ]
@@ -16,13 +22,19 @@
     {
         "id": 774,
         "name": "aten::to",
+        "start_time": 1755353987054913230,
+        "end_time": 1755353987054953630,
         "in_edges": [],
         "out_edges": [
             {
                 "id": 262,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64]",
+                "dtype": "torch.int64",
                 "size": 512,
+                "start_time": 1755353987054918930,
+                "end_time": -1,
                 "category": "input"
             }
         ]
@@ -30,12 +42,18 @@
     {
         "id": 775,
         "name": "aten::view",
+        "start_time": 1755353987055095130,
+        "end_time": 1755353987055099530,
         "in_edges": [
             {
                 "id": 261,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,1,28,28]",
+                "dtype": "torch.float32",
                 "size": 200704,
+                "start_time": 1755353987054799930,
+                "end_time": -1,
                 "category": "input"
             }
         ],
@@ -44,26 +62,40 @@
     {
         "id": 776,
         "name": "aten::linear",
+        "start_time": 1755353987055126230,
+        "end_time": 1755353987055227130,
         "in_edges": [
             {
                 "id": 261,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,1,28,28]",
+                "dtype": "torch.float32",
                 "size": 200704,
+                "start_time": 1755353987054799930,
+                "end_time": -1,
                 "category": "input"
             },
             {
                 "id": 263,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[128,784]",
+                "dtype": "torch.float32",
                 "size": 401408,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             },
             {
                 "id": 264,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[128]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             }
         ],
@@ -72,7 +104,11 @@
                 "id": 265,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987055154630,
+                "end_time": 1755353987055274930,
                 "category": "activation"
             }
         ]
@@ -80,12 +116,18 @@
     {
         "id": 777,
         "name": "aten::relu",
+        "start_time": 1755353987055248730,
+        "end_time": 1755353987055271130,
         "in_edges": [
             {
                 "id": 265,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987055154630,
+                "end_time": 1755353987055274930,
                 "category": "activation"
             }
         ],
@@ -94,7 +136,11 @@
                 "id": 266,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987055258430,
+                "end_time": 1755353987063227730,
                 "category": "activation"
             }
         ]
@@ -102,26 +148,40 @@
     {
         "id": 778,
         "name": "aten::linear",
+        "start_time": 1755353987055285630,
+        "end_time": 1755353987055319530,
         "in_edges": [
             {
                 "id": 266,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987055258430,
+                "end_time": 1755353987063227730,
                 "category": "activation"
             },
             {
                 "id": 267,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
                 "size": 5120,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             },
             {
                 "id": 268,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[10]",
+                "dtype": "torch.float32",
                 "size": 40,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             }
         ],
@@ -130,7 +190,11 @@
                 "id": 269,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,10]",
+                "dtype": "torch.float32",
                 "size": 2560,
+                "start_time": 1755353987055303330,
+                "end_time": -1,
                 "category": "activation"
             }
         ]
@@ -138,19 +202,29 @@
     {
         "id": 779,
         "name": "aten::cross_entropy_loss",
+        "start_time": 1755353987055347830,
+        "end_time": 1755353987055407530,
         "in_edges": [
             {
                 "id": 262,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64]",
+                "dtype": "torch.int64",
                 "size": 512,
+                "start_time": 1755353987054918930,
+                "end_time": -1,
                 "category": "input"
             },
             {
                 "id": 269,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,10]",
+                "dtype": "torch.float32",
                 "size": 2560,
+                "start_time": 1755353987055303330,
+                "end_time": -1,
                 "category": "activation"
             }
         ],
@@ -159,21 +233,33 @@
                 "id": 270,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,10]",
+                "dtype": "torch.float32",
                 "size": 2560,
+                "start_time": 1755353987055361230,
+                "end_time": 1755353987063012630,
                 "category": "activation"
             },
             {
                 "id": 271,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987055388830,
+                "end_time": -1,
                 "category": "activation"
             },
             {
                 "id": 272,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987055390530,
+                "end_time": 1755353987062978430,
                 "category": "activation"
             }
         ]
@@ -181,12 +267,18 @@
     {
         "id": 780,
         "name": "aten::ones_like",
+        "start_time": 1755353987055485730,
+        "end_time": 1755353987055503530,
         "in_edges": [
             {
                 "id": 271,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987055388830,
+                "end_time": -1,
                 "category": "activation"
             }
         ],
@@ -195,7 +287,11 @@
                 "id": 273,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987055491830,
+                "end_time": 1755353987063357530,
                 "category": "activation"
             }
         ]
@@ -203,33 +299,51 @@
     {
         "id": 781,
         "name": "NllLossBackward0",
+        "start_time": 1755353987062910130,
+        "end_time": 1755353987062974830,
         "in_edges": [
             {
                 "id": 262,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64]",
+                "dtype": "torch.int64",
                 "size": 512,
+                "start_time": 1755353987054918930,
+                "end_time": -1,
                 "category": "input"
             },
             {
                 "id": 270,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,10]",
+                "dtype": "torch.float32",
                 "size": 2560,
+                "start_time": 1755353987055361230,
+                "end_time": 1755353987063012630,
                 "category": "activation"
             },
             {
                 "id": 272,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987055390530,
+                "end_time": 1755353987062978430,
                 "category": "activation"
             },
             {
                 "id": 273,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987055491830,
+                "end_time": 1755353987063357530,
                 "category": "activation"
             }
         ],
@@ -238,7 +352,11 @@
                 "id": 274,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,10]",
+                "dtype": "torch.float32",
                 "size": 2560,
+                "start_time": 1755353987062937130,
+                "end_time": 1755353987063011830,
                 "category": "autograd_detail"
             }
         ]
@@ -246,19 +364,29 @@
     {
         "id": 782,
         "name": "LogSoftmaxBackward0",
+        "start_time": 1755353987062994530,
+        "end_time": 1755353987063009930,
         "in_edges": [
             {
                 "id": 270,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,10]",
+                "dtype": "torch.float32",
                 "size": 2560,
+                "start_time": 1755353987055361230,
+                "end_time": 1755353987063012630,
                 "category": "activation"
             },
             {
                 "id": 274,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,10]",
+                "dtype": "torch.float32",
                 "size": 2560,
+                "start_time": 1755353987062937130,
+                "end_time": 1755353987063011830,
                 "category": "autograd_detail"
             }
         ],
@@ -267,7 +395,11 @@
                 "id": 275,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,10]",
+                "dtype": "torch.float32",
                 "size": 2560,
+                "start_time": 1755353987063003130,
+                "end_time": 1755353987063135430,
                 "category": "autograd_detail"
             }
         ]
@@ -275,26 +407,40 @@
     {
         "id": 783,
         "name": "AddmmBackward0",
+        "start_time": 1755353987063019530,
+        "end_time": 1755353987063099730,
         "in_edges": [
             {
                 "id": 266,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987055258430,
+                "end_time": 1755353987063227730,
                 "category": "activation"
             },
             {
                 "id": 267,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
                 "size": 5120,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             },
             {
                 "id": 275,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,10]",
+                "dtype": "torch.float32",
                 "size": 2560,
+                "start_time": 1755353987063003130,
+                "end_time": 1755353987063135430,
                 "category": "autograd_detail"
             }
         ],
@@ -303,14 +449,22 @@
                 "id": 276,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987063040230,
+                "end_time": 1755353987063226830,
                 "category": "autograd_detail"
             },
             {
                 "id": 277,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[128,10]",
+                "dtype": "torch.float32",
                 "size": 5120,
+                "start_time": 1755353987063083330,
+                "end_time": 1755353987063697330,
                 "category": "gradient"
             }
         ]
@@ -318,12 +472,18 @@
     {
         "id": 784,
         "name": "aten::sum",
+        "start_time": 1755353987063104530,
+        "end_time": 1755353987063126730,
         "in_edges": [
             {
                 "id": 275,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,10]",
+                "dtype": "torch.float32",
                 "size": 2560,
+                "start_time": 1755353987063003130,
+                "end_time": 1755353987063135430,
                 "category": "autograd_detail"
             }
         ],
@@ -332,7 +492,11 @@
                 "id": 278,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[1,10]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987063108330,
+                "end_time": 1755353987063698030,
                 "category": "gradient"
             }
         ]
@@ -340,12 +504,18 @@
     {
         "id": 785,
         "name": "aten::view",
+        "start_time": 1755353987063130930,
+        "end_time": 1755353987063133430,
         "in_edges": [
             {
                 "id": 278,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[1,10]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987063108330,
+                "end_time": 1755353987063698030,
                 "category": "gradient"
             }
         ],
@@ -354,12 +524,18 @@
     {
         "id": 786,
         "name": "torch::autograd::AccumulateGrad",
+        "start_time": 1755353987063160930,
+        "end_time": 1755353987063172330,
         "in_edges": [
             {
                 "id": 278,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[1,10]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987063108330,
+                "end_time": 1755353987063698030,
                 "category": "gradient"
             }
         ],
@@ -368,12 +544,18 @@
     {
         "id": 787,
         "name": "TBackward0",
+        "start_time": 1755353987063181230,
+        "end_time": 1755353987063189430,
         "in_edges": [
             {
                 "id": 277,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[128,10]",
+                "dtype": "torch.float32",
                 "size": 5120,
+                "start_time": 1755353987063083330,
+                "end_time": 1755353987063697330,
                 "category": "gradient"
             }
         ],
@@ -382,12 +564,18 @@
     {
         "id": 788,
         "name": "torch::autograd::AccumulateGrad",
+        "start_time": 1755353987063196830,
+        "end_time": 1755353987063201630,
         "in_edges": [
             {
                 "id": 277,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[128,10]",
+                "dtype": "torch.float32",
                 "size": 5120,
+                "start_time": 1755353987063083330,
+                "end_time": 1755353987063697330,
                 "category": "gradient"
             }
         ],
@@ -396,19 +584,29 @@
     {
         "id": 789,
         "name": "ReluBackward0",
+        "start_time": 1755353987063208530,
+        "end_time": 1755353987063225430,
         "in_edges": [
             {
                 "id": 266,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987055258430,
+                "end_time": 1755353987063227730,
                 "category": "activation"
             },
             {
                 "id": 276,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987063040230,
+                "end_time": 1755353987063226830,
                 "category": "autograd_detail"
             }
         ],
@@ -417,7 +615,11 @@
                 "id": 279,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987063216530,
+                "end_time": 1755353987063286330,
                 "category": "autograd_detail"
             }
         ]
@@ -425,19 +627,29 @@
     {
         "id": 790,
         "name": "AddmmBackward0",
+        "start_time": 1755353987063235330,
+        "end_time": 1755353987063272430,
         "in_edges": [
             {
                 "id": 261,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,1,28,28]",
+                "dtype": "torch.float32",
                 "size": 200704,
+                "start_time": 1755353987054799930,
+                "end_time": -1,
                 "category": "input"
             },
             {
                 "id": 279,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987063216530,
+                "end_time": 1755353987063286330,
                 "category": "autograd_detail"
             }
         ],
@@ -446,7 +658,11 @@
                 "id": 280,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[784,128]",
+                "dtype": "torch.float32",
                 "size": 401408,
+                "start_time": 1755353987063245730,
+                "end_time": 1755353987063694430,
                 "category": "gradient"
             }
         ]
@@ -454,12 +670,18 @@
     {
         "id": 791,
         "name": "aten::sum",
+        "start_time": 1755353987063274730,
+        "end_time": 1755353987063281130,
         "in_edges": [
             {
                 "id": 279,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[64,128]",
+                "dtype": "torch.float32",
                 "size": 32768,
+                "start_time": 1755353987063216530,
+                "end_time": 1755353987063286330,
                 "category": "autograd_detail"
             }
         ],
@@ -468,7 +690,11 @@
                 "id": 281,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[1,128]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987063276130,
+                "end_time": 1755353987063696230,
                 "category": "gradient"
             }
         ]
@@ -476,12 +702,18 @@
     {
         "id": 792,
         "name": "aten::view",
+        "start_time": 1755353987063283730,
+        "end_time": 1755353987063284630,
         "in_edges": [
             {
                 "id": 281,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[1,128]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987063276130,
+                "end_time": 1755353987063696230,
                 "category": "gradient"
             }
         ],
@@ -490,12 +722,18 @@
     {
         "id": 793,
         "name": "torch::autograd::AccumulateGrad",
+        "start_time": 1755353987063294930,
+        "end_time": 1755353987063301630,
         "in_edges": [
             {
                 "id": 281,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[1,128]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987063276130,
+                "end_time": 1755353987063696230,
                 "category": "gradient"
             }
         ],
@@ -504,12 +742,18 @@
     {
         "id": 794,
         "name": "TBackward0",
+        "start_time": 1755353987063307730,
+        "end_time": 1755353987063315030,
         "in_edges": [
             {
                 "id": 280,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[784,128]",
+                "dtype": "torch.float32",
                 "size": 401408,
+                "start_time": 1755353987063245730,
+                "end_time": 1755353987063694430,
                 "category": "gradient"
             }
         ],
@@ -518,12 +762,18 @@
     {
         "id": 795,
         "name": "torch::autograd::AccumulateGrad",
+        "start_time": 1755353987063322230,
+        "end_time": 1755353987063326830,
         "in_edges": [
             {
                 "id": 280,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[784,128]",
+                "dtype": "torch.float32",
                 "size": 401408,
+                "start_time": 1755353987063245730,
+                "end_time": 1755353987063694430,
                 "category": "gradient"
             }
         ],
@@ -532,61 +782,95 @@
     {
         "id": 796,
         "name": "aten::_foreach_add_",
+        "start_time": 1755353987063571530,
+        "end_time": 1755353987063601030,
         "in_edges": [
             {
                 "id": 263,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[128,784]",
+                "dtype": "torch.float32",
                 "size": 401408,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             },
             {
                 "id": 264,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[128]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             },
             {
                 "id": 267,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
                 "size": 5120,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             },
             {
                 "id": 268,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[10]",
+                "dtype": "torch.float32",
                 "size": 40,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             },
             {
                 "id": 277,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[128,10]",
+                "dtype": "torch.float32",
                 "size": 5120,
+                "start_time": 1755353987063083330,
+                "end_time": 1755353987063697330,
                 "category": "gradient"
             },
             {
                 "id": 278,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[1,10]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987063108330,
+                "end_time": 1755353987063698030,
                 "category": "gradient"
             },
             {
                 "id": 280,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[784,128]",
+                "dtype": "torch.float32",
                 "size": 401408,
+                "start_time": 1755353987063245730,
+                "end_time": 1755353987063694430,
                 "category": "gradient"
             },
             {
                 "id": 281,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[1,128]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987063276130,
+                "end_time": 1755353987063696230,
                 "category": "gradient"
             }
         ],
@@ -595,28 +879,44 @@
                 "id": 263,
                 "version": 1,
                 "device": "cuda:0",
+                "shape": "[128,784]",
+                "dtype": "torch.float32",
                 "size": 401408,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             },
             {
                 "id": 264,
                 "version": 1,
                 "device": "cuda:0",
+                "shape": "[128]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             },
             {
                 "id": 267,
                 "version": 1,
                 "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
                 "size": 5120,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             },
             {
                 "id": 268,
                 "version": 1,
                 "device": "cuda:0",
+                "shape": "[10]",
+                "dtype": "torch.float32",
                 "size": 40,
+                "start_time": -1,
+                "end_time": -1,
                 "category": "parameter"
             }
         ]
@@ -624,12 +924,18 @@
     {
         "id": 797,
         "name": "aten::item",
+        "start_time": 1755353987064026930,
+        "end_time": 1755353987064065130,
         "in_edges": [
             {
                 "id": 271,
                 "version": 0,
                 "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
                 "size": 512,
+                "start_time": 1755353987055388830,
+                "end_time": -1,
                 "category": "activation"
             }
         ],

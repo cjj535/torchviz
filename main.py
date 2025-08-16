@@ -1,3 +1,7 @@
+# 劫持profiler函数
+from hijack_function.hijack_profiler import hijack_profiler
+hijack_profiler()
+
 # 跑训练过程，获取原始的json格式数据
 from sample.train import train
 train()
