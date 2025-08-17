@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torchvision import datasets, transforms
 import torch.profiler as profiler
 
 # 定义两层全连接网络
@@ -23,17 +22,14 @@ def train():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
-    # 数据加载（MNIST）
-    transform = transforms.ToTensor()
-    train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=64, shuffle=True)
-
     model = TwoLayerNet().to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=0.1)
+    batch_size = 10
 
     def trace_handler(prof: torch.profiler.profile):
         file_name = "prof_result"
+        # prof.export_chrome_trace(f"{file_name}.json")
         prof.export_memory_timeline(f"{file_name}.html", device="cuda:0")
 
     # Profiler 配置
@@ -44,7 +40,6 @@ def train():
         ],
         schedule=profiler.schedule(wait=0, warmup=2, active=1, repeat=1),  # 等待1步，热身1步，采集3步
         on_trace_ready=trace_handler,
-        # on_trace_ready=profiler.tensorboard_trace_handler('./log'),
         record_shapes=True,
         with_stack=True,
         profile_memory=True,
@@ -52,24 +47,20 @@ def train():
 
     # 训练并采集性能数据
     with prof:
-        for epoch in range(1):  # 演示只跑 1 个 epoch
-            total_loss = 0
-            for step, (images, labels) in enumerate(train_loader):
-                images = images.to(device)
-                labels = labels.to(device)
+        for epoch in range(3):  # 演示只跑 1 个 epoch
+            images = torch.rand(batch_size, 1, 28, 28).to(device)
+            labels = torch.randint(0, 10, (batch_size,)).to(device)
 
-                outputs = model(images)
-                loss = criterion(outputs, labels)
+            outputs = model(images)
+            loss = criterion(outputs, labels)
 
-                loss.backward()
-                optimizer.step()
-                optimizer.zero_grad(set_to_none=True)
+            loss.backward()
+            optimizer.step()
+            optimizer.zero_grad(set_to_none=True)
 
-                torch.cuda.synchronize()  # 确保 GPU 任务完成再计时
-                total_loss += loss.item()
+            torch.cuda.synchronize()
 
-                prof.step()  # 通知 profiler 进入下一步（必须）
-            print(f"Epoch [{epoch+1}], Loss: {total_loss/len(train_loader):.4f}")
+            prof.step()
 
 # 查看 TensorBoard：
 # tensorboard --logdir=./log

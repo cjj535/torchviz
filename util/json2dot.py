@@ -19,7 +19,7 @@ def json_to_dot(json_data):
             tensor_id = f"tensor_{t['id']}_v{t['version']}"
             if tensor_key not in tensor_nodes:
                 tensor_nodes.add(tensor_key)
-                dot_lines.append(f'  "{tensor_id}" [label="{t["size"]},{t["shape"]},{t["dtype"]}", shape=ellipse];')
+                dot_lines.append(f'  "{tensor_id}" [label="{t["shape"]}", shape=ellipse];')
             # tensor -> op
             dot_lines.append(f'  "{tensor_id}" -> "{op_id}";')
 
@@ -29,7 +29,7 @@ def json_to_dot(json_data):
             tensor_id = f"tensor_{t['id']}_v{t['version']}"
             if tensor_key not in tensor_nodes:
                 tensor_nodes.add(tensor_key)
-                dot_lines.append(f'  "{tensor_id}" [label="{t["size"]},{t["shape"]},{t["dtype"]}", shape=ellipse];')
+                dot_lines.append(f'  "{tensor_id}" [label="{t["shape"]}", shape=ellipse];')
             # op -> tensor
             dot_lines.append(f'  "{op_id}" -> "{tensor_id}";')
 
