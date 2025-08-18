@@ -1,0 +1,2765 @@
+[
+    {
+        "id": 1,
+        "name": "aten::to",
+        "start_time": [
+            1755536383409391342
+        ],
+        "end_time": [
+            1755536383409580642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 3,
+        "name": "aten::to",
+        "start_time": [
+            1755536383409609642
+        ],
+        "end_time": [
+            1755536383409684242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 4,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383409723142
+        ],
+        "end_time": [
+            1755536383409783842
+        ],
+        "is_leaf": true,
+        "parent": 236,
+        "children": []
+    },
+    {
+        "id": 5,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383409819042
+        ],
+        "end_time": [
+            1755536383409827742
+        ],
+        "is_leaf": true,
+        "parent": 237,
+        "children": []
+    },
+    {
+        "id": 6,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383409851342
+        ],
+        "end_time": [
+            1755536383409909742
+        ],
+        "is_leaf": true,
+        "parent": 237,
+        "children": []
+    },
+    {
+        "id": 7,
+        "name": "aten::relu_",
+        "start_time": [
+            1755536383409924642
+        ],
+        "end_time": [
+            1755536383409941242
+        ],
+        "is_leaf": true,
+        "parent": 238,
+        "children": []
+    },
+    {
+        "id": 8,
+        "name": "aten::max_pool2d",
+        "start_time": [
+            1755536383409958042
+        ],
+        "end_time": [
+            1755536383409972742
+        ],
+        "is_leaf": true,
+        "parent": 239,
+        "children": []
+    },
+    {
+        "id": 9,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383409996342
+        ],
+        "end_time": [
+            1755536383410026942
+        ],
+        "is_leaf": true,
+        "parent": 242,
+        "children": []
+    },
+    {
+        "id": 10,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410039942
+        ],
+        "end_time": [
+            1755536383410044542
+        ],
+        "is_leaf": true,
+        "parent": 243,
+        "children": []
+    },
+    {
+        "id": 11,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383410055242
+        ],
+        "end_time": [
+            1755536383410129342
+        ],
+        "is_leaf": true,
+        "parent": 243,
+        "children": []
+    },
+    {
+        "id": 12,
+        "name": "aten::relu_",
+        "start_time": [
+            1755536383410137342
+        ],
+        "end_time": [
+            1755536383410146542
+        ],
+        "is_leaf": true,
+        "parent": 244,
+        "children": []
+    },
+    {
+        "id": 13,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383410155842
+        ],
+        "end_time": [
+            1755536383410186542
+        ],
+        "is_leaf": true,
+        "parent": 245,
+        "children": []
+    },
+    {
+        "id": 14,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410197442
+        ],
+        "end_time": [
+            1755536383410201242
+        ],
+        "is_leaf": true,
+        "parent": 246,
+        "children": []
+    },
+    {
+        "id": 15,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383410210642
+        ],
+        "end_time": [
+            1755536383410249242
+        ],
+        "is_leaf": true,
+        "parent": 246,
+        "children": []
+    },
+    {
+        "id": 16,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410253542
+        ],
+        "end_time": [
+            1755536383410259242
+        ],
+        "is_leaf": true,
+        "parent": 241,
+        "children": []
+    },
+    {
+        "id": 17,
+        "name": "aten::relu_",
+        "start_time": [
+            1755536383410265342
+        ],
+        "end_time": [
+            1755536383410272842
+        ],
+        "is_leaf": true,
+        "parent": 247,
+        "children": []
+    },
+    {
+        "id": 18,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383410290242
+        ],
+        "end_time": [
+            1755536383410328942
+        ],
+        "is_leaf": true,
+        "parent": 250,
+        "children": []
+    },
+    {
+        "id": 19,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410341142
+        ],
+        "end_time": [
+            1755536383410344542
+        ],
+        "is_leaf": true,
+        "parent": 251,
+        "children": []
+    },
+    {
+        "id": 20,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383410353342
+        ],
+        "end_time": [
+            1755536383410399142
+        ],
+        "is_leaf": true,
+        "parent": 251,
+        "children": []
+    },
+    {
+        "id": 21,
+        "name": "aten::relu_",
+        "start_time": [
+            1755536383410406742
+        ],
+        "end_time": [
+            1755536383410414742
+        ],
+        "is_leaf": true,
+        "parent": 252,
+        "children": []
+    },
+    {
+        "id": 22,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383410423742
+        ],
+        "end_time": [
+            1755536383410459142
+        ],
+        "is_leaf": true,
+        "parent": 253,
+        "children": []
+    },
+    {
+        "id": 23,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410470042
+        ],
+        "end_time": [
+            1755536383410473342
+        ],
+        "is_leaf": true,
+        "parent": 254,
+        "children": []
+    },
+    {
+        "id": 24,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383410482342
+        ],
+        "end_time": [
+            1755536383410518342
+        ],
+        "is_leaf": true,
+        "parent": 254,
+        "children": []
+    },
+    {
+        "id": 25,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383410532042
+        ],
+        "end_time": [
+            1755536383410554042
+        ],
+        "is_leaf": true,
+        "parent": 256,
+        "children": []
+    },
+    {
+        "id": 26,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410563542
+        ],
+        "end_time": [
+            1755536383410566442
+        ],
+        "is_leaf": true,
+        "parent": 257,
+        "children": []
+    },
+    {
+        "id": 27,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383410574542
+        ],
+        "end_time": [
+            1755536383410609742
+        ],
+        "is_leaf": true,
+        "parent": 257,
+        "children": []
+    },
+    {
+        "id": 28,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410613642
+        ],
+        "end_time": [
+            1755536383410619242
+        ],
+        "is_leaf": true,
+        "parent": 249,
+        "children": []
+    },
+    {
+        "id": 29,
+        "name": "aten::relu_",
+        "start_time": [
+            1755536383410625042
+        ],
+        "end_time": [
+            1755536383410631842
+        ],
+        "is_leaf": true,
+        "parent": 258,
+        "children": []
+    },
+    {
+        "id": 30,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383410648442
+        ],
+        "end_time": [
+            1755536383410679442
+        ],
+        "is_leaf": true,
+        "parent": 261,
+        "children": []
+    },
+    {
+        "id": 31,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410689542
+        ],
+        "end_time": [
+            1755536383410692642
+        ],
+        "is_leaf": true,
+        "parent": 262,
+        "children": []
+    },
+    {
+        "id": 32,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383410700942
+        ],
+        "end_time": [
+            1755536383410766342
+        ],
+        "is_leaf": true,
+        "parent": 262,
+        "children": []
+    },
+    {
+        "id": 33,
+        "name": "aten::relu_",
+        "start_time": [
+            1755536383410773642
+        ],
+        "end_time": [
+            1755536383410781542
+        ],
+        "is_leaf": true,
+        "parent": 263,
+        "children": []
+    },
+    {
+        "id": 34,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383410790542
+        ],
+        "end_time": [
+            1755536383410819042
+        ],
+        "is_leaf": true,
+        "parent": 264,
+        "children": []
+    },
+    {
+        "id": 35,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410828942
+        ],
+        "end_time": [
+            1755536383410832342
+        ],
+        "is_leaf": true,
+        "parent": 265,
+        "children": []
+    },
+    {
+        "id": 36,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383410840842
+        ],
+        "end_time": [
+            1755536383410876842
+        ],
+        "is_leaf": true,
+        "parent": 265,
+        "children": []
+    },
+    {
+        "id": 37,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383410891142
+        ],
+        "end_time": [
+            1755536383410911042
+        ],
+        "is_leaf": true,
+        "parent": 267,
+        "children": []
+    },
+    {
+        "id": 38,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410919442
+        ],
+        "end_time": [
+            1755536383410922542
+        ],
+        "is_leaf": true,
+        "parent": 268,
+        "children": []
+    },
+    {
+        "id": 39,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383410930142
+        ],
+        "end_time": [
+            1755536383410974642
+        ],
+        "is_leaf": true,
+        "parent": 268,
+        "children": []
+    },
+    {
+        "id": 40,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383410979042
+        ],
+        "end_time": [
+            1755536383410984142
+        ],
+        "is_leaf": true,
+        "parent": 260,
+        "children": []
+    },
+    {
+        "id": 41,
+        "name": "aten::relu_",
+        "start_time": [
+            1755536383410991442
+        ],
+        "end_time": [
+            1755536383410998742
+        ],
+        "is_leaf": true,
+        "parent": 269,
+        "children": []
+    },
+    {
+        "id": 42,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383411019742
+        ],
+        "end_time": [
+            1755536383411048742
+        ],
+        "is_leaf": true,
+        "parent": 272,
+        "children": []
+    },
+    {
+        "id": 43,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383411058742
+        ],
+        "end_time": [
+            1755536383411061942
+        ],
+        "is_leaf": true,
+        "parent": 273,
+        "children": []
+    },
+    {
+        "id": 44,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383411070942
+        ],
+        "end_time": [
+            1755536383411109142
+        ],
+        "is_leaf": true,
+        "parent": 273,
+        "children": []
+    },
+    {
+        "id": 45,
+        "name": "aten::relu_",
+        "start_time": [
+            1755536383411115542
+        ],
+        "end_time": [
+            1755536383411122842
+        ],
+        "is_leaf": true,
+        "parent": 274,
+        "children": []
+    },
+    {
+        "id": 46,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383411131542
+        ],
+        "end_time": [
+            1755536383411167842
+        ],
+        "is_leaf": true,
+        "parent": 275,
+        "children": []
+    },
+    {
+        "id": 47,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383411178342
+        ],
+        "end_time": [
+            1755536383411181742
+        ],
+        "is_leaf": true,
+        "parent": 276,
+        "children": []
+    },
+    {
+        "id": 48,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383411191342
+        ],
+        "end_time": [
+            1755536383411228942
+        ],
+        "is_leaf": true,
+        "parent": 276,
+        "children": []
+    },
+    {
+        "id": 49,
+        "name": "aten::conv2d",
+        "start_time": [
+            1755536383411240642
+        ],
+        "end_time": [
+            1755536383411269242
+        ],
+        "is_leaf": true,
+        "parent": 278,
+        "children": []
+    },
+    {
+        "id": 50,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383411278142
+        ],
+        "end_time": [
+            1755536383411281342
+        ],
+        "is_leaf": true,
+        "parent": 279,
+        "children": []
+    },
+    {
+        "id": 51,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755536383411289242
+        ],
+        "end_time": [
+            1755536383411324342
+        ],
+        "is_leaf": true,
+        "parent": 279,
+        "children": []
+    },
+    {
+        "id": 52,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383411328142
+        ],
+        "end_time": [
+            1755536383411333142
+        ],
+        "is_leaf": true,
+        "parent": 271,
+        "children": []
+    },
+    {
+        "id": 53,
+        "name": "aten::relu_",
+        "start_time": [
+            1755536383411338942
+        ],
+        "end_time": [
+            1755536383411346142
+        ],
+        "is_leaf": true,
+        "parent": 280,
+        "children": []
+    },
+    {
+        "id": 54,
+        "name": "aten::adaptive_avg_pool2d",
+        "start_time": [
+            1755536383411377142
+        ],
+        "end_time": [
+            1755536383411423442
+        ],
+        "is_leaf": true,
+        "parent": 281,
+        "children": []
+    },
+    {
+        "id": 55,
+        "name": "aten::flatten",
+        "start_time": [
+            1755536383411447042
+        ],
+        "end_time": [
+            1755536383411453942
+        ],
+        "is_leaf": true,
+        "parent": 235,
+        "children": []
+    },
+    {
+        "id": 56,
+        "name": "aten::linear",
+        "start_time": [
+            1755536383411467442
+        ],
+        "end_time": [
+            1755536383411516142
+        ],
+        "is_leaf": true,
+        "parent": 282,
+        "children": []
+    },
+    {
+        "id": 57,
+        "name": "aten::cross_entropy_loss",
+        "start_time": [
+            1755536383411541042
+        ],
+        "end_time": [
+            1755536383411589242
+        ],
+        "is_leaf": true,
+        "parent": 283,
+        "children": []
+    },
+    {
+        "id": 58,
+        "name": "aten::ones_like",
+        "start_time": [
+            1755536383411632242
+        ],
+        "end_time": [
+            1755536383411646342
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 59,
+        "name": "NllLossBackward0",
+        "start_time": [
+            1755536383418931142
+        ],
+        "end_time": [
+            1755536383418977642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 60,
+        "name": "LogSoftmaxBackward0",
+        "start_time": [
+            1755536383418992942
+        ],
+        "end_time": [
+            1755536383419004942
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 61,
+        "name": "AddmmBackward0",
+        "start_time": [
+            1755536383419044642
+        ],
+        "end_time": [
+            1755536383419107542
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 62,
+        "name": "aten::sum",
+        "start_time": [
+            1755536383419110242
+        ],
+        "end_time": [
+            1755536383419119342
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 63,
+        "name": "aten::view",
+        "start_time": [
+            1755536383419122442
+        ],
+        "end_time": [
+            1755536383419124542
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 64,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419150642
+        ],
+        "end_time": [
+            1755536383419159942
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 65,
+        "name": "TBackward0",
+        "start_time": [
+            1755536383419167542
+        ],
+        "end_time": [
+            1755536383419174942
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 66,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419184442
+        ],
+        "end_time": [
+            1755536383419189242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 67,
+        "name": "ViewBackward0",
+        "start_time": [
+            1755536383419195542
+        ],
+        "end_time": [
+            1755536383419201642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 68,
+        "name": "MeanBackward1",
+        "start_time": [
+            1755536383419208242
+        ],
+        "end_time": [
+            1755536383419237242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 69,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755536383419245542
+        ],
+        "end_time": [
+            1755536383419297442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 70,
+        "name": "AddBackward0",
+        "start_time": [
+            1755536383419305242
+        ],
+        "end_time": [
+            1755536383419305842
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 71,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383419313542
+        ],
+        "end_time": [
+            1755536383419364442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 72,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419375442
+        ],
+        "end_time": [
+            1755536383419381042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 73,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419387842
+        ],
+        "end_time": [
+            1755536383419392542
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 74,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383419399342
+        ],
+        "end_time": [
+            1755536383419465942
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 75,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419475542
+        ],
+        "end_time": [
+            1755536383419480942
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 76,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383419487342
+        ],
+        "end_time": [
+            1755536383419514442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 77,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419524942
+        ],
+        "end_time": [
+            1755536383419529642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 78,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419535842
+        ],
+        "end_time": [
+            1755536383419540642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 79,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383419546842
+        ],
+        "end_time": [
+            1755536383419595342
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 80,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419605242
+        ],
+        "end_time": [
+            1755536383419610342
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 81,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755536383419616042
+        ],
+        "end_time": [
+            1755536383419625242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 82,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383419633742
+        ],
+        "end_time": [
+            1755536383419660042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 83,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419669642
+        ],
+        "end_time": [
+            1755536383419674042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 84,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419680242
+        ],
+        "end_time": [
+            1755536383419684542
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 85,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383419690342
+        ],
+        "end_time": [
+            1755536383419733542
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 86,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383419739242
+        ],
+        "end_time": [
+            1755536383419746842
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 87,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419755442
+        ],
+        "end_time": [
+            1755536383419760442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 88,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755536383419766342
+        ],
+        "end_time": [
+            1755536383419773442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 89,
+        "name": "AddBackward0",
+        "start_time": [
+            1755536383419781642
+        ],
+        "end_time": [
+            1755536383419782042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 90,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383419788942
+        ],
+        "end_time": [
+            1755536383419814242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 91,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419823642
+        ],
+        "end_time": [
+            1755536383419828242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 92,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419834542
+        ],
+        "end_time": [
+            1755536383419838942
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 93,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383419845142
+        ],
+        "end_time": [
+            1755536383419880042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 94,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419888042
+        ],
+        "end_time": [
+            1755536383419892842
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 95,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383419899042
+        ],
+        "end_time": [
+            1755536383419923542
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 96,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419933542
+        ],
+        "end_time": [
+            1755536383419938442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 97,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419944742
+        ],
+        "end_time": [
+            1755536383419949442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 98,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383419955342
+        ],
+        "end_time": [
+            1755536383419988842
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 99,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383419997242
+        ],
+        "end_time": [
+            1755536383420002142
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 100,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755536383420007942
+        ],
+        "end_time": [
+            1755536383420015742
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 101,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383420026742
+        ],
+        "end_time": [
+            1755536383420051042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 102,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420060242
+        ],
+        "end_time": [
+            1755536383420064742
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 103,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420071642
+        ],
+        "end_time": [
+            1755536383420076442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 104,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383420083042
+        ],
+        "end_time": [
+            1755536383420121042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 105,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383420125042
+        ],
+        "end_time": [
+            1755536383420128742
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 106,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420136642
+        ],
+        "end_time": [
+            1755536383420141842
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 107,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755536383420147942
+        ],
+        "end_time": [
+            1755536383420156442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 108,
+        "name": "AddBackward0",
+        "start_time": [
+            1755536383420163542
+        ],
+        "end_time": [
+            1755536383420163942
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 109,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383420170842
+        ],
+        "end_time": [
+            1755536383420198642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 110,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420207942
+        ],
+        "end_time": [
+            1755536383420212642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 111,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420219342
+        ],
+        "end_time": [
+            1755536383420224042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 112,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383420230042
+        ],
+        "end_time": [
+            1755536383420265942
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 113,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420273642
+        ],
+        "end_time": [
+            1755536383420278342
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 114,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383420284442
+        ],
+        "end_time": [
+            1755536383420332142
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 115,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420341342
+        ],
+        "end_time": [
+            1755536383420345842
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 116,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420352042
+        ],
+        "end_time": [
+            1755536383420356442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 117,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383420361942
+        ],
+        "end_time": [
+            1755536383420400642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 118,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420409042
+        ],
+        "end_time": [
+            1755536383420413942
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 119,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755536383420419942
+        ],
+        "end_time": [
+            1755536383420427442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 120,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383420434542
+        ],
+        "end_time": [
+            1755536383420518042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 121,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420527342
+        ],
+        "end_time": [
+            1755536383420532542
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 122,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420539142
+        ],
+        "end_time": [
+            1755536383420544042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 123,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383420550042
+        ],
+        "end_time": [
+            1755536383420591642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 124,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383420595642
+        ],
+        "end_time": [
+            1755536383420600142
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 125,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420608242
+        ],
+        "end_time": [
+            1755536383420613042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 126,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755536383420618742
+        ],
+        "end_time": [
+            1755536383420625342
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 127,
+        "name": "AddBackward0",
+        "start_time": [
+            1755536383420632842
+        ],
+        "end_time": [
+            1755536383420633242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 128,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383420639642
+        ],
+        "end_time": [
+            1755536383420668742
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 129,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420677542
+        ],
+        "end_time": [
+            1755536383420682142
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 130,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420688642
+        ],
+        "end_time": [
+            1755536383420693042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 131,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383420699442
+        ],
+        "end_time": [
+            1755536383420738142
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 132,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420746842
+        ],
+        "end_time": [
+            1755536383420787042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 133,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755536383420792942
+        ],
+        "end_time": [
+            1755536383420800042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 134,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383420807242
+        ],
+        "end_time": [
+            1755536383420836342
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 135,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420846142
+        ],
+        "end_time": [
+            1755536383420850642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 136,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420857042
+        ],
+        "end_time": [
+            1755536383420861242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 137,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383420866942
+        ],
+        "end_time": [
+            1755536383420899442
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 138,
+        "name": "aten::add_",
+        "start_time": [
+            1755536383420903642
+        ],
+        "end_time": [
+            1755536383420907042
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 139,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383420914942
+        ],
+        "end_time": [
+            1755536383420919842
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 140,
+        "name": "MaxPool2DWithIndicesBackward0",
+        "start_time": [
+            1755536383420926142
+        ],
+        "end_time": [
+            1755536383420947742
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 141,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755536383420956242
+        ],
+        "end_time": [
+            1755536383420962642
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 142,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755536383420973742
+        ],
+        "end_time": [
+            1755536383420999742
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 143,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383421009342
+        ],
+        "end_time": [
+            1755536383421014342
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 144,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383421020642
+        ],
+        "end_time": [
+            1755536383421025142
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 145,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755536383421033542
+        ],
+        "end_time": [
+            1755536383421060142
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 146,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755536383421067842
+        ],
+        "end_time": [
+            1755536383421073242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 152,
+        "name": "aten::_foreach_lerp_",
+        "start_time": [
+            1755536383421548942
+        ],
+        "end_time": [
+            1755536383421571342
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 153,
+        "name": "aten::_foreach_mul_",
+        "start_time": [
+            1755536383421582242
+        ],
+        "end_time": [
+            1755536383421669142
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 154,
+        "name": "aten::_foreach_addcmul_",
+        "start_time": [
+            1755536383421683342
+        ],
+        "end_time": [
+            1755536383421821142
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 231,
+        "name": "aten::_foreach_sqrt",
+        "start_time": [
+            1755536383422431742
+        ],
+        "end_time": [
+            1755536383422597242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 232,
+        "name": "aten::_foreach_div_",
+        "start_time": [
+            1755536383422633442
+        ],
+        "end_time": [
+            1755536383422713242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 233,
+        "name": "aten::_foreach_add_",
+        "start_time": [
+            1755536383422720242
+        ],
+        "end_time": [
+            1755536383422831242
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 234,
+        "name": "aten::_foreach_addcdiv_",
+        "start_time": [
+            1755536383422850642
+        ],
+        "end_time": [
+            1755536383422942542
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 235,
+        "name": "nn.Module: ResNet_0",
+        "start_time": [
+            1755536383409693642
+        ],
+        "end_time": [
+            1755536383411518342
+        ],
+        "is_leaf": false,
+        "parent": null,
+        "children": [
+            236,
+            237,
+            238,
+            239,
+            240,
+            248,
+            259,
+            270,
+            281,
+            55,
+            282
+        ]
+    },
+    {
+        "id": 236,
+        "name": "nn.Module: Conv2d_0",
+        "start_time": [
+            1755536383409709142
+        ],
+        "end_time": [
+            1755536383409786242
+        ],
+        "is_leaf": false,
+        "parent": 235,
+        "children": [
+            4
+        ]
+    },
+    {
+        "id": 237,
+        "name": "nn.Module: BatchNorm2d_0",
+        "start_time": [
+            1755536383409792042
+        ],
+        "end_time": [
+            1755536383409911542
+        ],
+        "is_leaf": false,
+        "parent": 235,
+        "children": [
+            5,
+            6
+        ]
+    },
+    {
+        "id": 238,
+        "name": "nn.Module: ReLU_0",
+        "start_time": [
+            1755536383409915142
+        ],
+        "end_time": [
+            1755536383409942842
+        ],
+        "is_leaf": false,
+        "parent": 235,
+        "children": [
+            7
+        ]
+    },
+    {
+        "id": 239,
+        "name": "nn.Module: MaxPool2d_0",
+        "start_time": [
+            1755536383409946642
+        ],
+        "end_time": [
+            1755536383409974642
+        ],
+        "is_leaf": false,
+        "parent": 235,
+        "children": [
+            8
+        ]
+    },
+    {
+        "id": 240,
+        "name": "nn.Module: Sequential_0",
+        "start_time": [
+            1755536383409977342
+        ],
+        "end_time": [
+            1755536383410275042
+        ],
+        "is_leaf": false,
+        "parent": 235,
+        "children": [
+            241
+        ]
+    },
+    {
+        "id": 241,
+        "name": "nn.Module: BasicBlock_0",
+        "start_time": [
+            1755536383409982942
+        ],
+        "end_time": [
+            1755536383410274442
+        ],
+        "is_leaf": false,
+        "parent": 240,
+        "children": [
+            242,
+            243,
+            244,
+            245,
+            246,
+            16,
+            247
+        ]
+    },
+    {
+        "id": 242,
+        "name": "nn.Module: Conv2d_1",
+        "start_time": [
+            1755536383409987842
+        ],
+        "end_time": [
+            1755536383410028642
+        ],
+        "is_leaf": false,
+        "parent": 241,
+        "children": [
+            9
+        ]
+    },
+    {
+        "id": 243,
+        "name": "nn.Module: BatchNorm2d_1",
+        "start_time": [
+            1755536383410032942
+        ],
+        "end_time": [
+            1755536383410131042
+        ],
+        "is_leaf": false,
+        "parent": 241,
+        "children": [
+            10,
+            11
+        ]
+    },
+    {
+        "id": 244,
+        "name": "nn.Module: ReLU_1",
+        "start_time": [
+            1755536383410133442
+        ],
+        "end_time": [
+            1755536383410147842
+        ],
+        "is_leaf": false,
+        "parent": 241,
+        "children": [
+            12
+        ]
+    },
+    {
+        "id": 245,
+        "name": "nn.Module: Conv2d_2",
+        "start_time": [
+            1755536383410150142
+        ],
+        "end_time": [
+            1755536383410188042
+        ],
+        "is_leaf": false,
+        "parent": 241,
+        "children": [
+            13
+        ]
+    },
+    {
+        "id": 246,
+        "name": "nn.Module: BatchNorm2d_2",
+        "start_time": [
+            1755536383410191042
+        ],
+        "end_time": [
+            1755536383410250642
+        ],
+        "is_leaf": false,
+        "parent": 241,
+        "children": [
+            14,
+            15
+        ]
+    },
+    {
+        "id": 247,
+        "name": "nn.Module: ReLU_1",
+        "start_time": [
+            1755536383410261742
+        ],
+        "end_time": [
+            1755536383410274142
+        ],
+        "is_leaf": false,
+        "parent": 241,
+        "children": [
+            17
+        ]
+    },
+    {
+        "id": 248,
+        "name": "nn.Module: Sequential_1",
+        "start_time": [
+            1755536383410276942
+        ],
+        "end_time": [
+            1755536383410635242
+        ],
+        "is_leaf": false,
+        "parent": 235,
+        "children": [
+            249
+        ]
+    },
+    {
+        "id": 249,
+        "name": "nn.Module: BasicBlock_1",
+        "start_time": [
+            1755536383410280142
+        ],
+        "end_time": [
+            1755536383410634842
+        ],
+        "is_leaf": false,
+        "parent": 248,
+        "children": [
+            250,
+            251,
+            252,
+            253,
+            254,
+            255,
+            28,
+            258
+        ]
+    },
+    {
+        "id": 250,
+        "name": "nn.Module: Conv2d_3",
+        "start_time": [
+            1755536383410283442
+        ],
+        "end_time": [
+            1755536383410330942
+        ],
+        "is_leaf": false,
+        "parent": 249,
+        "children": [
+            18
+        ]
+    },
+    {
+        "id": 251,
+        "name": "nn.Module: BatchNorm2d_3",
+        "start_time": [
+            1755536383410334942
+        ],
+        "end_time": [
+            1755536383410400742
+        ],
+        "is_leaf": false,
+        "parent": 249,
+        "children": [
+            19,
+            20
+        ]
+    },
+    {
+        "id": 252,
+        "name": "nn.Module: ReLU_2",
+        "start_time": [
+            1755536383410403142
+        ],
+        "end_time": [
+            1755536383410416142
+        ],
+        "is_leaf": false,
+        "parent": 249,
+        "children": [
+            21
+        ]
+    },
+    {
+        "id": 253,
+        "name": "nn.Module: Conv2d_4",
+        "start_time": [
+            1755536383410417942
+        ],
+        "end_time": [
+            1755536383410460742
+        ],
+        "is_leaf": false,
+        "parent": 249,
+        "children": [
+            22
+        ]
+    },
+    {
+        "id": 254,
+        "name": "nn.Module: BatchNorm2d_4",
+        "start_time": [
+            1755536383410463742
+        ],
+        "end_time": [
+            1755536383410519742
+        ],
+        "is_leaf": false,
+        "parent": 249,
+        "children": [
+            23,
+            24
+        ]
+    },
+    {
+        "id": 255,
+        "name": "nn.Module: Sequential_2",
+        "start_time": [
+            1755536383410522442
+        ],
+        "end_time": [
+            1755536383410611642
+        ],
+        "is_leaf": false,
+        "parent": 249,
+        "children": [
+            256,
+            257
+        ]
+    },
+    {
+        "id": 256,
+        "name": "nn.Module: Conv2d_5",
+        "start_time": [
+            1755536383410526142
+        ],
+        "end_time": [
+            1755536383410555742
+        ],
+        "is_leaf": false,
+        "parent": 255,
+        "children": [
+            25
+        ]
+    },
+    {
+        "id": 257,
+        "name": "nn.Module: BatchNorm2d_5",
+        "start_time": [
+            1755536383410557442
+        ],
+        "end_time": [
+            1755536383410611042
+        ],
+        "is_leaf": false,
+        "parent": 255,
+        "children": [
+            26,
+            27
+        ]
+    },
+    {
+        "id": 258,
+        "name": "nn.Module: ReLU_2",
+        "start_time": [
+            1755536383410621642
+        ],
+        "end_time": [
+            1755536383410633142
+        ],
+        "is_leaf": false,
+        "parent": 249,
+        "children": [
+            29
+        ]
+    },
+    {
+        "id": 259,
+        "name": "nn.Module: Sequential_3",
+        "start_time": [
+            1755536383410637442
+        ],
+        "end_time": [
+            1755536383411002342
+        ],
+        "is_leaf": false,
+        "parent": 235,
+        "children": [
+            260
+        ]
+    },
+    {
+        "id": 260,
+        "name": "nn.Module: BasicBlock_2",
+        "start_time": [
+            1755536383410639942
+        ],
+        "end_time": [
+            1755536383411001942
+        ],
+        "is_leaf": false,
+        "parent": 259,
+        "children": [
+            261,
+            262,
+            263,
+            264,
+            265,
+            266,
+            40,
+            269
+        ]
+    },
+    {
+        "id": 261,
+        "name": "nn.Module: Conv2d_6",
+        "start_time": [
+            1755536383410642942
+        ],
+        "end_time": [
+            1755536383410681142
+        ],
+        "is_leaf": false,
+        "parent": 260,
+        "children": [
+            30
+        ]
+    },
+    {
+        "id": 262,
+        "name": "nn.Module: BatchNorm2d_6",
+        "start_time": [
+            1755536383410683442
+        ],
+        "end_time": [
+            1755536383410767842
+        ],
+        "is_leaf": false,
+        "parent": 260,
+        "children": [
+            31,
+            32
+        ]
+    },
+    {
+        "id": 263,
+        "name": "nn.Module: ReLU_3",
+        "start_time": [
+            1755536383410769742
+        ],
+        "end_time": [
+            1755536383410782942
+        ],
+        "is_leaf": false,
+        "parent": 260,
+        "children": [
+            33
+        ]
+    },
+    {
+        "id": 264,
+        "name": "nn.Module: Conv2d_7",
+        "start_time": [
+            1755536383410785042
+        ],
+        "end_time": [
+            1755536383410820542
+        ],
+        "is_leaf": false,
+        "parent": 260,
+        "children": [
+            34
+        ]
+    },
+    {
+        "id": 265,
+        "name": "nn.Module: BatchNorm2d_7",
+        "start_time": [
+            1755536383410822942
+        ],
+        "end_time": [
+            1755536383410878242
+        ],
+        "is_leaf": false,
+        "parent": 260,
+        "children": [
+            35,
+            36
+        ]
+    },
+    {
+        "id": 266,
+        "name": "nn.Module: Sequential_4",
+        "start_time": [
+            1755536383410880742
+        ],
+        "end_time": [
+            1755536383410976742
+        ],
+        "is_leaf": false,
+        "parent": 260,
+        "children": [
+            267,
+            268
+        ]
+    },
+    {
+        "id": 267,
+        "name": "nn.Module: Conv2d_8",
+        "start_time": [
+            1755536383410885742
+        ],
+        "end_time": [
+            1755536383410912442
+        ],
+        "is_leaf": false,
+        "parent": 266,
+        "children": [
+            37
+        ]
+    },
+    {
+        "id": 268,
+        "name": "nn.Module: BatchNorm2d_8",
+        "start_time": [
+            1755536383410914142
+        ],
+        "end_time": [
+            1755536383410976142
+        ],
+        "is_leaf": false,
+        "parent": 266,
+        "children": [
+            38,
+            39
+        ]
+    },
+    {
+        "id": 269,
+        "name": "nn.Module: ReLU_3",
+        "start_time": [
+            1755536383410986842
+        ],
+        "end_time": [
+            1755536383411000142
+        ],
+        "is_leaf": false,
+        "parent": 260,
+        "children": [
+            41
+        ]
+    },
+    {
+        "id": 270,
+        "name": "nn.Module: Sequential_5",
+        "start_time": [
+            1755536383411007642
+        ],
+        "end_time": [
+            1755536383411349442
+        ],
+        "is_leaf": false,
+        "parent": 235,
+        "children": [
+            271
+        ]
+    },
+    {
+        "id": 271,
+        "name": "nn.Module: BasicBlock_3",
+        "start_time": [
+            1755536383411010142
+        ],
+        "end_time": [
+            1755536383411349142
+        ],
+        "is_leaf": false,
+        "parent": 270,
+        "children": [
+            272,
+            273,
+            274,
+            275,
+            276,
+            277,
+            52,
+            280
+        ]
+    },
+    {
+        "id": 272,
+        "name": "nn.Module: Conv2d_9",
+        "start_time": [
+            1755536383411013942
+        ],
+        "end_time": [
+            1755536383411050142
+        ],
+        "is_leaf": false,
+        "parent": 271,
+        "children": [
+            42
+        ]
+    },
+    {
+        "id": 273,
+        "name": "nn.Module: BatchNorm2d_9",
+        "start_time": [
+            1755536383411052642
+        ],
+        "end_time": [
+            1755536383411110542
+        ],
+        "is_leaf": false,
+        "parent": 271,
+        "children": [
+            43,
+            44
+        ]
+    },
+    {
+        "id": 274,
+        "name": "nn.Module: ReLU_4",
+        "start_time": [
+            1755536383411112242
+        ],
+        "end_time": [
+            1755536383411124342
+        ],
+        "is_leaf": false,
+        "parent": 271,
+        "children": [
+            45
+        ]
+    },
+    {
+        "id": 275,
+        "name": "nn.Module: Conv2d_10",
+        "start_time": [
+            1755536383411126242
+        ],
+        "end_time": [
+            1755536383411169442
+        ],
+        "is_leaf": false,
+        "parent": 271,
+        "children": [
+            46
+        ]
+    },
+    {
+        "id": 276,
+        "name": "nn.Module: BatchNorm2d_10",
+        "start_time": [
+            1755536383411172242
+        ],
+        "end_time": [
+            1755536383411230342
+        ],
+        "is_leaf": false,
+        "parent": 271,
+        "children": [
+            47,
+            48
+        ]
+    },
+    {
+        "id": 277,
+        "name": "nn.Module: Sequential_6",
+        "start_time": [
+            1755536383411232442
+        ],
+        "end_time": [
+            1755536383411326242
+        ],
+        "is_leaf": false,
+        "parent": 271,
+        "children": [
+            278,
+            279
+        ]
+    },
+    {
+        "id": 278,
+        "name": "nn.Module: Conv2d_11",
+        "start_time": [
+            1755536383411235442
+        ],
+        "end_time": [
+            1755536383411270642
+        ],
+        "is_leaf": false,
+        "parent": 277,
+        "children": [
+            49
+        ]
+    },
+    {
+        "id": 279,
+        "name": "nn.Module: BatchNorm2d_11",
+        "start_time": [
+            1755536383411272442
+        ],
+        "end_time": [
+            1755536383411325742
+        ],
+        "is_leaf": false,
+        "parent": 277,
+        "children": [
+            50,
+            51
+        ]
+    },
+    {
+        "id": 280,
+        "name": "nn.Module: ReLU_4",
+        "start_time": [
+            1755536383411335442
+        ],
+        "end_time": [
+            1755536383411347542
+        ],
+        "is_leaf": false,
+        "parent": 271,
+        "children": [
+            53
+        ]
+    },
+    {
+        "id": 281,
+        "name": "nn.Module: AdaptiveAvgPool2d_0",
+        "start_time": [
+            1755536383411359542
+        ],
+        "end_time": [
+            1755536383411425342
+        ],
+        "is_leaf": false,
+        "parent": 235,
+        "children": [
+            54
+        ]
+    },
+    {
+        "id": 282,
+        "name": "nn.Module: Linear_0",
+        "start_time": [
+            1755536383411460742
+        ],
+        "end_time": [
+            1755536383411517742
+        ],
+        "is_leaf": false,
+        "parent": 235,
+        "children": [
+            56
+        ]
+    },
+    {
+        "id": 283,
+        "name": "nn.Module: CrossEntropyLoss_0",
+        "start_time": [
+            1755536383411521742
+        ],
+        "end_time": [
+            1755536383411591142
+        ],
+        "is_leaf": false,
+        "parent": null,
+        "children": [
+            57
+        ]
+    }
+]
