@@ -1,0 +1,392 @@
+[
+    {
+        "id": 1,
+        "name": "aten::to",
+        "start_time": [
+            1755619025620080412
+        ],
+        "end_time": [
+            1755619025620152012
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 3,
+        "name": "aten::to",
+        "start_time": [
+            1755619025620179412
+        ],
+        "end_time": [
+            1755619025620230812
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 4,
+        "name": "nn.Module: TwoLayerNet_0",
+        "start_time": [
+            1755619025620242312
+        ],
+        "end_time": [
+            1755619025620599912
+        ],
+        "is_leaf": false,
+        "parent": null,
+        "children": [
+            5,
+            6,
+            8,
+            10
+        ]
+    },
+    {
+        "id": 5,
+        "name": "aten::view",
+        "start_time": [
+            1755619025620259412
+        ],
+        "end_time": [
+            1755619025620262512
+        ],
+        "is_leaf": true,
+        "parent": 4,
+        "children": []
+    },
+    {
+        "id": 6,
+        "name": "nn.Module: Linear_0",
+        "start_time": [
+            1755619025620274112
+        ],
+        "end_time": [
+            1755619025620517512
+        ],
+        "is_leaf": false,
+        "parent": 4,
+        "children": [
+            7
+        ]
+    },
+    {
+        "id": 7,
+        "name": "aten::linear",
+        "start_time": [
+            1755619025620458212
+        ],
+        "end_time": [
+            1755619025620514912
+        ],
+        "is_leaf": true,
+        "parent": 6,
+        "children": []
+    },
+    {
+        "id": 8,
+        "name": "nn.Module: ReLU_0",
+        "start_time": [
+            1755619025620523912
+        ],
+        "end_time": [
+            1755619025620558912
+        ],
+        "is_leaf": false,
+        "parent": 4,
+        "children": [
+            9
+        ]
+    },
+    {
+        "id": 9,
+        "name": "aten::relu",
+        "start_time": [
+            1755619025620541112
+        ],
+        "end_time": [
+            1755619025620556812
+        ],
+        "is_leaf": true,
+        "parent": 8,
+        "children": []
+    },
+    {
+        "id": 10,
+        "name": "nn.Module: Linear_1",
+        "start_time": [
+            1755619025620564612
+        ],
+        "end_time": [
+            1755619025620599212
+        ],
+        "is_leaf": false,
+        "parent": 4,
+        "children": [
+            11
+        ]
+    },
+    {
+        "id": 11,
+        "name": "aten::linear",
+        "start_time": [
+            1755619025620570512
+        ],
+        "end_time": [
+            1755619025620597812
+        ],
+        "is_leaf": true,
+        "parent": 10,
+        "children": []
+    },
+    {
+        "id": 12,
+        "name": "nn.Module: CrossEntropyLoss_0",
+        "start_time": [
+            1755619025620604412
+        ],
+        "end_time": [
+            1755619025620673112
+        ],
+        "is_leaf": false,
+        "parent": null,
+        "children": [
+            13
+        ]
+    },
+    {
+        "id": 13,
+        "name": "aten::cross_entropy_loss",
+        "start_time": [
+            1755619025620619612
+        ],
+        "end_time": [
+            1755619025620671312
+        ],
+        "is_leaf": true,
+        "parent": 12,
+        "children": []
+    },
+    {
+        "id": 14,
+        "name": "aten::ones_like",
+        "start_time": [
+            1755619025620708312
+        ],
+        "end_time": [
+            1755619025620723012
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 15,
+        "name": "NllLossBackward0",
+        "start_time": [
+            1755619025627973212
+        ],
+        "end_time": [
+            1755619025628019012
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 16,
+        "name": "LogSoftmaxBackward0",
+        "start_time": [
+            1755619025628040812
+        ],
+        "end_time": [
+            1755619025628053612
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 17,
+        "name": "AddmmBackward0",
+        "start_time": [
+            1755619025628063012
+        ],
+        "end_time": [
+            1755619025628139312
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 18,
+        "name": "aten::sum",
+        "start_time": [
+            1755619025628145212
+        ],
+        "end_time": [
+            1755619025628164212
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 19,
+        "name": "aten::view",
+        "start_time": [
+            1755619025628168312
+        ],
+        "end_time": [
+            1755619025628170712
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 20,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755619025628198012
+        ],
+        "end_time": [
+            1755619025628206512
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 21,
+        "name": "TBackward0",
+        "start_time": [
+            1755619025628214612
+        ],
+        "end_time": [
+            1755619025628222812
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 22,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755619025628229712
+        ],
+        "end_time": [
+            1755619025628236312
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 23,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755619025628243512
+        ],
+        "end_time": [
+            1755619025628258112
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 24,
+        "name": "AddmmBackward0",
+        "start_time": [
+            1755619025628266412
+        ],
+        "end_time": [
+            1755619025628296712
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 25,
+        "name": "aten::sum",
+        "start_time": [
+            1755619025628299512
+        ],
+        "end_time": [
+            1755619025628304912
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 26,
+        "name": "aten::view",
+        "start_time": [
+            1755619025628308012
+        ],
+        "end_time": [
+            1755619025628309012
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 27,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755619025628318412
+        ],
+        "end_time": [
+            1755619025628323812
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 28,
+        "name": "TBackward0",
+        "start_time": [
+            1755619025628330212
+        ],
+        "end_time": [
+            1755619025628342412
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 29,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755619025628349612
+        ],
+        "end_time": [
+            1755619025628356512
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 30,
+        "name": "aten::_foreach_add_",
+        "start_time": [
+            1755619025628530712
+        ],
+        "end_time": [
+            1755619025628555212
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    }
+]

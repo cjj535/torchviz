@@ -1,0 +1,924 @@
+[
+    {
+        "id": 1,
+        "name": "aten::to",
+        "start_time": 1755619025620080412,
+        "end_time": 1755619025620152012,
+        "in_edges": [],
+        "out_edges": [
+            {
+                "id": 1,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,1,28,28]",
+                "dtype": "torch.float32",
+                "size": 31744,
+                "start_time": 1755619025620091612,
+                "end_time": -1,
+                "category": "input"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "aten::to",
+        "start_time": 1755619025620179412,
+        "end_time": 1755619025620230812,
+        "in_edges": [],
+        "out_edges": [
+            {
+                "id": 3,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10]",
+                "dtype": "torch.int64",
+                "size": 512,
+                "start_time": 1755619025620184312,
+                "end_time": -1,
+                "category": "input"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "aten::view",
+        "start_time": 1755619025620259412,
+        "end_time": 1755619025620262512,
+        "in_edges": [
+            {
+                "id": 1,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,1,28,28]",
+                "dtype": "torch.float32",
+                "size": 31744,
+                "start_time": 1755619025620091612,
+                "end_time": -1,
+                "category": "input"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 7,
+        "name": "aten::linear",
+        "start_time": 1755619025620458212,
+        "end_time": 1755619025620514912,
+        "in_edges": [
+            {
+                "id": 1,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,1,28,28]",
+                "dtype": "torch.float32",
+                "size": 31744,
+                "start_time": 1755619025620091612,
+                "end_time": -1,
+                "category": "input"
+            },
+            {
+                "id": 4,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[128,784]",
+                "dtype": "torch.float32",
+                "size": 401408,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            },
+            {
+                "id": 5,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[128]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 6,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025620484912,
+                "end_time": 1755619025620559912,
+                "category": "activation"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "aten::relu",
+        "start_time": 1755619025620541112,
+        "end_time": 1755619025620556812,
+        "in_edges": [
+            {
+                "id": 6,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025620484912,
+                "end_time": 1755619025620559912,
+                "category": "activation"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 7,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025620547912,
+                "end_time": 1755619025628260512,
+                "category": "activation"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "aten::linear",
+        "start_time": 1755619025620570512,
+        "end_time": 1755619025620597812,
+        "in_edges": [
+            {
+                "id": 7,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025620547912,
+                "end_time": 1755619025628260512,
+                "category": "activation"
+            },
+            {
+                "id": 8,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            },
+            {
+                "id": 9,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10]",
+                "dtype": "torch.float32",
+                "size": 40,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 10,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620585712,
+                "end_time": -1,
+                "category": "activation"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "aten::cross_entropy_loss",
+        "start_time": 1755619025620619612,
+        "end_time": 1755619025620671312,
+        "in_edges": [
+            {
+                "id": 3,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10]",
+                "dtype": "torch.int64",
+                "size": 512,
+                "start_time": 1755619025620184312,
+                "end_time": -1,
+                "category": "input"
+            },
+            {
+                "id": 10,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620585712,
+                "end_time": -1,
+                "category": "activation"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 11,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620631812,
+                "end_time": 1755619025628055912,
+                "category": "activation"
+            },
+            {
+                "id": 12,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620651312,
+                "end_time": -1,
+                "category": "activation"
+            },
+            {
+                "id": 13,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620657912,
+                "end_time": 1755619025628022612,
+                "category": "activation"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "aten::ones_like",
+        "start_time": 1755619025620708312,
+        "end_time": 1755619025620723012,
+        "in_edges": [
+            {
+                "id": 12,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620651312,
+                "end_time": -1,
+                "category": "activation"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 14,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620714012,
+                "end_time": 1755619025628379812,
+                "category": "activation"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "NllLossBackward0",
+        "start_time": 1755619025627973212,
+        "end_time": 1755619025628019012,
+        "in_edges": [
+            {
+                "id": 3,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10]",
+                "dtype": "torch.int64",
+                "size": 512,
+                "start_time": 1755619025620184312,
+                "end_time": -1,
+                "category": "input"
+            },
+            {
+                "id": 11,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620631812,
+                "end_time": 1755619025628055912,
+                "category": "activation"
+            },
+            {
+                "id": 13,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620657912,
+                "end_time": 1755619025628022612,
+                "category": "activation"
+            },
+            {
+                "id": 14,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620714012,
+                "end_time": 1755619025628379812,
+                "category": "activation"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 15,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025627990912,
+                "end_time": 1755619025628055312,
+                "category": "autograd_detail"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "LogSoftmaxBackward0",
+        "start_time": 1755619025628040812,
+        "end_time": 1755619025628053612,
+        "in_edges": [
+            {
+                "id": 11,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025620631812,
+                "end_time": 1755619025628055912,
+                "category": "activation"
+            },
+            {
+                "id": 15,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025627990912,
+                "end_time": 1755619025628055312,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 16,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628048112,
+                "end_time": 1755619025628172612,
+                "category": "autograd_detail"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "AddmmBackward0",
+        "start_time": 1755619025628063012,
+        "end_time": 1755619025628139312,
+        "in_edges": [
+            {
+                "id": 7,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025620547912,
+                "end_time": 1755619025628260512,
+                "category": "activation"
+            },
+            {
+                "id": 8,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            },
+            {
+                "id": 16,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628048112,
+                "end_time": 1755619025628172612,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 17,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025628082312,
+                "end_time": 1755619025628259612,
+                "category": "autograd_detail"
+            },
+            {
+                "id": 18,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[128,10]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025628119312,
+                "end_time": 1755619025628640612,
+                "category": "gradient"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "aten::sum",
+        "start_time": 1755619025628145212,
+        "end_time": 1755619025628164212,
+        "in_edges": [
+            {
+                "id": 16,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628048112,
+                "end_time": 1755619025628172612,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 19,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[1,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628147612,
+                "end_time": 1755619025628641212,
+                "category": "gradient"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "aten::view",
+        "start_time": 1755619025628168312,
+        "end_time": 1755619025628170712,
+        "in_edges": [
+            {
+                "id": 19,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[1,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628147612,
+                "end_time": 1755619025628641212,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 20,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": 1755619025628198012,
+        "end_time": 1755619025628206512,
+        "in_edges": [
+            {
+                "id": 19,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[1,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628147612,
+                "end_time": 1755619025628641212,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 21,
+        "name": "TBackward0",
+        "start_time": 1755619025628214612,
+        "end_time": 1755619025628222812,
+        "in_edges": [
+            {
+                "id": 18,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[128,10]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025628119312,
+                "end_time": 1755619025628640612,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 22,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": 1755619025628229712,
+        "end_time": 1755619025628236312,
+        "in_edges": [
+            {
+                "id": 18,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[128,10]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025628119312,
+                "end_time": 1755619025628640612,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 23,
+        "name": "ReluBackward0",
+        "start_time": 1755619025628243512,
+        "end_time": 1755619025628258112,
+        "in_edges": [
+            {
+                "id": 7,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025620547912,
+                "end_time": 1755619025628260512,
+                "category": "activation"
+            },
+            {
+                "id": 17,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025628082312,
+                "end_time": 1755619025628259612,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 20,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025628250812,
+                "end_time": 1755619025628310712,
+                "category": "autograd_detail"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "AddmmBackward0",
+        "start_time": 1755619025628266412,
+        "end_time": 1755619025628296712,
+        "in_edges": [
+            {
+                "id": 1,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,1,28,28]",
+                "dtype": "torch.float32",
+                "size": 31744,
+                "start_time": 1755619025620091612,
+                "end_time": -1,
+                "category": "input"
+            },
+            {
+                "id": 20,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025628250812,
+                "end_time": 1755619025628310712,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 21,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[784,128]",
+                "dtype": "torch.float32",
+                "size": 401408,
+                "start_time": 1755619025628277412,
+                "end_time": 1755619025628637812,
+                "category": "gradient"
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "aten::sum",
+        "start_time": 1755619025628299512,
+        "end_time": 1755619025628304912,
+        "in_edges": [
+            {
+                "id": 20,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025628250812,
+                "end_time": 1755619025628310712,
+                "category": "autograd_detail"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 22,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[1,128]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628300712,
+                "end_time": 1755619025628639612,
+                "category": "gradient"
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "aten::view",
+        "start_time": 1755619025628308012,
+        "end_time": 1755619025628309012,
+        "in_edges": [
+            {
+                "id": 22,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[1,128]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628300712,
+                "end_time": 1755619025628639612,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 27,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": 1755619025628318412,
+        "end_time": 1755619025628323812,
+        "in_edges": [
+            {
+                "id": 22,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[1,128]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628300712,
+                "end_time": 1755619025628639612,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 28,
+        "name": "TBackward0",
+        "start_time": 1755619025628330212,
+        "end_time": 1755619025628342412,
+        "in_edges": [
+            {
+                "id": 21,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[784,128]",
+                "dtype": "torch.float32",
+                "size": 401408,
+                "start_time": 1755619025628277412,
+                "end_time": 1755619025628637812,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 29,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": 1755619025628349612,
+        "end_time": 1755619025628356512,
+        "in_edges": [
+            {
+                "id": 21,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[784,128]",
+                "dtype": "torch.float32",
+                "size": 401408,
+                "start_time": 1755619025628277412,
+                "end_time": 1755619025628637812,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": []
+    },
+    {
+        "id": 30,
+        "name": "aten::_foreach_add_",
+        "start_time": 1755619025628530712,
+        "end_time": 1755619025628555212,
+        "in_edges": [
+            {
+                "id": 4,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[128,784]",
+                "dtype": "torch.float32",
+                "size": 401408,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            },
+            {
+                "id": 5,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[128]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            },
+            {
+                "id": 8,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            },
+            {
+                "id": 9,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[10]",
+                "dtype": "torch.float32",
+                "size": 40,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            },
+            {
+                "id": 18,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[128,10]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": 1755619025628119312,
+                "end_time": 1755619025628640612,
+                "category": "gradient"
+            },
+            {
+                "id": 19,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[1,10]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628147612,
+                "end_time": 1755619025628641212,
+                "category": "gradient"
+            },
+            {
+                "id": 21,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[784,128]",
+                "dtype": "torch.float32",
+                "size": 401408,
+                "start_time": 1755619025628277412,
+                "end_time": 1755619025628637812,
+                "category": "gradient"
+            },
+            {
+                "id": 22,
+                "version": 0,
+                "device": "cuda:0",
+                "shape": "[1,128]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": 1755619025628300712,
+                "end_time": 1755619025628639612,
+                "category": "gradient"
+            }
+        ],
+        "out_edges": [
+            {
+                "id": 4,
+                "version": 1,
+                "device": "cuda:0",
+                "shape": "[128,784]",
+                "dtype": "torch.float32",
+                "size": 401408,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            },
+            {
+                "id": 5,
+                "version": 1,
+                "device": "cuda:0",
+                "shape": "[128]",
+                "dtype": "torch.float32",
+                "size": 512,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            },
+            {
+                "id": 8,
+                "version": 1,
+                "device": "cuda:0",
+                "shape": "[10,128]",
+                "dtype": "torch.float32",
+                "size": 5120,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            },
+            {
+                "id": 9,
+                "version": 1,
+                "device": "cuda:0",
+                "shape": "[10]",
+                "dtype": "torch.float32",
+                "size": 40,
+                "start_time": -1,
+                "end_time": -1,
+                "category": "parameter"
+            }
+        ]
+    }
+]

@@ -1,2 +1,7 @@
-torch
-torchvision
+# CPU 版本
+torch==2.5.1
+torchvision==0.20.1
+
+# CUDA 11.8 版本，需要指定 extra-index-url
+# 安装命令示例：
+# pip install torch==2.5.1+cu118 torchvision==0.20.1+cu118 -f https://download.pytorch.org/whl/torch_stable.html

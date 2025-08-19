@@ -28,14 +28,23 @@ def train():
         file_name = "prof_result"
         # prof.export_chrome_trace(f"{file_name}.json")
         prof.export_memory_timeline(f"{file_name}.html", device="cuda:0")
+        import os
+        file_path = f"{file_name}.html"
+        try:
+            os.remove(file_path)
+            print(f"{file_path} has been delete.")
+        except FileNotFoundError:
+            print(f"{file_path} not exist.")
+        except PermissionError:
+            print(f"No permission to delete {file_path}.")
 
     # Profiler 配置
     prof = profiler.profile(
         activities=[
             profiler.ProfilerActivity.CPU,
-            profiler.ProfilerActivity.CUDA  # 如果是 CPU 训练可以去掉
+            profiler.ProfilerActivity.CUDA
         ],
-        schedule=profiler.schedule(wait=0, warmup=2, active=1, repeat=1),  # 等待1步，热身1步，采集3步
+        schedule=profiler.schedule(wait=0, warmup=2, active=1, repeat=1),
         on_trace_ready=trace_handler,
         record_shapes=True,
         with_stack=True,
@@ -44,7 +53,7 @@ def train():
 
     # 训练并采集性能数据
     with prof:
-        for epoch in range(3):  # 演示只跑 1 个 epoch
+        for epoch in range(3):
             images = torch.rand(batch_size, 3, 32, 32).to(device)
             labels = torch.randint(0, 10, (batch_size,)).to(device)
 
@@ -58,7 +67,3 @@ def train():
             torch.cuda.synchronize()
 
             prof.step()
-
-# 查看 TensorBoard：
-# tensorboard --logdir=./log
-# 然后打开 http://localhost:6006
