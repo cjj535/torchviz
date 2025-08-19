@@ -1,0 +1,11 @@
+# 忽略所有 __pycache__ 目录
+__pycache__/
+
+# 忽略所有 .pyc 文件
+*.pyc
+
+# 忽略所有 .pyo 文件
+*.pyo
+
+# 忽略所有 .pyd 文件
+*.pyd
