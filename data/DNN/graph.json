@@ -2,8 +2,8 @@
     {
         "id": 1,
         "name": "aten::to",
-        "start_time": 1755619025620080412,
-        "end_time": 1755619025620152012,
+        "start_time": 1755698104783697700,
+        "end_time": 1755698104783824500,
         "in_edges": [],
         "out_edges": [
             {
@@ -13,7 +13,7 @@
                 "shape": "[10,1,28,28]",
                 "dtype": "torch.float32",
                 "size": 31744,
-                "start_time": 1755619025620091612,
+                "start_time": 1755698104783707500,
                 "end_time": -1,
                 "category": "input"
             }
@@ -22,8 +22,8 @@
     {
         "id": 3,
         "name": "aten::to",
-        "start_time": 1755619025620179412,
-        "end_time": 1755619025620230812,
+        "start_time": 1755698104783851100,
+        "end_time": 1755698104783897000,
         "in_edges": [],
         "out_edges": [
             {
@@ -33,7 +33,7 @@
                 "shape": "[10]",
                 "dtype": "torch.int64",
                 "size": 512,
-                "start_time": 1755619025620184312,
+                "start_time": 1755698104783856000,
                 "end_time": -1,
                 "category": "input"
             }
@@ -42,8 +42,8 @@
     {
         "id": 5,
         "name": "aten::view",
-        "start_time": 1755619025620259412,
-        "end_time": 1755619025620262512,
+        "start_time": 1755698104783917600,
+        "end_time": 1755698104783920300,
         "in_edges": [
             {
                 "id": 1,
@@ -52,7 +52,7 @@
                 "shape": "[10,1,28,28]",
                 "dtype": "torch.float32",
                 "size": 31744,
-                "start_time": 1755619025620091612,
+                "start_time": 1755698104783707500,
                 "end_time": -1,
                 "category": "input"
             }
@@ -62,8 +62,8 @@
     {
         "id": 7,
         "name": "aten::linear",
-        "start_time": 1755619025620458212,
-        "end_time": 1755619025620514912,
+        "start_time": 1755698104783937300,
+        "end_time": 1755698104783984800,
         "in_edges": [
             {
                 "id": 1,
@@ -72,7 +72,7 @@
                 "shape": "[10,1,28,28]",
                 "dtype": "torch.float32",
                 "size": 31744,
-                "start_time": 1755619025620091612,
+                "start_time": 1755698104783707500,
                 "end_time": -1,
                 "category": "input"
             },
@@ -107,8 +107,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025620484912,
-                "end_time": 1755619025620559912,
+                "start_time": 1755698104783960400,
+                "end_time": 1755698104784027000,
                 "category": "activation"
             }
         ]
@@ -116,8 +116,8 @@
     {
         "id": 9,
         "name": "aten::relu",
-        "start_time": 1755619025620541112,
-        "end_time": 1755619025620556812,
+        "start_time": 1755698104784009900,
+        "end_time": 1755698104784024300,
         "in_edges": [
             {
                 "id": 6,
@@ -126,8 +126,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025620484912,
-                "end_time": 1755619025620559912,
+                "start_time": 1755698104783960400,
+                "end_time": 1755698104784027000,
                 "category": "activation"
             }
         ],
@@ -139,8 +139,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025620547912,
-                "end_time": 1755619025628260512,
+                "start_time": 1755698104784016200,
+                "end_time": 1755698104791869500,
                 "category": "activation"
             }
         ]
@@ -148,8 +148,8 @@
     {
         "id": 11,
         "name": "aten::linear",
-        "start_time": 1755619025620570512,
-        "end_time": 1755619025620597812,
+        "start_time": 1755698104784034900,
+        "end_time": 1755698104784060300,
         "in_edges": [
             {
                 "id": 7,
@@ -158,8 +158,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025620547912,
-                "end_time": 1755619025628260512,
+                "start_time": 1755698104784016200,
+                "end_time": 1755698104791869500,
                 "category": "activation"
             },
             {
@@ -193,7 +193,7 @@
                 "shape": "[10,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620585712,
+                "start_time": 1755698104784048400,
                 "end_time": -1,
                 "category": "activation"
             }
@@ -202,8 +202,8 @@
     {
         "id": 13,
         "name": "aten::cross_entropy_loss",
-        "start_time": 1755619025620619612,
-        "end_time": 1755619025620671312,
+        "start_time": 1755698104784079100,
+        "end_time": 1755698104784144600,
         "in_edges": [
             {
                 "id": 3,
@@ -212,7 +212,7 @@
                 "shape": "[10]",
                 "dtype": "torch.int64",
                 "size": 512,
-                "start_time": 1755619025620184312,
+                "start_time": 1755698104783856000,
                 "end_time": -1,
                 "category": "input"
             },
@@ -223,7 +223,7 @@
                 "shape": "[10,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620585712,
+                "start_time": 1755698104784048400,
                 "end_time": -1,
                 "category": "activation"
             }
@@ -236,8 +236,8 @@
                 "shape": "[10,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620631812,
-                "end_time": 1755619025628055912,
+                "start_time": 1755698104784088500,
+                "end_time": 1755698104791671700,
                 "category": "activation"
             },
             {
@@ -247,7 +247,7 @@
                 "shape": "[]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620651312,
+                "start_time": 1755698104784131400,
                 "end_time": -1,
                 "category": "activation"
             },
@@ -258,8 +258,8 @@
                 "shape": "[]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620657912,
-                "end_time": 1755619025628022612,
+                "start_time": 1755698104784132200,
+                "end_time": 1755698104791643500,
                 "category": "activation"
             }
         ]
@@ -267,8 +267,8 @@
     {
         "id": 14,
         "name": "aten::ones_like",
-        "start_time": 1755619025620708312,
-        "end_time": 1755619025620723012,
+        "start_time": 1755698104784175700,
+        "end_time": 1755698104784189200,
         "in_edges": [
             {
                 "id": 12,
@@ -277,7 +277,7 @@
                 "shape": "[]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620651312,
+                "start_time": 1755698104784131400,
                 "end_time": -1,
                 "category": "activation"
             }
@@ -290,8 +290,8 @@
                 "shape": "[]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620714012,
-                "end_time": 1755619025628379812,
+                "start_time": 1755698104784180400,
+                "end_time": 1755698104791978900,
                 "category": "activation"
             }
         ]
@@ -299,8 +299,8 @@
     {
         "id": 15,
         "name": "NllLossBackward0",
-        "start_time": 1755619025627973212,
-        "end_time": 1755619025628019012,
+        "start_time": 1755698104791591800,
+        "end_time": 1755698104791640400,
         "in_edges": [
             {
                 "id": 3,
@@ -309,7 +309,7 @@
                 "shape": "[10]",
                 "dtype": "torch.int64",
                 "size": 512,
-                "start_time": 1755619025620184312,
+                "start_time": 1755698104783856000,
                 "end_time": -1,
                 "category": "input"
             },
@@ -320,8 +320,8 @@
                 "shape": "[10,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620631812,
-                "end_time": 1755619025628055912,
+                "start_time": 1755698104784088500,
+                "end_time": 1755698104791671700,
                 "category": "activation"
             },
             {
@@ -331,8 +331,8 @@
                 "shape": "[]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620657912,
-                "end_time": 1755619025628022612,
+                "start_time": 1755698104784132200,
+                "end_time": 1755698104791643500,
                 "category": "activation"
             },
             {
@@ -342,8 +342,8 @@
                 "shape": "[]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620714012,
-                "end_time": 1755619025628379812,
+                "start_time": 1755698104784180400,
+                "end_time": 1755698104791978900,
                 "category": "activation"
             }
         ],
@@ -355,8 +355,8 @@
                 "shape": "[10,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025627990912,
-                "end_time": 1755619025628055312,
+                "start_time": 1755698104791610200,
+                "end_time": 1755698104791671300,
                 "category": "autograd_detail"
             }
         ]
@@ -364,8 +364,8 @@
     {
         "id": 16,
         "name": "LogSoftmaxBackward0",
-        "start_time": 1755619025628040812,
-        "end_time": 1755619025628053612,
+        "start_time": 1755698104791657500,
+        "end_time": 1755698104791669500,
         "in_edges": [
             {
                 "id": 11,
@@ -374,8 +374,8 @@
                 "shape": "[10,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025620631812,
-                "end_time": 1755619025628055912,
+                "start_time": 1755698104784088500,
+                "end_time": 1755698104791671700,
                 "category": "activation"
             },
             {
@@ -385,8 +385,8 @@
                 "shape": "[10,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025627990912,
-                "end_time": 1755619025628055312,
+                "start_time": 1755698104791610200,
+                "end_time": 1755698104791671300,
                 "category": "autograd_detail"
             }
         ],
@@ -398,8 +398,8 @@
                 "shape": "[10,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628048112,
-                "end_time": 1755619025628172612,
+                "start_time": 1755698104791664300,
+                "end_time": 1755698104791781200,
                 "category": "autograd_detail"
             }
         ]
@@ -407,8 +407,8 @@
     {
         "id": 17,
         "name": "AddmmBackward0",
-        "start_time": 1755619025628063012,
-        "end_time": 1755619025628139312,
+        "start_time": 1755698104791678300,
+        "end_time": 1755698104791748100,
         "in_edges": [
             {
                 "id": 7,
@@ -417,8 +417,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025620547912,
-                "end_time": 1755619025628260512,
+                "start_time": 1755698104784016200,
+                "end_time": 1755698104791869500,
                 "category": "activation"
             },
             {
@@ -439,8 +439,8 @@
                 "shape": "[10,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628048112,
-                "end_time": 1755619025628172612,
+                "start_time": 1755698104791664300,
+                "end_time": 1755698104791781200,
                 "category": "autograd_detail"
             }
         ],
@@ -452,8 +452,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025628082312,
-                "end_time": 1755619025628259612,
+                "start_time": 1755698104791697200,
+                "end_time": 1755698104791868700,
                 "category": "autograd_detail"
             },
             {
@@ -463,8 +463,8 @@
                 "shape": "[128,10]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025628119312,
-                "end_time": 1755619025628640612,
+                "start_time": 1755698104791729800,
+                "end_time": 1755698104792215900,
                 "category": "gradient"
             }
         ]
@@ -472,8 +472,8 @@
     {
         "id": 18,
         "name": "aten::sum",
-        "start_time": 1755619025628145212,
-        "end_time": 1755619025628164212,
+        "start_time": 1755698104791752600,
+        "end_time": 1755698104791773600,
         "in_edges": [
             {
                 "id": 16,
@@ -482,8 +482,8 @@
                 "shape": "[10,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628048112,
-                "end_time": 1755619025628172612,
+                "start_time": 1755698104791664300,
+                "end_time": 1755698104791781200,
                 "category": "autograd_detail"
             }
         ],
@@ -495,8 +495,8 @@
                 "shape": "[1,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628147612,
-                "end_time": 1755619025628641212,
+                "start_time": 1755698104791756000,
+                "end_time": 1755698104792216500,
                 "category": "gradient"
             }
         ]
@@ -504,8 +504,8 @@
     {
         "id": 19,
         "name": "aten::view",
-        "start_time": 1755619025628168312,
-        "end_time": 1755619025628170712,
+        "start_time": 1755698104791777400,
+        "end_time": 1755698104791779300,
         "in_edges": [
             {
                 "id": 19,
@@ -514,8 +514,8 @@
                 "shape": "[1,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628147612,
-                "end_time": 1755619025628641212,
+                "start_time": 1755698104791756000,
+                "end_time": 1755698104792216500,
                 "category": "gradient"
             }
         ],
@@ -524,8 +524,8 @@
     {
         "id": 20,
         "name": "torch::autograd::AccumulateGrad",
-        "start_time": 1755619025628198012,
-        "end_time": 1755619025628206512,
+        "start_time": 1755698104791804300,
+        "end_time": 1755698104791816400,
         "in_edges": [
             {
                 "id": 19,
@@ -534,8 +534,8 @@
                 "shape": "[1,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628147612,
-                "end_time": 1755619025628641212,
+                "start_time": 1755698104791756000,
+                "end_time": 1755698104792216500,
                 "category": "gradient"
             }
         ],
@@ -544,8 +544,8 @@
     {
         "id": 21,
         "name": "TBackward0",
-        "start_time": 1755619025628214612,
-        "end_time": 1755619025628222812,
+        "start_time": 1755698104791825300,
+        "end_time": 1755698104791833900,
         "in_edges": [
             {
                 "id": 18,
@@ -554,8 +554,8 @@
                 "shape": "[128,10]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025628119312,
-                "end_time": 1755619025628640612,
+                "start_time": 1755698104791729800,
+                "end_time": 1755698104792215900,
                 "category": "gradient"
             }
         ],
@@ -564,8 +564,8 @@
     {
         "id": 22,
         "name": "torch::autograd::AccumulateGrad",
-        "start_time": 1755619025628229712,
-        "end_time": 1755619025628236312,
+        "start_time": 1755698104791840700,
+        "end_time": 1755698104791846000,
         "in_edges": [
             {
                 "id": 18,
@@ -574,8 +574,8 @@
                 "shape": "[128,10]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025628119312,
-                "end_time": 1755619025628640612,
+                "start_time": 1755698104791729800,
+                "end_time": 1755698104792215900,
                 "category": "gradient"
             }
         ],
@@ -584,8 +584,8 @@
     {
         "id": 23,
         "name": "ReluBackward0",
-        "start_time": 1755619025628243512,
-        "end_time": 1755619025628258112,
+        "start_time": 1755698104791852900,
+        "end_time": 1755698104791867400,
         "in_edges": [
             {
                 "id": 7,
@@ -594,8 +594,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025620547912,
-                "end_time": 1755619025628260512,
+                "start_time": 1755698104784016200,
+                "end_time": 1755698104791869500,
                 "category": "activation"
             },
             {
@@ -605,8 +605,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025628082312,
-                "end_time": 1755619025628259612,
+                "start_time": 1755698104791697200,
+                "end_time": 1755698104791868700,
                 "category": "autograd_detail"
             }
         ],
@@ -618,8 +618,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025628250812,
-                "end_time": 1755619025628310712,
+                "start_time": 1755698104791860800,
+                "end_time": 1755698104791918900,
                 "category": "autograd_detail"
             }
         ]
@@ -627,8 +627,8 @@
     {
         "id": 24,
         "name": "AddmmBackward0",
-        "start_time": 1755619025628266412,
-        "end_time": 1755619025628296712,
+        "start_time": 1755698104791876600,
+        "end_time": 1755698104791904700,
         "in_edges": [
             {
                 "id": 1,
@@ -637,7 +637,7 @@
                 "shape": "[10,1,28,28]",
                 "dtype": "torch.float32",
                 "size": 31744,
-                "start_time": 1755619025620091612,
+                "start_time": 1755698104783707500,
                 "end_time": -1,
                 "category": "input"
             },
@@ -648,8 +648,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025628250812,
-                "end_time": 1755619025628310712,
+                "start_time": 1755698104791860800,
+                "end_time": 1755698104791918900,
                 "category": "autograd_detail"
             }
         ],
@@ -661,8 +661,8 @@
                 "shape": "[784,128]",
                 "dtype": "torch.float32",
                 "size": 401408,
-                "start_time": 1755619025628277412,
-                "end_time": 1755619025628637812,
+                "start_time": 1755698104791887300,
+                "end_time": 1755698104792213100,
                 "category": "gradient"
             }
         ]
@@ -670,8 +670,8 @@
     {
         "id": 25,
         "name": "aten::sum",
-        "start_time": 1755619025628299512,
-        "end_time": 1755619025628304912,
+        "start_time": 1755698104791907400,
+        "end_time": 1755698104791913600,
         "in_edges": [
             {
                 "id": 20,
@@ -680,8 +680,8 @@
                 "shape": "[10,128]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025628250812,
-                "end_time": 1755619025628310712,
+                "start_time": 1755698104791860800,
+                "end_time": 1755698104791918900,
                 "category": "autograd_detail"
             }
         ],
@@ -693,8 +693,8 @@
                 "shape": "[1,128]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628300712,
-                "end_time": 1755619025628639612,
+                "start_time": 1755698104791908800,
+                "end_time": 1755698104792214900,
                 "category": "gradient"
             }
         ]
@@ -702,8 +702,8 @@
     {
         "id": 26,
         "name": "aten::view",
-        "start_time": 1755619025628308012,
-        "end_time": 1755619025628309012,
+        "start_time": 1755698104791916200,
+        "end_time": 1755698104791917300,
         "in_edges": [
             {
                 "id": 22,
@@ -712,8 +712,8 @@
                 "shape": "[1,128]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628300712,
-                "end_time": 1755619025628639612,
+                "start_time": 1755698104791908800,
+                "end_time": 1755698104792214900,
                 "category": "gradient"
             }
         ],
@@ -722,8 +722,8 @@
     {
         "id": 27,
         "name": "torch::autograd::AccumulateGrad",
-        "start_time": 1755619025628318412,
-        "end_time": 1755619025628323812,
+        "start_time": 1755698104791926700,
+        "end_time": 1755698104791933700,
         "in_edges": [
             {
                 "id": 22,
@@ -732,8 +732,8 @@
                 "shape": "[1,128]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628300712,
-                "end_time": 1755619025628639612,
+                "start_time": 1755698104791908800,
+                "end_time": 1755698104792214900,
                 "category": "gradient"
             }
         ],
@@ -742,8 +742,8 @@
     {
         "id": 28,
         "name": "TBackward0",
-        "start_time": 1755619025628330212,
-        "end_time": 1755619025628342412,
+        "start_time": 1755698104791939800,
+        "end_time": 1755698104791947700,
         "in_edges": [
             {
                 "id": 21,
@@ -752,8 +752,8 @@
                 "shape": "[784,128]",
                 "dtype": "torch.float32",
                 "size": 401408,
-                "start_time": 1755619025628277412,
-                "end_time": 1755619025628637812,
+                "start_time": 1755698104791887300,
+                "end_time": 1755698104792213100,
                 "category": "gradient"
             }
         ],
@@ -762,8 +762,8 @@
     {
         "id": 29,
         "name": "torch::autograd::AccumulateGrad",
-        "start_time": 1755619025628349612,
-        "end_time": 1755619025628356512,
+        "start_time": 1755698104791954500,
+        "end_time": 1755698104791959700,
         "in_edges": [
             {
                 "id": 21,
@@ -772,8 +772,8 @@
                 "shape": "[784,128]",
                 "dtype": "torch.float32",
                 "size": 401408,
-                "start_time": 1755619025628277412,
-                "end_time": 1755619025628637812,
+                "start_time": 1755698104791887300,
+                "end_time": 1755698104792213100,
                 "category": "gradient"
             }
         ],
@@ -782,8 +782,8 @@
     {
         "id": 30,
         "name": "aten::_foreach_add_",
-        "start_time": 1755619025628530712,
-        "end_time": 1755619025628555212,
+        "start_time": 1755698104792113600,
+        "end_time": 1755698104792136100,
         "in_edges": [
             {
                 "id": 4,
@@ -836,8 +836,8 @@
                 "shape": "[128,10]",
                 "dtype": "torch.float32",
                 "size": 5120,
-                "start_time": 1755619025628119312,
-                "end_time": 1755619025628640612,
+                "start_time": 1755698104791729800,
+                "end_time": 1755698104792215900,
                 "category": "gradient"
             },
             {
@@ -847,8 +847,8 @@
                 "shape": "[1,10]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628147612,
-                "end_time": 1755619025628641212,
+                "start_time": 1755698104791756000,
+                "end_time": 1755698104792216500,
                 "category": "gradient"
             },
             {
@@ -858,8 +858,8 @@
                 "shape": "[784,128]",
                 "dtype": "torch.float32",
                 "size": 401408,
-                "start_time": 1755619025628277412,
-                "end_time": 1755619025628637812,
+                "start_time": 1755698104791887300,
+                "end_time": 1755698104792213100,
                 "category": "gradient"
             },
             {
@@ -869,8 +869,8 @@
                 "shape": "[1,128]",
                 "dtype": "torch.float32",
                 "size": 512,
-                "start_time": 1755619025628300712,
-                "end_time": 1755619025628639612,
+                "start_time": 1755698104791908800,
+                "end_time": 1755698104792214900,
                 "category": "gradient"
             }
         ],

@@ -2,12 +2,8 @@
     {
         "id": 1,
         "name": "aten::to",
-        "start_time": [
-            1755619025620080412
-        ],
-        "end_time": [
-            1755619025620152012
-        ],
+        "start_time": 1755698104783697700,
+        "end_time": 1755698104783824500,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -15,12 +11,8 @@
     {
         "id": 3,
         "name": "aten::to",
-        "start_time": [
-            1755619025620179412
-        ],
-        "end_time": [
-            1755619025620230812
-        ],
+        "start_time": 1755698104783851100,
+        "end_time": 1755698104783897000,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -28,12 +20,8 @@
     {
         "id": 4,
         "name": "nn.Module: TwoLayerNet_0",
-        "start_time": [
-            1755619025620242312
-        ],
-        "end_time": [
-            1755619025620599912
-        ],
+        "start_time": 1755698104783905100,
+        "end_time": 1755698104784062200,
         "is_leaf": false,
         "parent": null,
         "children": [
@@ -46,12 +34,8 @@
     {
         "id": 5,
         "name": "aten::view",
-        "start_time": [
-            1755619025620259412
-        ],
-        "end_time": [
-            1755619025620262512
-        ],
+        "start_time": 1755698104783917600,
+        "end_time": 1755698104783920300,
         "is_leaf": true,
         "parent": 4,
         "children": []
@@ -59,12 +43,8 @@
     {
         "id": 6,
         "name": "nn.Module: Linear_0",
-        "start_time": [
-            1755619025620274112
-        ],
-        "end_time": [
-            1755619025620517512
-        ],
+        "start_time": 1755698104783929600,
+        "end_time": 1755698104783986800,
         "is_leaf": false,
         "parent": 4,
         "children": [
@@ -74,12 +54,8 @@
     {
         "id": 7,
         "name": "aten::linear",
-        "start_time": [
-            1755619025620458212
-        ],
-        "end_time": [
-            1755619025620514912
-        ],
+        "start_time": 1755698104783937300,
+        "end_time": 1755698104783984800,
         "is_leaf": true,
         "parent": 6,
         "children": []
@@ -87,12 +63,8 @@
     {
         "id": 8,
         "name": "nn.Module: ReLU_0",
-        "start_time": [
-            1755619025620523912
-        ],
-        "end_time": [
-            1755619025620558912
-        ],
+        "start_time": 1755698104783990700,
+        "end_time": 1755698104784026000,
         "is_leaf": false,
         "parent": 4,
         "children": [
@@ -102,12 +74,8 @@
     {
         "id": 9,
         "name": "aten::relu",
-        "start_time": [
-            1755619025620541112
-        ],
-        "end_time": [
-            1755619025620556812
-        ],
+        "start_time": 1755698104784009900,
+        "end_time": 1755698104784024300,
         "is_leaf": true,
         "parent": 8,
         "children": []
@@ -115,12 +83,8 @@
     {
         "id": 10,
         "name": "nn.Module: Linear_1",
-        "start_time": [
-            1755619025620564612
-        ],
-        "end_time": [
-            1755619025620599212
-        ],
+        "start_time": 1755698104784030400,
+        "end_time": 1755698104784061600,
         "is_leaf": false,
         "parent": 4,
         "children": [
@@ -130,12 +94,8 @@
     {
         "id": 11,
         "name": "aten::linear",
-        "start_time": [
-            1755619025620570512
-        ],
-        "end_time": [
-            1755619025620597812
-        ],
+        "start_time": 1755698104784034900,
+        "end_time": 1755698104784060300,
         "is_leaf": true,
         "parent": 10,
         "children": []
@@ -143,12 +103,8 @@
     {
         "id": 12,
         "name": "nn.Module: CrossEntropyLoss_0",
-        "start_time": [
-            1755619025620604412
-        ],
-        "end_time": [
-            1755619025620673112
-        ],
+        "start_time": 1755698104784066100,
+        "end_time": 1755698104784146400,
         "is_leaf": false,
         "parent": null,
         "children": [
@@ -158,12 +114,8 @@
     {
         "id": 13,
         "name": "aten::cross_entropy_loss",
-        "start_time": [
-            1755619025620619612
-        ],
-        "end_time": [
-            1755619025620671312
-        ],
+        "start_time": 1755698104784079100,
+        "end_time": 1755698104784144600,
         "is_leaf": true,
         "parent": 12,
         "children": []
@@ -171,12 +123,8 @@
     {
         "id": 14,
         "name": "aten::ones_like",
-        "start_time": [
-            1755619025620708312
-        ],
-        "end_time": [
-            1755619025620723012
-        ],
+        "start_time": 1755698104784175700,
+        "end_time": 1755698104784189200,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -184,12 +132,8 @@
     {
         "id": 15,
         "name": "NllLossBackward0",
-        "start_time": [
-            1755619025627973212
-        ],
-        "end_time": [
-            1755619025628019012
-        ],
+        "start_time": 1755698104791591800,
+        "end_time": 1755698104791640400,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -197,12 +141,8 @@
     {
         "id": 16,
         "name": "LogSoftmaxBackward0",
-        "start_time": [
-            1755619025628040812
-        ],
-        "end_time": [
-            1755619025628053612
-        ],
+        "start_time": 1755698104791657500,
+        "end_time": 1755698104791669500,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -210,12 +150,8 @@
     {
         "id": 17,
         "name": "AddmmBackward0",
-        "start_time": [
-            1755619025628063012
-        ],
-        "end_time": [
-            1755619025628139312
-        ],
+        "start_time": 1755698104791678300,
+        "end_time": 1755698104791748100,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -223,12 +159,8 @@
     {
         "id": 18,
         "name": "aten::sum",
-        "start_time": [
-            1755619025628145212
-        ],
-        "end_time": [
-            1755619025628164212
-        ],
+        "start_time": 1755698104791752600,
+        "end_time": 1755698104791773600,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -236,12 +168,8 @@
     {
         "id": 19,
         "name": "aten::view",
-        "start_time": [
-            1755619025628168312
-        ],
-        "end_time": [
-            1755619025628170712
-        ],
+        "start_time": 1755698104791777400,
+        "end_time": 1755698104791779300,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -249,12 +177,8 @@
     {
         "id": 20,
         "name": "torch::autograd::AccumulateGrad",
-        "start_time": [
-            1755619025628198012
-        ],
-        "end_time": [
-            1755619025628206512
-        ],
+        "start_time": 1755698104791804300,
+        "end_time": 1755698104791816400,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -262,12 +186,8 @@
     {
         "id": 21,
         "name": "TBackward0",
-        "start_time": [
-            1755619025628214612
-        ],
-        "end_time": [
-            1755619025628222812
-        ],
+        "start_time": 1755698104791825300,
+        "end_time": 1755698104791833900,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -275,12 +195,8 @@
     {
         "id": 22,
         "name": "torch::autograd::AccumulateGrad",
-        "start_time": [
-            1755619025628229712
-        ],
-        "end_time": [
-            1755619025628236312
-        ],
+        "start_time": 1755698104791840700,
+        "end_time": 1755698104791846000,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -288,12 +204,8 @@
     {
         "id": 23,
         "name": "ReluBackward0",
-        "start_time": [
-            1755619025628243512
-        ],
-        "end_time": [
-            1755619025628258112
-        ],
+        "start_time": 1755698104791852900,
+        "end_time": 1755698104791867400,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -301,12 +213,8 @@
     {
         "id": 24,
         "name": "AddmmBackward0",
-        "start_time": [
-            1755619025628266412
-        ],
-        "end_time": [
-            1755619025628296712
-        ],
+        "start_time": 1755698104791876600,
+        "end_time": 1755698104791904700,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -314,12 +222,8 @@
     {
         "id": 25,
         "name": "aten::sum",
-        "start_time": [
-            1755619025628299512
-        ],
-        "end_time": [
-            1755619025628304912
-        ],
+        "start_time": 1755698104791907400,
+        "end_time": 1755698104791913600,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -327,12 +231,8 @@
     {
         "id": 26,
         "name": "aten::view",
-        "start_time": [
-            1755619025628308012
-        ],
-        "end_time": [
-            1755619025628309012
-        ],
+        "start_time": 1755698104791916200,
+        "end_time": 1755698104791917300,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -340,12 +240,8 @@
     {
         "id": 27,
         "name": "torch::autograd::AccumulateGrad",
-        "start_time": [
-            1755619025628318412
-        ],
-        "end_time": [
-            1755619025628323812
-        ],
+        "start_time": 1755698104791926700,
+        "end_time": 1755698104791933700,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -353,12 +249,8 @@
     {
         "id": 28,
         "name": "TBackward0",
-        "start_time": [
-            1755619025628330212
-        ],
-        "end_time": [
-            1755619025628342412
-        ],
+        "start_time": 1755698104791939800,
+        "end_time": 1755698104791947700,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -366,12 +258,8 @@
     {
         "id": 29,
         "name": "torch::autograd::AccumulateGrad",
-        "start_time": [
-            1755619025628349612
-        ],
-        "end_time": [
-            1755619025628356512
-        ],
+        "start_time": 1755698104791954500,
+        "end_time": 1755698104791959700,
         "is_leaf": true,
         "parent": null,
         "children": []
@@ -379,12 +267,8 @@
     {
         "id": 30,
         "name": "aten::_foreach_add_",
-        "start_time": [
-            1755619025628530712
-        ],
-        "end_time": [
-            1755619025628555212
-        ],
+        "start_time": 1755698104792113600,
+        "end_time": 1755698104792136100,
         "is_leaf": true,
         "parent": null,
         "children": []

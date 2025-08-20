@@ -224,8 +224,8 @@ class Node:
     def __init__(self, id: int, name: str, start_time: int, end_time: int, is_leaf: bool, parent: Optional[int] = None):
         self.id = id
         self.name = name
-        self.start_time = start_time,
-        self.end_time = end_time,
+        self.start_time = start_time
+        self.end_time = end_time
         self.is_leaf = is_leaf
         self.parent = parent
         self.children = []
