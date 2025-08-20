@@ -3,15 +3,19 @@ from torch.profiler._memory_profiler import (
     DataFlowGraph,
     CategoryDict,
     SizeMap,
-    _EventType,
     TensorKey,
     Category,
     OpTree,
-    _TensorMetadata,
-    _ProfilerEvent,
     TensorAndID,
-    RecordScope,
     SchemaMatcher,
+)
+from torch._C._profiler import (
+    _EventType,
+    _ExtraFields_Allocation,
+    _ExtraFields_TorchOp,
+    _ProfilerEvent,
+    _TensorMetadata,
+    RecordScope,
 )
 from typing import (
     Any,

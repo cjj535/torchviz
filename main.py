@@ -4,7 +4,7 @@ from core.json2dot import graph_json_to_dot, tree_json_to_dot
 from core.dot2png import dot_to_png
 import argparse
 
-def main(model = 'DNN', is_train = 1, is_generate_tree = 1):
+def main(model = 'DNN', is_train = 1, is_generate_tree = 1, is_graph = 1):
     if is_train:
         # 劫持profiler函数
         from hijack_function.hijack_profiler import hijack_profiler
@@ -37,7 +37,8 @@ def main(model = 'DNN', is_train = 1, is_generate_tree = 1):
                 print(f"Transfered ./data/{model}/tree.json to ./data/{model}/tree.dot")
     
     # 将dot文件可视化
-    dot_to_png(f'./data/{model}', is_generate_tree)
+    if is_graph:
+        dot_to_png(f'./data/{model}', is_generate_tree)
 
 
 if __name__ == '__main__':
@@ -46,7 +47,8 @@ if __name__ == '__main__':
     parser.add_argument("--model", type=str, help="model name", required=True)
     parser.add_argument("--train", type=int, help="1 train, 0 not train")
     parser.add_argument("--tree", type=int, help="1 generate tree, 0 not")
+    parser.add_argument("--graph", type=int, help="1 generate png, 0 not")
 
     args = parser.parse_args()
 
-    main(args.model, args.train, args.tree)
+    main(args.model, args.train, args.tree, args.graph)

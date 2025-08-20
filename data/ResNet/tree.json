@@ -3,10 +3,10 @@
         "id": 1,
         "name": "aten::to",
         "start_time": [
-            1755618864137121942
+            1755695599426485596
         ],
         "end_time": [
-            1755618864137371842
+            1755695599426656496
         ],
         "is_leaf": true,
         "parent": null,
@@ -16,10 +16,10 @@
         "id": 3,
         "name": "aten::to",
         "start_time": [
-            1755618864137406942
+            1755695599426688496
         ],
         "end_time": [
-            1755618864137488042
+            1755695599426765096
         ],
         "is_leaf": true,
         "parent": null,
@@ -29,10 +29,10 @@
         "id": 4,
         "name": "nn.Module: ResNet_0",
         "start_time": [
-            1755618864137497942
+            1755695599426775796
         ],
         "end_time": [
-            1755618864139329142
+            1755695599429728896
         ],
         "is_leaf": false,
         "parent": null,
@@ -42,22 +42,22 @@
             10,
             12,
             14,
-            31,
-            54,
-            77,
-            100,
-            102,
-            103
+            47,
+            86,
+            125,
+            164,
+            166,
+            167
         ]
     },
     {
         "id": 5,
         "name": "nn.Module: Conv2d_0",
         "start_time": [
-            1755618864137512642
+            1755695599426794596
         ],
         "end_time": [
-            1755618864137587242
+            1755695599426867796
         ],
         "is_leaf": false,
         "parent": 4,
@@ -69,10 +69,10 @@
         "id": 6,
         "name": "aten::conv2d",
         "start_time": [
-            1755618864137526342
+            1755695599426808096
         ],
         "end_time": [
-            1755618864137584642
+            1755695599426865496
         ],
         "is_leaf": true,
         "parent": 5,
@@ -82,10 +82,10 @@
         "id": 7,
         "name": "nn.Module: BatchNorm2d_0",
         "start_time": [
-            1755618864137593542
+            1755695599426873696
         ],
         "end_time": [
-            1755618864137707742
+            1755695599427032696
         ],
         "is_leaf": false,
         "parent": 4,
@@ -98,10 +98,10 @@
         "id": 8,
         "name": "aten::add_",
         "start_time": [
-            1755618864137621142
+            1755695599426897296
         ],
         "end_time": [
-            1755618864137628542
+            1755695599426906596
         ],
         "is_leaf": true,
         "parent": 7,
@@ -111,10 +111,10 @@
         "id": 9,
         "name": "aten::batch_norm",
         "start_time": [
-            1755618864137649742
+            1755695599426929896
         ],
         "end_time": [
-            1755618864137705942
+            1755695599427030896
         ],
         "is_leaf": true,
         "parent": 7,
@@ -124,10 +124,10 @@
         "id": 10,
         "name": "nn.Module: ReLU_0",
         "start_time": [
-            1755618864137711442
+            1755695599427036496
         ],
         "end_time": [
-            1755618864137736442
+            1755695599427065396
         ],
         "is_leaf": false,
         "parent": 4,
@@ -139,10 +139,10 @@
         "id": 11,
         "name": "aten::relu_",
         "start_time": [
-            1755618864137721742
+            1755695599427047096
         ],
         "end_time": [
-            1755618864137734842
+            1755695599427063696
         ],
         "is_leaf": true,
         "parent": 10,
@@ -152,10 +152,10 @@
         "id": 12,
         "name": "nn.Module: MaxPool2d_0",
         "start_time": [
-            1755618864137740242
+            1755695599427069396
         ],
         "end_time": [
-            1755618864137771442
+            1755695599427096996
         ],
         "is_leaf": false,
         "parent": 4,
@@ -167,10 +167,10 @@
         "id": 13,
         "name": "aten::max_pool2d",
         "start_time": [
-            1755618864137752842
+            1755695599427080896
         ],
         "end_time": [
-            1755618864137767242
+            1755695599427094996
         ],
         "is_leaf": true,
         "parent": 12,
@@ -180,25 +180,26 @@
         "id": 14,
         "name": "nn.Module: Sequential_0",
         "start_time": [
-            1755618864137773842
+            1755695599427099696
         ],
         "end_time": [
-            1755618864138053842
+            1755695599427596796
         ],
         "is_leaf": false,
         "parent": 4,
         "children": [
-            15
+            15,
+            31
         ]
     },
     {
         "id": 15,
         "name": "nn.Module: BasicBlock_0",
         "start_time": [
-            1755618864137779642
+            1755695599427105196
         ],
         "end_time": [
-            1755618864138053342
+            1755695599427368696
         ],
         "is_leaf": false,
         "parent": 14,
@@ -216,10 +217,10 @@
         "id": 16,
         "name": "nn.Module: Conv2d_1",
         "start_time": [
-            1755618864137784242
+            1755695599427109896
         ],
         "end_time": [
-            1755618864137826342
+            1755695599427149496
         ],
         "is_leaf": false,
         "parent": 15,
@@ -231,10 +232,10 @@
         "id": 17,
         "name": "aten::conv2d",
         "start_time": [
-            1755618864137791642
+            1755695599427117196
         ],
         "end_time": [
-            1755618864137824542
+            1755695599427147796
         ],
         "is_leaf": true,
         "parent": 16,
@@ -244,10 +245,10 @@
         "id": 18,
         "name": "nn.Module: BatchNorm2d_1",
         "start_time": [
-            1755618864137831042
+            1755695599427154096
         ],
         "end_time": [
-            1755618864137898242
+            1755695599427219596
         ],
         "is_leaf": false,
         "parent": 15,
@@ -260,10 +261,10 @@
         "id": 19,
         "name": "aten::add_",
         "start_time": [
-            1755618864137839142
+            1755695599427161696
         ],
         "end_time": [
-            1755618864137843742
+            1755695599427166396
         ],
         "is_leaf": true,
         "parent": 18,
@@ -273,10 +274,10 @@
         "id": 20,
         "name": "aten::batch_norm",
         "start_time": [
-            1755618864137855642
+            1755695599427178196
         ],
         "end_time": [
-            1755618864137896542
+            1755695599427218096
         ],
         "is_leaf": true,
         "parent": 18,
@@ -286,10 +287,10 @@
         "id": 21,
         "name": "nn.Module: ReLU_1",
         "start_time": [
-            1755618864137900642
+            1755695599427221996
         ],
         "end_time": [
-            1755618864137916642
+            1755695599427236396
         ],
         "is_leaf": false,
         "parent": 15,
@@ -301,10 +302,10 @@
         "id": 22,
         "name": "aten::relu_",
         "start_time": [
-            1755618864137905842
+            1755695599427225696
         ],
         "end_time": [
-            1755618864137915242
+            1755695599427234896
         ],
         "is_leaf": true,
         "parent": 21,
@@ -314,10 +315,10 @@
         "id": 23,
         "name": "nn.Module: Conv2d_2",
         "start_time": [
-            1755618864137919142
+            1755695599427238896
         ],
         "end_time": [
-            1755618864137959442
+            1755695599427280796
         ],
         "is_leaf": false,
         "parent": 15,
@@ -329,10 +330,10 @@
         "id": 24,
         "name": "aten::conv2d",
         "start_time": [
-            1755618864137925442
+            1755695599427244896
         ],
         "end_time": [
-            1755618864137957742
+            1755695599427278896
         ],
         "is_leaf": true,
         "parent": 23,
@@ -342,10 +343,10 @@
         "id": 25,
         "name": "nn.Module: BatchNorm2d_2",
         "start_time": [
-            1755618864137962542
+            1755695599427284196
         ],
         "end_time": [
-            1755618864138028942
+            1755695599427344696
         ],
         "is_leaf": false,
         "parent": 15,
@@ -358,10 +359,10 @@
         "id": 26,
         "name": "aten::add_",
         "start_time": [
-            1755618864137973542
+            1755695599427290696
         ],
         "end_time": [
-            1755618864137977242
+            1755695599427295496
         ],
         "is_leaf": true,
         "parent": 25,
@@ -371,10 +372,10 @@
         "id": 27,
         "name": "aten::batch_norm",
         "start_time": [
-            1755618864137986742
+            1755695599427305196
         ],
         "end_time": [
-            1755618864138027442
+            1755695599427343096
         ],
         "is_leaf": true,
         "parent": 25,
@@ -384,10 +385,10 @@
         "id": 28,
         "name": "aten::add_",
         "start_time": [
-            1755618864138031642
+            1755695599427347796
         ],
         "end_time": [
-            1755618864138037742
+            1755695599427353396
         ],
         "is_leaf": true,
         "parent": 15,
@@ -397,10 +398,10 @@
         "id": 29,
         "name": "nn.Module: ReLU_1",
         "start_time": [
-            1755618864138040442
+            1755695599427355896
         ],
         "end_time": [
-            1755618864138053042
+            1755695599427368396
         ],
         "is_leaf": false,
         "parent": 15,
@@ -412,10 +413,10 @@
         "id": 30,
         "name": "aten::relu_",
         "start_time": [
-            1755618864138044442
+            1755695599427359696
         ],
         "end_time": [
-            1755618864138051742
+            1755695599427366896
         ],
         "is_leaf": true,
         "parent": 29,
@@ -423,384 +424,381 @@
     },
     {
         "id": 31,
-        "name": "nn.Module: Sequential_1",
+        "name": "nn.Module: BasicBlock_1",
         "start_time": [
-            1755618864138056242
+            1755695599427369596
         ],
         "end_time": [
-            1755618864138446442
+            1755695599427596196
         ],
         "is_leaf": false,
-        "parent": 4,
+        "parent": 14,
         "children": [
-            32
+            32,
+            34,
+            37,
+            39,
+            41,
+            44,
+            45
         ]
     },
     {
         "id": 32,
-        "name": "nn.Module: BasicBlock_1",
+        "name": "nn.Module: Conv2d_3",
         "start_time": [
-            1755618864138061042
+            1755695599427373096
         ],
         "end_time": [
-            1755618864138446042
+            1755695599427403996
         ],
         "is_leaf": false,
         "parent": 31,
         "children": [
-            33,
-            35,
-            38,
-            40,
-            42,
-            45,
-            51,
-            52
+            33
         ]
     },
     {
         "id": 33,
-        "name": "nn.Module: Conv2d_3",
-        "start_time": [
-            1755618864138082342
-        ],
-        "end_time": [
-            1755618864138129642
-        ],
-        "is_leaf": false,
-        "parent": 32,
-        "children": [
-            34
-        ]
-    },
-    {
-        "id": 34,
         "name": "aten::conv2d",
         "start_time": [
-            1755618864138089142
+            1755695599427379196
         ],
         "end_time": [
-            1755618864138127842
+            1755695599427402396
         ],
         "is_leaf": true,
-        "parent": 33,
+        "parent": 32,
         "children": []
     },
     {
-        "id": 35,
+        "id": 34,
         "name": "nn.Module: BatchNorm2d_3",
         "start_time": [
-            1755618864138132942
+            1755695599427406396
         ],
         "end_time": [
-            1755618864138196842
+            1755695599427461396
         ],
         "is_leaf": false,
-        "parent": 32,
+        "parent": 31,
         "children": [
-            36,
-            37
+            35,
+            36
         ]
     },
     {
-        "id": 36,
+        "id": 35,
         "name": "aten::add_",
         "start_time": [
-            1755618864138140242
+            1755695599427412296
         ],
         "end_time": [
-            1755618864138143942
+            1755695599427415196
         ],
         "is_leaf": true,
-        "parent": 35,
+        "parent": 34,
+        "children": []
+    },
+    {
+        "id": 36,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755695599427423996
+        ],
+        "end_time": [
+            1755695599427459796
+        ],
+        "is_leaf": true,
+        "parent": 34,
         "children": []
     },
     {
         "id": 37,
-        "name": "aten::batch_norm",
+        "name": "nn.Module: ReLU_2",
         "start_time": [
-            1755618864138153942
+            1755695599427464596
         ],
         "end_time": [
-            1755618864138195342
+            1755695599427477096
         ],
-        "is_leaf": true,
-        "parent": 35,
-        "children": []
+        "is_leaf": false,
+        "parent": 31,
+        "children": [
+            38
+        ]
     },
     {
         "id": 38,
-        "name": "nn.Module: ReLU_2",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864138200542
+            1755695599427468296
         ],
         "end_time": [
-            1755618864138214742
+            1755695599427475796
         ],
-        "is_leaf": false,
-        "parent": 32,
-        "children": [
-            39
-        ]
+        "is_leaf": true,
+        "parent": 37,
+        "children": []
     },
     {
         "id": 39,
-        "name": "aten::relu_",
+        "name": "nn.Module: Conv2d_4",
         "start_time": [
-            1755618864138204642
+            1755695599427480996
         ],
         "end_time": [
-            1755618864138213242
+            1755695599427509496
         ],
-        "is_leaf": true,
-        "parent": 38,
-        "children": []
+        "is_leaf": false,
+        "parent": 31,
+        "children": [
+            40
+        ]
     },
     {
         "id": 40,
-        "name": "nn.Module: Conv2d_4",
-        "start_time": [
-            1755618864138217042
-        ],
-        "end_time": [
-            1755618864138261042
-        ],
-        "is_leaf": false,
-        "parent": 32,
-        "children": [
-            41
-        ]
-    },
-    {
-        "id": 41,
         "name": "aten::conv2d",
         "start_time": [
-            1755618864138223242
+            1755695599427486896
         ],
         "end_time": [
-            1755618864138259342
+            1755695599427507996
         ],
         "is_leaf": true,
-        "parent": 40,
+        "parent": 39,
         "children": []
     },
     {
-        "id": 42,
+        "id": 41,
         "name": "nn.Module: BatchNorm2d_4",
         "start_time": [
-            1755618864138264042
+            1755695599427512096
         ],
         "end_time": [
-            1755618864138323842
+            1755695599427574696
         ],
         "is_leaf": false,
-        "parent": 32,
+        "parent": 31,
         "children": [
-            43,
-            44
+            42,
+            43
         ]
     },
     {
-        "id": 43,
+        "id": 42,
         "name": "aten::add_",
         "start_time": [
-            1755618864138270842
+            1755695599427517696
         ],
         "end_time": [
-            1755618864138274242
+            1755695599427525796
         ],
         "is_leaf": true,
-        "parent": 42,
+        "parent": 41,
+        "children": []
+    },
+    {
+        "id": 43,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755695599427535496
+        ],
+        "end_time": [
+            1755695599427573196
+        ],
+        "is_leaf": true,
+        "parent": 41,
         "children": []
     },
     {
         "id": 44,
-        "name": "aten::batch_norm",
+        "name": "aten::add_",
         "start_time": [
-            1755618864138283142
+            1755695599427576896
         ],
         "end_time": [
-            1755618864138322242
+            1755695599427581596
         ],
         "is_leaf": true,
-        "parent": 42,
+        "parent": 31,
         "children": []
     },
     {
         "id": 45,
-        "name": "nn.Module: Sequential_2",
+        "name": "nn.Module: ReLU_2",
         "start_time": [
-            1755618864138326542
+            1755695599427584396
         ],
         "end_time": [
-            1755618864138422242
+            1755695599427595996
         ],
         "is_leaf": false,
-        "parent": 32,
+        "parent": 31,
         "children": [
-            46,
-            48
+            46
         ]
     },
     {
         "id": 46,
-        "name": "nn.Module: Conv2d_5",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864138330742
+            1755695599427588096
         ],
         "end_time": [
-            1755618864138360942
-        ],
-        "is_leaf": false,
-        "parent": 45,
-        "children": [
-            47
-        ]
-    },
-    {
-        "id": 47,
-        "name": "aten::conv2d",
-        "start_time": [
-            1755618864138336742
-        ],
-        "end_time": [
-            1755618864138359442
+            1755695599427594596
         ],
         "is_leaf": true,
-        "parent": 46,
+        "parent": 45,
         "children": []
     },
     {
-        "id": 48,
-        "name": "nn.Module: BatchNorm2d_5",
+        "id": 47,
+        "name": "nn.Module: Sequential_1",
         "start_time": [
-            1755618864138362842
+            1755695599427599196
         ],
         "end_time": [
-            1755618864138421742
+            1755695599428248096
         ],
         "is_leaf": false,
-        "parent": 45,
+        "parent": 4,
+        "children": [
+            48,
+            70
+        ]
+    },
+    {
+        "id": 48,
+        "name": "nn.Module: BasicBlock_2",
+        "start_time": [
+            1755695599427602096
+        ],
+        "end_time": [
+            1755695599427965096
+        ],
+        "is_leaf": false,
+        "parent": 47,
         "children": [
             49,
-            50
+            51,
+            54,
+            56,
+            58,
+            61,
+            67,
+            68
         ]
     },
     {
         "id": 49,
-        "name": "aten::add_",
+        "name": "nn.Module: Conv2d_5",
         "start_time": [
-            1755618864138368842
+            1755695599427605696
         ],
         "end_time": [
-            1755618864138371842
+            1755695599427647096
         ],
-        "is_leaf": true,
+        "is_leaf": false,
         "parent": 48,
-        "children": []
+        "children": [
+            50
+        ]
     },
     {
         "id": 50,
-        "name": "aten::batch_norm",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864138383042
+            1755695599427611796
         ],
         "end_time": [
-            1755618864138420442
+            1755695599427645096
         ],
         "is_leaf": true,
-        "parent": 48,
+        "parent": 49,
         "children": []
     },
     {
         "id": 51,
-        "name": "aten::add_",
+        "name": "nn.Module: BatchNorm2d_5",
         "start_time": [
-            1755618864138424542
+            1755695599427649696
         ],
         "end_time": [
-            1755618864138429442
-        ],
-        "is_leaf": true,
-        "parent": 32,
-        "children": []
-    },
-    {
-        "id": 52,
-        "name": "nn.Module: ReLU_2",
-        "start_time": [
-            1755618864138431942
-        ],
-        "end_time": [
-            1755618864138444242
+            1755695599427711196
         ],
         "is_leaf": false,
-        "parent": 32,
+        "parent": 48,
         "children": [
+            52,
             53
         ]
     },
     {
-        "id": 53,
-        "name": "aten::relu_",
+        "id": 52,
+        "name": "aten::add_",
         "start_time": [
-            1755618864138435542
+            1755695599427656096
         ],
         "end_time": [
-            1755618864138442642
+            1755695599427659396
         ],
         "is_leaf": true,
-        "parent": 52,
+        "parent": 51,
+        "children": []
+    },
+    {
+        "id": 53,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755695599427668696
+        ],
+        "end_time": [
+            1755695599427709596
+        ],
+        "is_leaf": true,
+        "parent": 51,
         "children": []
     },
     {
         "id": 54,
-        "name": "nn.Module: Sequential_3",
+        "name": "nn.Module: ReLU_3",
         "start_time": [
-            1755618864138448942
+            1755695599427713096
         ],
         "end_time": [
-            1755618864138830842
+            1755695599427725996
         ],
         "is_leaf": false,
-        "parent": 4,
+        "parent": 48,
         "children": [
             55
         ]
     },
     {
         "id": 55,
-        "name": "nn.Module: BasicBlock_2",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864138451742
+            1755695599427717096
         ],
         "end_time": [
-            1755618864138830442
+            1755695599427724696
         ],
-        "is_leaf": false,
+        "is_leaf": true,
         "parent": 54,
-        "children": [
-            56,
-            58,
-            61,
-            63,
-            65,
-            68,
-            74,
-            75
-        ]
+        "children": []
     },
     {
         "id": 56,
         "name": "nn.Module: Conv2d_6",
         "start_time": [
-            1755618864138454942
+            1755695599427728096
         ],
         "end_time": [
-            1755618864138531842
+            1755695599427774396
         ],
         "is_leaf": false,
-        "parent": 55,
+        "parent": 48,
         "children": [
             57
         ]
@@ -809,10 +807,10 @@
         "id": 57,
         "name": "aten::conv2d",
         "start_time": [
-            1755618864138460842
+            1755695599427734096
         ],
         "end_time": [
-            1755618864138530042
+            1755695599427772196
         ],
         "is_leaf": true,
         "parent": 56,
@@ -822,13 +820,13 @@
         "id": 58,
         "name": "nn.Module: BatchNorm2d_6",
         "start_time": [
-            1755618864138534942
+            1755695599427777996
         ],
         "end_time": [
-            1755618864138597742
+            1755695599427844796
         ],
         "is_leaf": false,
-        "parent": 55,
+        "parent": 48,
         "children": [
             59,
             60
@@ -838,10 +836,10 @@
         "id": 59,
         "name": "aten::add_",
         "start_time": [
-            1755618864138542042
+            1755695599427785996
         ],
         "end_time": [
-            1755618864138545642
+            1755695599427789596
         ],
         "is_leaf": true,
         "parent": 58,
@@ -851,10 +849,10 @@
         "id": 60,
         "name": "aten::batch_norm",
         "start_time": [
-            1755618864138555242
+            1755695599427798596
         ],
         "end_time": [
-            1755618864138596042
+            1755695599427843096
         ],
         "is_leaf": true,
         "parent": 58,
@@ -862,170 +860,175 @@
     },
     {
         "id": 61,
-        "name": "nn.Module: ReLU_3",
+        "name": "nn.Module: Sequential_2",
         "start_time": [
-            1755618864138599642
+            1755695599427848296
         ],
         "end_time": [
-            1755618864138613542
+            1755695599427940996
         ],
         "is_leaf": false,
-        "parent": 55,
+        "parent": 48,
         "children": [
-            62
-        ]
-    },
-    {
-        "id": 62,
-        "name": "aten::relu_",
-        "start_time": [
-            1755618864138603942
-        ],
-        "end_time": [
-            1755618864138612042
-        ],
-        "is_leaf": true,
-        "parent": 61,
-        "children": []
-    },
-    {
-        "id": 63,
-        "name": "nn.Module: Conv2d_7",
-        "start_time": [
-            1755618864138616242
-        ],
-        "end_time": [
-            1755618864138650142
-        ],
-        "is_leaf": false,
-        "parent": 55,
-        "children": [
+            62,
             64
         ]
     },
     {
-        "id": 64,
-        "name": "aten::conv2d",
+        "id": 62,
+        "name": "nn.Module: Conv2d_7",
         "start_time": [
-            1755618864138622342
+            1755695599427852596
         ],
         "end_time": [
-            1755618864138648542
-        ],
-        "is_leaf": true,
-        "parent": 63,
-        "children": []
-    },
-    {
-        "id": 65,
-        "name": "nn.Module: BatchNorm2d_7",
-        "start_time": [
-            1755618864138652842
-        ],
-        "end_time": [
-            1755618864138709442
+            1755695599427882496
         ],
         "is_leaf": false,
-        "parent": 55,
+        "parent": 61,
         "children": [
-            66,
-            67
+            63
         ]
     },
     {
-        "id": 66,
-        "name": "aten::add_",
+        "id": 63,
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864138658742
+            1755695599427858996
         ],
         "end_time": [
-            1755618864138661642
+            1755695599427880896
         ],
         "is_leaf": true,
-        "parent": 65,
+        "parent": 62,
+        "children": []
+    },
+    {
+        "id": 64,
+        "name": "nn.Module: BatchNorm2d_7",
+        "start_time": [
+            1755695599427884096
+        ],
+        "end_time": [
+            1755695599427940396
+        ],
+        "is_leaf": false,
+        "parent": 61,
+        "children": [
+            65,
+            66
+        ]
+    },
+    {
+        "id": 65,
+        "name": "aten::add_",
+        "start_time": [
+            1755695599427890396
+        ],
+        "end_time": [
+            1755695599427893696
+        ],
+        "is_leaf": true,
+        "parent": 64,
+        "children": []
+    },
+    {
+        "id": 66,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755695599427901996
+        ],
+        "end_time": [
+            1755695599427938896
+        ],
+        "is_leaf": true,
+        "parent": 64,
         "children": []
     },
     {
         "id": 67,
-        "name": "aten::batch_norm",
+        "name": "aten::add_",
         "start_time": [
-            1755618864138670342
+            1755695599427943096
         ],
         "end_time": [
-            1755618864138708042
+            1755695599427947796
         ],
         "is_leaf": true,
-        "parent": 65,
+        "parent": 48,
         "children": []
     },
     {
         "id": 68,
-        "name": "nn.Module: Sequential_4",
+        "name": "nn.Module: ReLU_3",
         "start_time": [
-            1755618864138711842
+            1755695599427950396
         ],
         "end_time": [
-            1755618864138806342
+            1755695599427963096
         ],
         "is_leaf": false,
-        "parent": 55,
+        "parent": 48,
         "children": [
-            69,
-            71
+            69
         ]
     },
     {
         "id": 69,
-        "name": "nn.Module: Conv2d_8",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864138718142
+            1755695599427954296
         ],
         "end_time": [
-            1755618864138746042
-        ],
-        "is_leaf": false,
-        "parent": 68,
-        "children": [
-            70
-        ]
-    },
-    {
-        "id": 70,
-        "name": "aten::conv2d",
-        "start_time": [
-            1755618864138723842
-        ],
-        "end_time": [
-            1755618864138744542
+            1755695599427961796
         ],
         "is_leaf": true,
-        "parent": 69,
+        "parent": 68,
         "children": []
     },
     {
-        "id": 71,
-        "name": "nn.Module: BatchNorm2d_8",
+        "id": 70,
+        "name": "nn.Module: BasicBlock_3",
         "start_time": [
-            1755618864138747642
+            1755695599427965996
         ],
         "end_time": [
-            1755618864138805842
+            1755695599428247296
         ],
         "is_leaf": false,
-        "parent": 68,
+        "parent": 47,
         "children": [
-            72,
-            73
+            71,
+            73,
+            76,
+            78,
+            80,
+            83,
+            84
+        ]
+    },
+    {
+        "id": 71,
+        "name": "nn.Module: Conv2d_8",
+        "start_time": [
+            1755695599427973196
+        ],
+        "end_time": [
+            1755695599428007696
+        ],
+        "is_leaf": false,
+        "parent": 70,
+        "children": [
+            72
         ]
     },
     {
         "id": 72,
-        "name": "aten::add_",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864138753142
+            1755695599427979696
         ],
         "end_time": [
-            1755618864138756242
+            1755695599428005796
         ],
         "is_leaf": true,
         "parent": 71,
@@ -1033,176 +1036,168 @@
     },
     {
         "id": 73,
-        "name": "aten::batch_norm",
+        "name": "nn.Module: BatchNorm2d_8",
         "start_time": [
-            1755618864138764242
+            1755695599428010196
         ],
         "end_time": [
-            1755618864138804342
+            1755695599428074196
         ],
-        "is_leaf": true,
-        "parent": 71,
-        "children": []
+        "is_leaf": false,
+        "parent": 70,
+        "children": [
+            74,
+            75
+        ]
     },
     {
         "id": 74,
         "name": "aten::add_",
         "start_time": [
-            1755618864138808842
+            1755695599428016396
         ],
         "end_time": [
-            1755618864138813642
+            1755695599428023996
         ],
         "is_leaf": true,
-        "parent": 55,
+        "parent": 73,
         "children": []
     },
     {
         "id": 75,
-        "name": "nn.Module: ReLU_3",
+        "name": "aten::batch_norm",
         "start_time": [
-            1755618864138816242
+            1755695599428033096
         ],
         "end_time": [
-            1755618864138828542
-        ],
-        "is_leaf": false,
-        "parent": 55,
-        "children": [
-            76
-        ]
-    },
-    {
-        "id": 76,
-        "name": "aten::relu_",
-        "start_time": [
-            1755618864138819842
-        ],
-        "end_time": [
-            1755618864138827042
+            1755695599428072296
         ],
         "is_leaf": true,
-        "parent": 75,
+        "parent": 73,
         "children": []
     },
     {
-        "id": 77,
-        "name": "nn.Module: Sequential_5",
+        "id": 76,
+        "name": "nn.Module: ReLU_4",
         "start_time": [
-            1755618864138834142
+            1755695599428075896
         ],
         "end_time": [
-            1755618864139182642
+            1755695599428089196
         ],
         "is_leaf": false,
-        "parent": 4,
+        "parent": 70,
         "children": [
-            78
+            77
         ]
     },
     {
-        "id": 78,
-        "name": "nn.Module: BasicBlock_3",
+        "id": 77,
+        "name": "aten::relu_",
         "start_time": [
-            1755618864138836742
+            1755695599428079696
         ],
         "end_time": [
-            1755618864139182242
+            1755695599428087796
+        ],
+        "is_leaf": true,
+        "parent": 76,
+        "children": []
+    },
+    {
+        "id": 78,
+        "name": "nn.Module: Conv2d_9",
+        "start_time": [
+            1755695599428095496
+        ],
+        "end_time": [
+            1755695599428163096
         ],
         "is_leaf": false,
-        "parent": 77,
+        "parent": 70,
         "children": [
-            79,
-            81,
-            84,
-            86,
-            88,
-            91,
-            97,
-            98
+            79
         ]
     },
     {
         "id": 79,
-        "name": "nn.Module: Conv2d_9",
-        "start_time": [
-            1755618864138840042
-        ],
-        "end_time": [
-            1755618864138877542
-        ],
-        "is_leaf": false,
-        "parent": 78,
-        "children": [
-            80
-        ]
-    },
-    {
-        "id": 80,
         "name": "aten::conv2d",
         "start_time": [
-            1755618864138847642
+            1755695599428102096
         ],
         "end_time": [
-            1755618864138875842
+            1755695599428160996
         ],
         "is_leaf": true,
-        "parent": 79,
+        "parent": 78,
         "children": []
     },
     {
-        "id": 81,
+        "id": 80,
         "name": "nn.Module: BatchNorm2d_9",
         "start_time": [
-            1755618864138880342
+            1755695599428166196
         ],
         "end_time": [
-            1755618864138936642
+            1755695599428225596
         ],
         "is_leaf": false,
-        "parent": 78,
+        "parent": 70,
         "children": [
-            82,
-            83
+            81,
+            82
         ]
     },
     {
-        "id": 82,
+        "id": 81,
         "name": "aten::add_",
         "start_time": [
-            1755618864138886642
+            1755695599428172796
         ],
         "end_time": [
-            1755618864138889542
+            1755695599428176096
         ],
         "is_leaf": true,
-        "parent": 81,
+        "parent": 80,
+        "children": []
+    },
+    {
+        "id": 82,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755695599428184696
+        ],
+        "end_time": [
+            1755695599428223896
+        ],
+        "is_leaf": true,
+        "parent": 80,
         "children": []
     },
     {
         "id": 83,
-        "name": "aten::batch_norm",
+        "name": "aten::add_",
         "start_time": [
-            1755618864138898542
+            1755695599428227596
         ],
         "end_time": [
-            1755618864138935142
+            1755695599428232296
         ],
         "is_leaf": true,
-        "parent": 81,
+        "parent": 70,
         "children": []
     },
     {
         "id": 84,
         "name": "nn.Module: ReLU_4",
         "start_time": [
-            1755618864138938342
+            1755695599428234996
         ],
         "end_time": [
-            1755618864138950742
+            1755695599428246996
         ],
         "is_leaf": false,
-        "parent": 78,
+        "parent": 70,
         "children": [
             85
         ]
@@ -1211,10 +1206,10 @@
         "id": 85,
         "name": "aten::relu_",
         "start_time": [
-            1755618864138942242
+            1755695599428238696
         ],
         "end_time": [
-            1755618864138949342
+            1755695599428245396
         ],
         "is_leaf": true,
         "parent": 84,
@@ -1222,56 +1217,65 @@
     },
     {
         "id": 86,
-        "name": "nn.Module: Conv2d_10",
+        "name": "nn.Module: Sequential_3",
         "start_time": [
-            1755618864138952642
+            1755695599428250996
         ],
         "end_time": [
-            1755618864138996942
+            1755695599428888596
         ],
         "is_leaf": false,
-        "parent": 78,
+        "parent": 4,
         "children": [
-            87
+            87,
+            109
         ]
     },
     {
         "id": 87,
-        "name": "aten::conv2d",
+        "name": "nn.Module: BasicBlock_4",
         "start_time": [
-            1755618864138958242
+            1755695599428254396
         ],
         "end_time": [
-            1755618864138995342
+            1755695599428614696
         ],
-        "is_leaf": true,
+        "is_leaf": false,
         "parent": 86,
-        "children": []
+        "children": [
+            88,
+            90,
+            93,
+            95,
+            97,
+            100,
+            106,
+            107
+        ]
     },
     {
         "id": 88,
-        "name": "nn.Module: BatchNorm2d_10",
+        "name": "nn.Module: Conv2d_10",
         "start_time": [
-            1755618864138999742
+            1755695599428257596
         ],
         "end_time": [
-            1755618864139061442
+            1755695599428298296
         ],
         "is_leaf": false,
-        "parent": 78,
+        "parent": 87,
         "children": [
-            89,
-            90
+            89
         ]
     },
     {
         "id": 89,
-        "name": "aten::add_",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864139006042
+            1755695599428263896
         ],
         "end_time": [
-            1755618864139009142
+            1755695599428296496
         ],
         "is_leaf": true,
         "parent": 88,
@@ -1279,208 +1283,212 @@
     },
     {
         "id": 90,
-        "name": "aten::batch_norm",
+        "name": "nn.Module: BatchNorm2d_10",
         "start_time": [
-            1755618864139021342
+            1755695599428304096
         ],
         "end_time": [
-            1755618864139059842
+            1755695599428366196
         ],
-        "is_leaf": true,
-        "parent": 88,
-        "children": []
+        "is_leaf": false,
+        "parent": 87,
+        "children": [
+            91,
+            92
+        ]
     },
     {
         "id": 91,
-        "name": "nn.Module: Sequential_6",
+        "name": "aten::add_",
         "start_time": [
-            1755618864139063642
+            1755695599428310796
         ],
         "end_time": [
-            1755618864139159042
+            1755695599428314296
+        ],
+        "is_leaf": true,
+        "parent": 90,
+        "children": []
+    },
+    {
+        "id": 92,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755695599428323796
+        ],
+        "end_time": [
+            1755695599428364596
+        ],
+        "is_leaf": true,
+        "parent": 90,
+        "children": []
+    },
+    {
+        "id": 93,
+        "name": "nn.Module: ReLU_5",
+        "start_time": [
+            1755695599428368096
+        ],
+        "end_time": [
+            1755695599428385096
         ],
         "is_leaf": false,
-        "parent": 78,
+        "parent": 87,
         "children": [
-            92,
             94
         ]
     },
     {
-        "id": 92,
-        "name": "nn.Module: Conv2d_11",
+        "id": 94,
+        "name": "aten::relu_",
         "start_time": [
-            1755618864139067342
+            1755695599428375096
         ],
         "end_time": [
-            1755618864139102642
-        ],
-        "is_leaf": false,
-        "parent": 91,
-        "children": [
-            93
-        ]
-    },
-    {
-        "id": 93,
-        "name": "aten::conv2d",
-        "start_time": [
-            1755618864139072742
-        ],
-        "end_time": [
-            1755618864139101042
+            1755695599428383796
         ],
         "is_leaf": true,
-        "parent": 92,
+        "parent": 93,
         "children": []
     },
     {
-        "id": 94,
-        "name": "nn.Module: BatchNorm2d_11",
+        "id": 95,
+        "name": "nn.Module: Conv2d_11",
         "start_time": [
-            1755618864139104342
+            1755695599428387396
         ],
         "end_time": [
-            1755618864139158542
+            1755695599428423296
         ],
         "is_leaf": false,
-        "parent": 91,
+        "parent": 87,
         "children": [
-            95,
             96
         ]
     },
     {
-        "id": 95,
-        "name": "aten::add_",
-        "start_time": [
-            1755618864139110442
-        ],
-        "end_time": [
-            1755618864139113642
-        ],
-        "is_leaf": true,
-        "parent": 94,
-        "children": []
-    },
-    {
         "id": 96,
-        "name": "aten::batch_norm",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864139121842
+            1755695599428393596
         ],
         "end_time": [
-            1755618864139157142
+            1755695599428421696
         ],
         "is_leaf": true,
-        "parent": 94,
+        "parent": 95,
         "children": []
     },
     {
         "id": 97,
-        "name": "aten::add_",
+        "name": "nn.Module: BatchNorm2d_11",
         "start_time": [
-            1755618864139161442
+            1755695599428426496
         ],
         "end_time": [
-            1755618864139165742
-        ],
-        "is_leaf": true,
-        "parent": 78,
-        "children": []
-    },
-    {
-        "id": 98,
-        "name": "nn.Module: ReLU_4",
-        "start_time": [
-            1755618864139168442
-        ],
-        "end_time": [
-            1755618864139180742
+            1755695599428483596
         ],
         "is_leaf": false,
-        "parent": 78,
+        "parent": 87,
         "children": [
+            98,
             99
         ]
     },
     {
-        "id": 99,
-        "name": "aten::relu_",
+        "id": 98,
+        "name": "aten::add_",
         "start_time": [
-            1755618864139172042
+            1755695599428432596
         ],
         "end_time": [
-            1755618864139179242
+            1755695599428435696
         ],
         "is_leaf": true,
-        "parent": 98,
+        "parent": 97,
+        "children": []
+    },
+    {
+        "id": 99,
+        "name": "aten::batch_norm",
+        "start_time": [
+            1755695599428444496
+        ],
+        "end_time": [
+            1755695599428481896
+        ],
+        "is_leaf": true,
+        "parent": 97,
         "children": []
     },
     {
         "id": 100,
-        "name": "nn.Module: AdaptiveAvgPool2d_0",
+        "name": "nn.Module: Sequential_4",
         "start_time": [
-            1755618864139193642
+            1755695599428486396
         ],
         "end_time": [
-            1755618864139235042
+            1755695599428589596
         ],
         "is_leaf": false,
-        "parent": 4,
+        "parent": 87,
         "children": [
-            101
+            101,
+            103
         ]
     },
     {
         "id": 101,
-        "name": "aten::adaptive_avg_pool2d",
+        "name": "nn.Module: Conv2d_12",
         "start_time": [
-            1755618864139213542
+            1755695599428490696
         ],
         "end_time": [
-            1755618864139232942
+            1755695599428520296
         ],
-        "is_leaf": true,
+        "is_leaf": false,
         "parent": 100,
-        "children": []
+        "children": [
+            102
+        ]
     },
     {
         "id": 102,
-        "name": "aten::flatten",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864139254042
+            1755695599428496796
         ],
         "end_time": [
-            1755618864139261342
+            1755695599428518596
         ],
         "is_leaf": true,
-        "parent": 4,
+        "parent": 101,
         "children": []
     },
     {
         "id": 103,
-        "name": "nn.Module: Linear_0",
+        "name": "nn.Module: BatchNorm2d_12",
         "start_time": [
-            1755618864139267842
+            1755695599428522596
         ],
         "end_time": [
-            1755618864139328442
+            1755695599428588996
         ],
         "is_leaf": false,
-        "parent": 4,
+        "parent": 100,
         "children": [
-            104
+            104,
+            105
         ]
     },
     {
         "id": 104,
-        "name": "aten::linear",
+        "name": "aten::add_",
         "start_time": [
-            1755618864139275342
+            1755695599428529396
         ],
         "end_time": [
-            1755618864139326742
+            1755695599428532796
         ],
         "is_leaf": true,
         "parent": 103,
@@ -1488,872 +1496,956 @@
     },
     {
         "id": 105,
-        "name": "nn.Module: CrossEntropyLoss_0",
+        "name": "aten::batch_norm",
         "start_time": [
-            1755618864139333342
+            1755695599428541796
         ],
         "end_time": [
-            1755618864139405242
+            1755695599428587496
         ],
-        "is_leaf": false,
-        "parent": null,
-        "children": [
-            106
-        ]
+        "is_leaf": true,
+        "parent": 103,
+        "children": []
     },
     {
         "id": 106,
-        "name": "aten::cross_entropy_loss",
+        "name": "aten::add_",
         "start_time": [
-            1755618864139353742
+            1755695599428591996
         ],
         "end_time": [
-            1755618864139403342
+            1755695599428597196
         ],
         "is_leaf": true,
-        "parent": 105,
+        "parent": 87,
         "children": []
     },
     {
         "id": 107,
-        "name": "aten::ones_like",
+        "name": "nn.Module: ReLU_5",
         "start_time": [
-            1755618864139454942
+            1755695599428600196
         ],
         "end_time": [
-            1755618864139469642
+            1755695599428612996
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 87,
+        "children": [
+            108
+        ]
     },
     {
         "id": 108,
-        "name": "NllLossBackward0",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864146819842
+            1755695599428604596
         ],
         "end_time": [
-            1755618864146903742
+            1755695599428611496
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 107,
         "children": []
     },
     {
         "id": 109,
-        "name": "LogSoftmaxBackward0",
+        "name": "nn.Module: BasicBlock_5",
         "start_time": [
-            1755618864146923342
+            1755695599428615796
         ],
         "end_time": [
-            1755618864146938242
+            1755695599428888096
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 86,
+        "children": [
+            110,
+            112,
+            115,
+            117,
+            119,
+            122,
+            123
+        ]
     },
     {
         "id": 110,
-        "name": "AddmmBackward0",
+        "name": "nn.Module: Conv2d_13",
         "start_time": [
-            1755618864146980642
+            1755695599428619396
         ],
         "end_time": [
-            1755618864147064542
+            1755695599428653496
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 109,
+        "children": [
+            111
+        ]
     },
     {
         "id": 111,
-        "name": "aten::sum",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864147067742
+            1755695599428625096
         ],
         "end_time": [
-            1755618864147077742
+            1755695599428651796
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 110,
         "children": []
     },
     {
         "id": 112,
-        "name": "aten::view",
+        "name": "nn.Module: BatchNorm2d_13",
         "start_time": [
-            1755618864147080442
+            1755695599428656596
         ],
         "end_time": [
-            1755618864147082442
+            1755695599428744696
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 109,
+        "children": [
+            113,
+            114
+        ]
     },
     {
         "id": 113,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::add_",
         "start_time": [
-            1755618864147106742
+            1755695599428663096
         ],
         "end_time": [
-            1755618864147114242
+            1755695599428666696
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 112,
         "children": []
     },
     {
         "id": 114,
-        "name": "TBackward0",
+        "name": "aten::batch_norm",
         "start_time": [
-            1755618864147121842
+            1755695599428675596
         ],
         "end_time": [
-            1755618864147129142
+            1755695599428742896
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 112,
         "children": []
     },
     {
         "id": 115,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: ReLU_6",
         "start_time": [
-            1755618864147135842
+            1755695599428746696
         ],
         "end_time": [
-            1755618864147140742
+            1755695599428760196
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 109,
+        "children": [
+            116
+        ]
     },
     {
         "id": 116,
-        "name": "ViewBackward0",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864147146742
+            1755695599428750296
         ],
         "end_time": [
-            1755618864147153342
+            1755695599428758796
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 115,
         "children": []
     },
     {
         "id": 117,
-        "name": "MeanBackward1",
+        "name": "nn.Module: Conv2d_14",
         "start_time": [
-            1755618864147160342
+            1755695599428762496
         ],
         "end_time": [
-            1755618864147188742
+            1755695599428803096
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 109,
+        "children": [
+            118
+        ]
     },
     {
         "id": 118,
-        "name": "ReluBackward0",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864147196642
+            1755695599428769296
         ],
         "end_time": [
-            1755618864147218742
+            1755695599428801396
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 117,
         "children": []
     },
     {
         "id": 119,
-        "name": "AddBackward0",
+        "name": "nn.Module: BatchNorm2d_14",
         "start_time": [
-            1755618864147226742
+            1755695599428805996
         ],
         "end_time": [
-            1755618864147227142
+            1755695599428865796
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 109,
+        "children": [
+            120,
+            121
+        ]
     },
     {
         "id": 120,
-        "name": "CudnnBatchNormBackward0",
+        "name": "aten::add_",
         "start_time": [
-            1755618864147235242
+            1755695599428812896
         ],
         "end_time": [
-            1755618864147276642
+            1755695599428816696
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 119,
         "children": []
     },
     {
         "id": 121,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::batch_norm",
         "start_time": [
-            1755618864147287442
+            1755695599428826296
         ],
         "end_time": [
-            1755618864147293142
+            1755695599428864396
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 119,
         "children": []
     },
     {
         "id": 122,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::add_",
         "start_time": [
-            1755618864147299542
+            1755695599428868196
         ],
         "end_time": [
-            1755618864147304042
+            1755695599428872996
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 109,
         "children": []
     },
     {
         "id": 123,
-        "name": "ConvolutionBackward0",
+        "name": "nn.Module: ReLU_6",
         "start_time": [
-            1755618864147311042
+            1755695599428875896
         ],
         "end_time": [
-            1755618864147368442
+            1755695599428887796
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 109,
+        "children": [
+            124
+        ]
     },
     {
         "id": 124,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864147377942
+            1755695599428879696
         ],
         "end_time": [
-            1755618864147383242
+            1755695599428886596
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 123,
         "children": []
     },
     {
         "id": 125,
-        "name": "CudnnBatchNormBackward0",
+        "name": "nn.Module: Sequential_5",
         "start_time": [
-            1755618864147389742
+            1755695599428891796
         ],
         "end_time": [
-            1755618864147416042
+            1755695599429545096
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 4,
+        "children": [
+            126,
+            148
+        ]
     },
     {
         "id": 126,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: BasicBlock_6",
         "start_time": [
-            1755618864147425742
+            1755695599428894296
         ],
         "end_time": [
-            1755618864147430642
+            1755695599429273096
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 125,
+        "children": [
+            127,
+            129,
+            132,
+            134,
+            136,
+            139,
+            145,
+            146
+        ]
     },
     {
         "id": 127,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: Conv2d_15",
         "start_time": [
-            1755618864147436942
+            1755695599428897696
         ],
         "end_time": [
-            1755618864147441342
+            1755695599428934496
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 126,
+        "children": [
+            128
+        ]
     },
     {
         "id": 128,
-        "name": "ConvolutionBackward0",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864147447342
+            1755695599428903896
         ],
         "end_time": [
-            1755618864147493842
+            1755695599428932796
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 127,
         "children": []
     },
     {
         "id": 129,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: BatchNorm2d_15",
         "start_time": [
-            1755618864147502942
+            1755695599428937196
         ],
         "end_time": [
-            1755618864147508042
+            1755695599428997796
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 126,
+        "children": [
+            130,
+            131
+        ]
     },
     {
         "id": 130,
-        "name": "ReluBackward0",
+        "name": "aten::add_",
         "start_time": [
-            1755618864147514042
+            1755695599428943896
         ],
         "end_time": [
-            1755618864147523042
+            1755695599428946796
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 129,
         "children": []
     },
     {
         "id": 131,
-        "name": "CudnnBatchNormBackward0",
+        "name": "aten::batch_norm",
         "start_time": [
-            1755618864147531342
+            1755695599428956596
         ],
         "end_time": [
-            1755618864147557242
+            1755695599428996096
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 129,
         "children": []
     },
     {
         "id": 132,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: ReLU_7",
         "start_time": [
-            1755618864147566742
+            1755695599428999596
         ],
         "end_time": [
-            1755618864147571642
+            1755695599429013096
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 126,
+        "children": [
+            133
+        ]
     },
     {
         "id": 133,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864147577842
+            1755695599429003896
         ],
         "end_time": [
-            1755618864147582042
+            1755695599429011596
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 132,
         "children": []
     },
     {
         "id": 134,
-        "name": "ConvolutionBackward0",
+        "name": "nn.Module: Conv2d_16",
         "start_time": [
-            1755618864147587942
+            1755695599429015096
         ],
         "end_time": [
-            1755618864147632642
+            1755695599429066796
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 126,
+        "children": [
+            135
+        ]
     },
     {
         "id": 135,
-        "name": "aten::add_",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864147637542
+            1755695599429020796
         ],
         "end_time": [
-            1755618864147643242
+            1755695599429064996
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 134,
         "children": []
     },
     {
         "id": 136,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: BatchNorm2d_16",
         "start_time": [
-            1755618864147651642
+            1755695599429070596
         ],
         "end_time": [
-            1755618864147656342
+            1755695599429131396
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 126,
+        "children": [
+            137,
+            138
+        ]
     },
     {
         "id": 137,
-        "name": "ReluBackward0",
+        "name": "aten::add_",
         "start_time": [
-            1755618864147662342
+            1755695599429077896
         ],
         "end_time": [
-            1755618864147670242
+            1755695599429081996
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 136,
         "children": []
     },
     {
         "id": 138,
-        "name": "AddBackward0",
+        "name": "aten::batch_norm",
         "start_time": [
-            1755618864147678542
+            1755695599429091196
         ],
         "end_time": [
-            1755618864147678942
+            1755695599429129696
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 136,
         "children": []
     },
     {
         "id": 139,
-        "name": "CudnnBatchNormBackward0",
+        "name": "nn.Module: Sequential_6",
         "start_time": [
-            1755618864147686242
+            1755695599429134096
         ],
         "end_time": [
-            1755618864147712542
+            1755695599429246596
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 126,
+        "children": [
+            140,
+            142
+        ]
     },
     {
         "id": 140,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: Conv2d_17",
         "start_time": [
-            1755618864147722242
+            1755695599429144696
         ],
         "end_time": [
-            1755618864147726942
+            1755695599429183396
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 139,
+        "children": [
+            141
+        ]
     },
     {
         "id": 141,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864147733042
+            1755695599429151496
         ],
         "end_time": [
-            1755618864147737942
+            1755695599429181796
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 140,
         "children": []
     },
     {
         "id": 142,
-        "name": "ConvolutionBackward0",
+        "name": "nn.Module: BatchNorm2d_17",
         "start_time": [
-            1755618864147743642
+            1755695599429185796
         ],
         "end_time": [
-            1755618864147780042
+            1755695599429245796
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 139,
+        "children": [
+            143,
+            144
+        ]
     },
     {
         "id": 143,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::add_",
         "start_time": [
-            1755618864147788242
+            1755695599429192296
         ],
         "end_time": [
-            1755618864147793442
+            1755695599429195796
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 142,
         "children": []
     },
     {
         "id": 144,
-        "name": "CudnnBatchNormBackward0",
+        "name": "aten::batch_norm",
         "start_time": [
-            1755618864147799242
+            1755695599429205696
         ],
         "end_time": [
-            1755618864147823442
+            1755695599429244096
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 142,
         "children": []
     },
     {
         "id": 145,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::add_",
         "start_time": [
-            1755618864147833542
+            1755695599429248896
         ],
         "end_time": [
-            1755618864147838142
+            1755695599429254196
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 126,
         "children": []
     },
     {
         "id": 146,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: ReLU_7",
         "start_time": [
-            1755618864147844242
+            1755695599429256796
         ],
         "end_time": [
-            1755618864147848642
+            1755695599429271496
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 126,
+        "children": [
+            147
+        ]
     },
     {
         "id": 147,
-        "name": "ConvolutionBackward0",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864147854842
+            1755695599429261796
         ],
         "end_time": [
-            1755618864147888842
+            1755695599429270196
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 146,
         "children": []
     },
     {
         "id": 148,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: BasicBlock_7",
         "start_time": [
-            1755618864147896942
+            1755695599429274196
         ],
         "end_time": [
-            1755618864147901642
+            1755695599429544296
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 125,
+        "children": [
+            149,
+            151,
+            154,
+            156,
+            158,
+            161,
+            162
+        ]
     },
     {
         "id": 149,
-        "name": "ReluBackward0",
+        "name": "nn.Module: Conv2d_18",
         "start_time": [
-            1755618864147908142
+            1755695599429277796
         ],
         "end_time": [
-            1755618864147915742
+            1755695599429321796
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 148,
+        "children": [
+            150
+        ]
     },
     {
         "id": 150,
-        "name": "CudnnBatchNormBackward0",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864147929542
+            1755695599429284496
         ],
         "end_time": [
-            1755618864147953442
+            1755695599429320096
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 149,
         "children": []
     },
     {
         "id": 151,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: BatchNorm2d_18",
         "start_time": [
-            1755618864147962942
+            1755695599429326796
         ],
         "end_time": [
-            1755618864147967642
+            1755695599429390596
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 148,
+        "children": [
+            152,
+            153
+        ]
     },
     {
         "id": 152,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::add_",
         "start_time": [
-            1755618864147973942
+            1755695599429333996
         ],
         "end_time": [
-            1755618864147979042
+            1755695599429337696
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 151,
         "children": []
     },
     {
         "id": 153,
-        "name": "ConvolutionBackward0",
+        "name": "aten::batch_norm",
         "start_time": [
-            1755618864147985342
+            1755695599429347396
         ],
         "end_time": [
-            1755618864148020142
+            1755695599429388796
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 151,
         "children": []
     },
     {
         "id": 154,
-        "name": "aten::add_",
+        "name": "nn.Module: ReLU_8",
         "start_time": [
-            1755618864148024142
+            1755695599429392796
         ],
         "end_time": [
-            1755618864148027542
+            1755695599429407396
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 148,
+        "children": [
+            155
+        ]
     },
     {
         "id": 155,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864148036242
+            1755695599429397296
         ],
         "end_time": [
-            1755618864148041442
+            1755695599429405896
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 154,
         "children": []
     },
     {
         "id": 156,
-        "name": "ReluBackward0",
+        "name": "nn.Module: Conv2d_19",
         "start_time": [
-            1755618864148047442
+            1755695599429415296
         ],
         "end_time": [
-            1755618864148056642
+            1755695599429453796
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 148,
+        "children": [
+            157
+        ]
     },
     {
         "id": 157,
-        "name": "AddBackward0",
+        "name": "aten::conv2d",
         "start_time": [
-            1755618864148063942
+            1755695599429421896
         ],
         "end_time": [
-            1755618864148064242
+            1755695599429451996
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 156,
         "children": []
     },
     {
         "id": 158,
-        "name": "CudnnBatchNormBackward0",
+        "name": "nn.Module: BatchNorm2d_19",
         "start_time": [
-            1755618864148071342
+            1755695599429456896
         ],
         "end_time": [
-            1755618864148098542
+            1755695599429516296
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 148,
+        "children": [
+            159,
+            160
+        ]
     },
     {
         "id": 159,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::add_",
         "start_time": [
-            1755618864148108042
+            1755695599429462896
         ],
         "end_time": [
-            1755618864148112642
+            1755695599429466696
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 158,
         "children": []
     },
     {
         "id": 160,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::batch_norm",
         "start_time": [
-            1755618864148118742
+            1755695599429475396
         ],
         "end_time": [
-            1755618864148123342
+            1755695599429514496
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 158,
         "children": []
     },
     {
         "id": 161,
-        "name": "ConvolutionBackward0",
+        "name": "aten::add_",
         "start_time": [
-            1755618864148129342
+            1755695599429518896
         ],
         "end_time": [
-            1755618864148164442
+            1755695599429523896
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 148,
         "children": []
     },
     {
         "id": 162,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: ReLU_8",
         "start_time": [
-            1755618864148172242
+            1755695599429526296
         ],
         "end_time": [
-            1755618864148177142
+            1755695599429543896
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 148,
+        "children": [
+            163
+        ]
     },
     {
         "id": 163,
-        "name": "CudnnBatchNormBackward0",
+        "name": "aten::relu_",
         "start_time": [
-            1755618864148183042
+            1755695599429529996
         ],
         "end_time": [
-            1755618864148230142
+            1755695599429542196
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 162,
         "children": []
     },
     {
         "id": 164,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: AdaptiveAvgPool2d_0",
         "start_time": [
-            1755618864148239742
+            1755695599429555896
         ],
         "end_time": [
-            1755618864148244442
+            1755695599429604996
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 4,
+        "children": [
+            165
+        ]
     },
     {
         "id": 165,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::adaptive_avg_pool2d",
         "start_time": [
-            1755618864148250642
+            1755695599429578196
         ],
         "end_time": [
-            1755618864148254842
+            1755695599429602696
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 164,
         "children": []
     },
     {
         "id": 166,
-        "name": "ConvolutionBackward0",
+        "name": "aten::flatten",
         "start_time": [
-            1755618864148260642
+            1755695599429626696
         ],
         "end_time": [
-            1755618864148300642
+            1755695599429636296
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 4,
         "children": []
     },
     {
         "id": 167,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "nn.Module: Linear_0",
         "start_time": [
-            1755618864148308842
+            1755695599429650096
         ],
         "end_time": [
-            1755618864148313442
+            1755695599429727996
         ],
-        "is_leaf": true,
-        "parent": null,
-        "children": []
+        "is_leaf": false,
+        "parent": 4,
+        "children": [
+            168
+        ]
     },
     {
         "id": 168,
-        "name": "ReluBackward0",
+        "name": "aten::linear",
         "start_time": [
-            1755618864148319542
+            1755695599429658396
         ],
         "end_time": [
-            1755618864148327142
+            1755695599429725896
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 167,
         "children": []
     },
     {
         "id": 169,
-        "name": "CudnnBatchNormBackward0",
+        "name": "nn.Module: CrossEntropyLoss_0",
         "start_time": [
-            1755618864148335442
+            1755695599429733396
         ],
         "end_time": [
-            1755618864148415042
+            1755695599429805496
         ],
-        "is_leaf": true,
+        "is_leaf": false,
         "parent": null,
-        "children": []
+        "children": [
+            170
+        ]
     },
     {
         "id": 170,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::cross_entropy_loss",
         "start_time": [
-            1755618864148425342
+            1755695599429748696
         ],
         "end_time": [
-            1755618864148430042
+            1755695599429803296
         ],
         "is_leaf": true,
-        "parent": null,
+        "parent": 169,
         "children": []
     },
     {
         "id": 171,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "aten::ones_like",
         "start_time": [
-            1755618864148436342
+            1755695599429872296
         ],
         "end_time": [
-            1755618864148440942
+            1755695599429891196
         ],
         "is_leaf": true,
         "parent": null,
@@ -2361,12 +2453,12 @@
     },
     {
         "id": 172,
-        "name": "ConvolutionBackward0",
+        "name": "NllLossBackward0",
         "start_time": [
-            1755618864148446942
+            1755695599437157496
         ],
         "end_time": [
-            1755618864148488942
+            1755695599437215696
         ],
         "is_leaf": true,
         "parent": null,
@@ -2374,12 +2466,12 @@
     },
     {
         "id": 173,
-        "name": "aten::add_",
+        "name": "LogSoftmaxBackward0",
         "start_time": [
-            1755618864148493142
+            1755695599437240496
         ],
         "end_time": [
-            1755618864148497142
+            1755695599437254896
         ],
         "is_leaf": true,
         "parent": null,
@@ -2387,12 +2479,12 @@
     },
     {
         "id": 174,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "AddmmBackward0",
         "start_time": [
-            1755618864148505442
+            1755695599437265096
         ],
         "end_time": [
-            1755618864148510442
+            1755695599437337596
         ],
         "is_leaf": true,
         "parent": null,
@@ -2400,12 +2492,12 @@
     },
     {
         "id": 175,
-        "name": "ReluBackward0",
+        "name": "aten::sum",
         "start_time": [
-            1755618864148516742
+            1755695599437340496
         ],
         "end_time": [
-            1755618864148523442
+            1755695599437363596
         ],
         "is_leaf": true,
         "parent": null,
@@ -2413,12 +2505,12 @@
     },
     {
         "id": 176,
-        "name": "AddBackward0",
+        "name": "aten::view",
         "start_time": [
-            1755618864148531242
+            1755695599437366596
         ],
         "end_time": [
-            1755618864148531542
+            1755695599437369596
         ],
         "is_leaf": true,
         "parent": null,
@@ -2426,12 +2518,12 @@
     },
     {
         "id": 177,
-        "name": "CudnnBatchNormBackward0",
+        "name": "torch::autograd::AccumulateGrad",
         "start_time": [
-            1755618864148538142
+            1755695599437398696
         ],
         "end_time": [
-            1755618864148563742
+            1755695599437407496
         ],
         "is_leaf": true,
         "parent": null,
@@ -2439,12 +2531,12 @@
     },
     {
         "id": 178,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "TBackward0",
         "start_time": [
-            1755618864148572842
+            1755695599437414996
         ],
         "end_time": [
-            1755618864148577742
+            1755695599437422896
         ],
         "is_leaf": true,
         "parent": null,
@@ -2454,10 +2546,10 @@
         "id": 179,
         "name": "torch::autograd::AccumulateGrad",
         "start_time": [
-            1755618864148584342
+            1755695599437429996
         ],
         "end_time": [
-            1755618864148588642
+            1755695599437434696
         ],
         "is_leaf": true,
         "parent": null,
@@ -2465,12 +2557,12 @@
     },
     {
         "id": 180,
-        "name": "ConvolutionBackward0",
+        "name": "ViewBackward0",
         "start_time": [
-            1755618864148595042
+            1755695599437440696
         ],
         "end_time": [
-            1755618864148634442
+            1755695599437447496
         ],
         "is_leaf": true,
         "parent": null,
@@ -2478,12 +2570,12 @@
     },
     {
         "id": 181,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "MeanBackward1",
         "start_time": [
-            1755618864148643342
+            1755695599437454196
         ],
         "end_time": [
-            1755618864148648042
+            1755695599437487296
         ],
         "is_leaf": true,
         "parent": null,
@@ -2493,10 +2585,10 @@
         "id": 182,
         "name": "ReluBackward0",
         "start_time": [
-            1755618864148654142
+            1755695599437495996
         ],
         "end_time": [
-            1755618864148660942
+            1755695599437509796
         ],
         "is_leaf": true,
         "parent": null,
@@ -2504,12 +2596,12 @@
     },
     {
         "id": 183,
-        "name": "CudnnBatchNormBackward0",
+        "name": "AddBackward0",
         "start_time": [
-            1755618864148668242
+            1755695599437517896
         ],
         "end_time": [
-            1755618864148695942
+            1755695599437518496
         ],
         "is_leaf": true,
         "parent": null,
@@ -2517,12 +2609,12 @@
     },
     {
         "id": 184,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "CudnnBatchNormBackward0",
         "start_time": [
-            1755618864148705642
+            1755695599437526696
         ],
         "end_time": [
-            1755618864148710242
+            1755695599437574996
         ],
         "is_leaf": true,
         "parent": null,
@@ -2532,10 +2624,10 @@
         "id": 185,
         "name": "torch::autograd::AccumulateGrad",
         "start_time": [
-            1755618864148716642
+            1755695599437585796
         ],
         "end_time": [
-            1755618864148721242
+            1755695599437591596
         ],
         "is_leaf": true,
         "parent": null,
@@ -2543,12 +2635,12 @@
     },
     {
         "id": 186,
-        "name": "ConvolutionBackward0",
+        "name": "torch::autograd::AccumulateGrad",
         "start_time": [
-            1755618864148727642
+            1755695599437597996
         ],
         "end_time": [
-            1755618864148760242
+            1755695599437602496
         ],
         "is_leaf": true,
         "parent": null,
@@ -2556,12 +2648,12 @@
     },
     {
         "id": 187,
-        "name": "aten::add_",
+        "name": "ConvolutionBackward0",
         "start_time": [
-            1755618864148764442
+            1755695599437609296
         ],
         "end_time": [
-            1755618864148767442
+            1755695599437692496
         ],
         "is_leaf": true,
         "parent": null,
@@ -2571,10 +2663,10 @@
         "id": 188,
         "name": "torch::autograd::AccumulateGrad",
         "start_time": [
-            1755618864148775142
+            1755695599437702096
         ],
         "end_time": [
-            1755618864148784242
+            1755695599437707196
         ],
         "is_leaf": true,
         "parent": null,
@@ -2582,12 +2674,12 @@
     },
     {
         "id": 189,
-        "name": "MaxPool2DWithIndicesBackward0",
+        "name": "ReluBackward0",
         "start_time": [
-            1755618864148790842
+            1755695599437713896
         ],
         "end_time": [
-            1755618864148812042
+            1755695599437722696
         ],
         "is_leaf": true,
         "parent": null,
@@ -2595,12 +2687,12 @@
     },
     {
         "id": 190,
-        "name": "ReluBackward0",
+        "name": "CudnnBatchNormBackward0",
         "start_time": [
-            1755618864148819942
+            1755695599437730796
         ],
         "end_time": [
-            1755618864148826442
+            1755695599437758396
         ],
         "is_leaf": true,
         "parent": null,
@@ -2608,12 +2700,12 @@
     },
     {
         "id": 191,
-        "name": "CudnnBatchNormBackward0",
+        "name": "torch::autograd::AccumulateGrad",
         "start_time": [
-            1755618864148838342
+            1755695599437769396
         ],
         "end_time": [
-            1755618864148864442
+            1755695599437774496
         ],
         "is_leaf": true,
         "parent": null,
@@ -2623,10 +2715,10 @@
         "id": 192,
         "name": "torch::autograd::AccumulateGrad",
         "start_time": [
-            1755618864148874442
+            1755695599437780696
         ],
         "end_time": [
-            1755618864148879442
+            1755695599437785196
         ],
         "is_leaf": true,
         "parent": null,
@@ -2634,12 +2726,12 @@
     },
     {
         "id": 193,
-        "name": "torch::autograd::AccumulateGrad",
+        "name": "ConvolutionBackward0",
         "start_time": [
-            1755618864148886142
+            1755695599437791196
         ],
         "end_time": [
-            1755618864148890642
+            1755695599437827296
         ],
         "is_leaf": true,
         "parent": null,
@@ -2647,12 +2739,12 @@
     },
     {
         "id": 194,
-        "name": "ConvolutionBackward0",
+        "name": "aten::add_",
         "start_time": [
-            1755618864148896442
+            1755695599437832096
         ],
         "end_time": [
-            1755618864148944942
+            1755695599437842496
         ],
         "is_leaf": true,
         "parent": null,
@@ -2662,10 +2754,75 @@
         "id": 195,
         "name": "torch::autograd::AccumulateGrad",
         "start_time": [
-            1755618864148953242
+            1755695599437852196
         ],
         "end_time": [
-            1755618864148973842
+            1755695599437857796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 196,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599437864396
+        ],
+        "end_time": [
+            1755695599437871696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 197,
+        "name": "AddBackward0",
+        "start_time": [
+            1755695599437904696
+        ],
+        "end_time": [
+            1755695599437904996
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 198,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599437912196
+        ],
+        "end_time": [
+            1755695599437940196
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 199,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599437949796
+        ],
+        "end_time": [
+            1755695599437954296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 200,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599437960496
+        ],
+        "end_time": [
+            1755695599437964596
         ],
         "is_leaf": true,
         "parent": null,
@@ -2673,12 +2830,12 @@
     },
     {
         "id": 201,
-        "name": "aten::_foreach_lerp_",
+        "name": "ConvolutionBackward0",
         "start_time": [
-            1755618864149520042
+            1755695599437970396
         ],
         "end_time": [
-            1755618864149543142
+            1755695599438010196
         ],
         "is_leaf": true,
         "parent": null,
@@ -2686,12 +2843,12 @@
     },
     {
         "id": 202,
-        "name": "aten::_foreach_mul_",
+        "name": "torch::autograd::AccumulateGrad",
         "start_time": [
-            1755618864149556242
+            1755695599438018996
         ],
         "end_time": [
-            1755618864149642842
+            1755695599438023596
         ],
         "is_leaf": true,
         "parent": null,
@@ -2699,12 +2856,1000 @@
     },
     {
         "id": 203,
-        "name": "aten::_foreach_addcmul_",
+        "name": "CudnnBatchNormBackward0",
         "start_time": [
-            1755618864149657342
+            1755695599438029496
         ],
         "end_time": [
-            1755618864149801942
+            1755695599438109296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 204,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438119296
+        ],
+        "end_time": [
+            1755695599438124296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 205,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438130696
+        ],
+        "end_time": [
+            1755695599438139896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 206,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599438146196
+        ],
+        "end_time": [
+            1755695599438180696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 207,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438190096
+        ],
+        "end_time": [
+            1755695599438194696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 208,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599438200496
+        ],
+        "end_time": [
+            1755695599438208496
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 209,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599438215796
+        ],
+        "end_time": [
+            1755695599438240296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 210,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438249696
+        ],
+        "end_time": [
+            1755695599438290696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 211,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438296996
+        ],
+        "end_time": [
+            1755695599438301096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 212,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599438306696
+        ],
+        "end_time": [
+            1755695599438350496
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 213,
+        "name": "aten::add_",
+        "start_time": [
+            1755695599438354796
+        ],
+        "end_time": [
+            1755695599438359396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 214,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438367596
+        ],
+        "end_time": [
+            1755695599438372296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 215,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599438378096
+        ],
+        "end_time": [
+            1755695599438385196
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 216,
+        "name": "AddBackward0",
+        "start_time": [
+            1755695599438392896
+        ],
+        "end_time": [
+            1755695599438393196
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 217,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599438399496
+        ],
+        "end_time": [
+            1755695599438424596
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 218,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438433896
+        ],
+        "end_time": [
+            1755695599438438496
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 219,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438444496
+        ],
+        "end_time": [
+            1755695599438448596
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 220,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599438454796
+        ],
+        "end_time": [
+            1755695599438499796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 221,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438508096
+        ],
+        "end_time": [
+            1755695599438513396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 222,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599438519896
+        ],
+        "end_time": [
+            1755695599438526596
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 223,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599438533996
+        ],
+        "end_time": [
+            1755695599438558896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 224,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438568296
+        ],
+        "end_time": [
+            1755695599438572696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 225,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438578696
+        ],
+        "end_time": [
+            1755695599438583296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 226,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599438588996
+        ],
+        "end_time": [
+            1755695599438621396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 227,
+        "name": "aten::add_",
+        "start_time": [
+            1755695599438625096
+        ],
+        "end_time": [
+            1755695599438628496
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 228,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438636396
+        ],
+        "end_time": [
+            1755695599438641296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 229,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599438647396
+        ],
+        "end_time": [
+            1755695599438654096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 230,
+        "name": "AddBackward0",
+        "start_time": [
+            1755695599438661296
+        ],
+        "end_time": [
+            1755695599438661596
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 231,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599438668796
+        ],
+        "end_time": [
+            1755695599438693196
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 232,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438702896
+        ],
+        "end_time": [
+            1755695599438707796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 233,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438714496
+        ],
+        "end_time": [
+            1755695599438718996
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 234,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599438725196
+        ],
+        "end_time": [
+            1755695599438756896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 235,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438764996
+        ],
+        "end_time": [
+            1755695599438773896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 236,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599438779596
+        ],
+        "end_time": [
+            1755695599438805396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 237,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438814696
+        ],
+        "end_time": [
+            1755695599438819796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 238,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438826396
+        ],
+        "end_time": [
+            1755695599438830996
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 239,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599438836696
+        ],
+        "end_time": [
+            1755695599438866596
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 240,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438874396
+        ],
+        "end_time": [
+            1755695599438878896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 241,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599438884596
+        ],
+        "end_time": [
+            1755695599438892096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 242,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599438900196
+        ],
+        "end_time": [
+            1755695599438923496
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 243,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438932996
+        ],
+        "end_time": [
+            1755695599438937396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 244,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599438943596
+        ],
+        "end_time": [
+            1755695599438947796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 245,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599438953496
+        ],
+        "end_time": [
+            1755695599438991996
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 246,
+        "name": "aten::add_",
+        "start_time": [
+            1755695599438996096
+        ],
+        "end_time": [
+            1755695599438999296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 247,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439007296
+        ],
+        "end_time": [
+            1755695599439012296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 248,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599439018896
+        ],
+        "end_time": [
+            1755695599439025496
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 249,
+        "name": "AddBackward0",
+        "start_time": [
+            1755695599439032796
+        ],
+        "end_time": [
+            1755695599439033096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 250,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599439039496
+        ],
+        "end_time": [
+            1755695599439064696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 251,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439074996
+        ],
+        "end_time": [
+            1755695599439079696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 252,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439139296
+        ],
+        "end_time": [
+            1755695599439143596
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 253,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599439149196
+        ],
+        "end_time": [
+            1755695599439190396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 254,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439203696
+        ],
+        "end_time": [
+            1755695599439208396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 255,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599439214096
+        ],
+        "end_time": [
+            1755695599439221096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 256,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599439228396
+        ],
+        "end_time": [
+            1755695599439252796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 257,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439263596
+        ],
+        "end_time": [
+            1755695599439268096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 258,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439274296
+        ],
+        "end_time": [
+            1755695599439278596
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 259,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599439284296
+        ],
+        "end_time": [
+            1755695599439317596
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 260,
+        "name": "aten::add_",
+        "start_time": [
+            1755695599439321496
+        ],
+        "end_time": [
+            1755695599439324696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 261,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439332396
+        ],
+        "end_time": [
+            1755695599439336896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 262,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599439342496
+        ],
+        "end_time": [
+            1755695599439348696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 263,
+        "name": "AddBackward0",
+        "start_time": [
+            1755695599439356296
+        ],
+        "end_time": [
+            1755695599439356596
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 264,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599439363096
+        ],
+        "end_time": [
+            1755695599439387796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 265,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439397096
+        ],
+        "end_time": [
+            1755695599439401496
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 266,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439407496
+        ],
+        "end_time": [
+            1755695599439411696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 267,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599439417796
+        ],
+        "end_time": [
+            1755695599439452796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 268,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439460896
+        ],
+        "end_time": [
+            1755695599439466996
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 269,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599439473096
+        ],
+        "end_time": [
+            1755695599439499296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 270,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439509596
+        ],
+        "end_time": [
+            1755695599439533396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 271,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439544596
+        ],
+        "end_time": [
+            1755695599439548896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 272,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599439554696
+        ],
+        "end_time": [
+            1755695599439585896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 273,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439593696
+        ],
+        "end_time": [
+            1755695599439598096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 274,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599439604296
+        ],
+        "end_time": [
+            1755695599439611596
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 275,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599439618696
+        ],
+        "end_time": [
+            1755695599439647496
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 276,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439656396
+        ],
+        "end_time": [
+            1755695599439660896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 277,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439666696
+        ],
+        "end_time": [
+            1755695599439670896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 278,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599439676996
+        ],
+        "end_time": [
+            1755695599439715096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 279,
+        "name": "aten::add_",
+        "start_time": [
+            1755695599439719096
+        ],
+        "end_time": [
+            1755695599439722596
         ],
         "is_leaf": true,
         "parent": null,
@@ -2712,12 +3857,12 @@
     },
     {
         "id": 280,
-        "name": "aten::_foreach_sqrt",
+        "name": "torch::autograd::AccumulateGrad",
         "start_time": [
-            1755618864150486042
+            1755695599439730396
         ],
         "end_time": [
-            1755618864150635842
+            1755695599439735296
         ],
         "is_leaf": true,
         "parent": null,
@@ -2725,12 +3870,12 @@
     },
     {
         "id": 281,
-        "name": "aten::_foreach_div_",
+        "name": "ReluBackward0",
         "start_time": [
-            1755618864150669342
+            1755695599439741496
         ],
         "end_time": [
-            1755618864150754942
+            1755695599439748196
         ],
         "is_leaf": true,
         "parent": null,
@@ -2738,12 +3883,12 @@
     },
     {
         "id": 282,
-        "name": "aten::_foreach_add_",
+        "name": "AddBackward0",
         "start_time": [
-            1755618864150762342
+            1755695599439755396
         ],
         "end_time": [
-            1755618864150879342
+            1755695599439755796
         ],
         "is_leaf": true,
         "parent": null,
@@ -2751,12 +3896,519 @@
     },
     {
         "id": 283,
-        "name": "aten::_foreach_addcdiv_",
+        "name": "CudnnBatchNormBackward0",
         "start_time": [
-            1755618864150901242
+            1755695599439762896
         ],
         "end_time": [
-            1755618864150988942
+            1755695599439788796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 284,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439798196
+        ],
+        "end_time": [
+            1755695599439803196
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 285,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439809196
+        ],
+        "end_time": [
+            1755695599439813696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 286,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599439819396
+        ],
+        "end_time": [
+            1755695599439858296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 287,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599439866296
+        ],
+        "end_time": [
+            1755695599439870896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 288,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599439876696
+        ],
+        "end_time": [
+            1755695599439883196
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 289,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599439890996
+        ],
+        "end_time": [
+            1755695599440047996
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 290,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440058296
+        ],
+        "end_time": [
+            1755695599440067696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 291,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440074096
+        ],
+        "end_time": [
+            1755695599440078996
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 292,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599440085096
+        ],
+        "end_time": [
+            1755695599440136296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 293,
+        "name": "aten::add_",
+        "start_time": [
+            1755695599440140896
+        ],
+        "end_time": [
+            1755695599440144896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 294,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440152496
+        ],
+        "end_time": [
+            1755695599440157096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 295,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599440163496
+        ],
+        "end_time": [
+            1755695599440170196
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 296,
+        "name": "AddBackward0",
+        "start_time": [
+            1755695599440177996
+        ],
+        "end_time": [
+            1755695599440178296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 297,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599440185196
+        ],
+        "end_time": [
+            1755695599440210196
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 298,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440220096
+        ],
+        "end_time": [
+            1755695599440224796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 299,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440231396
+        ],
+        "end_time": [
+            1755695599440235896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 300,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599440241896
+        ],
+        "end_time": [
+            1755695599440278096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 301,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440286696
+        ],
+        "end_time": [
+            1755695599440291296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 302,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599440297196
+        ],
+        "end_time": [
+            1755695599440303796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 303,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599440311396
+        ],
+        "end_time": [
+            1755695599440335896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 304,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440345196
+        ],
+        "end_time": [
+            1755695599440350196
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 305,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440356096
+        ],
+        "end_time": [
+            1755695599440360396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 306,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599440365896
+        ],
+        "end_time": [
+            1755695599440399896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 307,
+        "name": "aten::add_",
+        "start_time": [
+            1755695599440404296
+        ],
+        "end_time": [
+            1755695599440407496
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 308,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440415096
+        ],
+        "end_time": [
+            1755695599440419996
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 309,
+        "name": "MaxPool2DWithIndicesBackward0",
+        "start_time": [
+            1755695599440426196
+        ],
+        "end_time": [
+            1755695599440450896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 310,
+        "name": "ReluBackward0",
+        "start_time": [
+            1755695599440458796
+        ],
+        "end_time": [
+            1755695599440465496
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 311,
+        "name": "CudnnBatchNormBackward0",
+        "start_time": [
+            1755695599440472896
+        ],
+        "end_time": [
+            1755695599440499396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 312,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440509196
+        ],
+        "end_time": [
+            1755695599440513796
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 313,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440520196
+        ],
+        "end_time": [
+            1755695599440524396
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 314,
+        "name": "ConvolutionBackward0",
+        "start_time": [
+            1755695599440530096
+        ],
+        "end_time": [
+            1755695599440556696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 315,
+        "name": "torch::autograd::AccumulateGrad",
+        "start_time": [
+            1755695599440563896
+        ],
+        "end_time": [
+            1755695599440568296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 321,
+        "name": "aten::_foreach_lerp_",
+        "start_time": [
+            1755695599441442196
+        ],
+        "end_time": [
+            1755695599441464096
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 322,
+        "name": "aten::_foreach_mul_",
+        "start_time": [
+            1755695599441477996
+        ],
+        "end_time": [
+            1755695599441775296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 323,
+        "name": "aten::_foreach_addcmul_",
+        "start_time": [
+            1755695599441796296
+        ],
+        "end_time": [
+            1755695599441984196
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 448,
+        "name": "aten::_foreach_sqrt",
+        "start_time": [
+            1755695599442730196
+        ],
+        "end_time": [
+            1755695599442945696
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 449,
+        "name": "aten::_foreach_div_",
+        "start_time": [
+            1755695599442969396
+        ],
+        "end_time": [
+            1755695599443103296
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 450,
+        "name": "aten::_foreach_add_",
+        "start_time": [
+            1755695599443112796
+        ],
+        "end_time": [
+            1755695599443264896
+        ],
+        "is_leaf": true,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 451,
+        "name": "aten::_foreach_addcdiv_",
+        "start_time": [
+            1755695599443305596
+        ],
+        "end_time": [
+            1755695599443611496
         ],
         "is_leaf": true,
         "parent": null,
