@@ -1,6 +1,7 @@
 import sys
 import json
 from core.json2dot import graph_json_to_dot, tree_json_to_dot
+from core.json_to_complex_dot import json_to_complex_dot
 from core.dot2png import dot_to_png
 import argparse
 
@@ -50,5 +51,6 @@ if __name__ == '__main__':
     parser.add_argument("--graph", type=int, help="1 generate png, 0 not")
 
     args = parser.parse_args()
+
 
     main(args.model, args.train, args.tree, args.graph)
