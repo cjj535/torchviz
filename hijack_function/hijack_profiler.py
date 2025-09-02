@@ -400,6 +400,7 @@ def my_init(self, *args, **kwargs):
     # validate
     # 1、校验反向节点的祖先都是反向
     # 2、校验is_leaf是否正确
+    # 3、校验必为有向无环图
 
     # 最后导出为json文件
     global model
@@ -423,3 +424,4 @@ def hijack_profiler(model_name: str, is_generate_tree: int):
     # 替换 __init__
 
     MemoryProfile.__init__ = my_init
+
