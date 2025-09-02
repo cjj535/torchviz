@@ -8,7 +8,6 @@ from torch.profiler._memory_profiler import (
     OpTree,
     TensorAndID,
     SchemaMatcher,
-    get_scopes,
 )
 from torch._C._profiler import (
     _EventType,
@@ -222,13 +221,13 @@ def graph_to_json(
 
 
 class Node:
-    def __init__(self, id: int, name: str, start_time: int, end_time: int, is_leaf: bool, is_backward: bool, parent: Optional[int] = None):
+    def __init__(self, id: int, name: str, start_time: int, end_time: int, is_leaf: bool, scope: str, parent: Optional[int] = None):
         self.id = id
         self.name = name
         self.start_time = start_time
         self.end_time = end_time
         self.is_leaf = is_leaf
-        self.is_backward = is_backward
+        self.scope = scope
         self.parent = parent
         self.children = []
 
@@ -280,7 +279,7 @@ def filter_tree(nodes: List[Dict], leaf_id_list: List[int], id_list: List[int]) 
             "start_time": node["start_time"],
             "end_time": node["end_time"],
             "is_leaf": node["is_leaf"],
-            "is_backward": node["is_backward"],
+            "scope": node["scope"],
             "parent": node.get("parent"),
             "children": [child_id for child_id in node.get("children", []) 
                     if child_id in valid_nodes],
@@ -302,11 +301,30 @@ def is_tree_node(e: _ProfilerEvent) -> bool:
         # bool(SchemaMatcher.match_schemas(e.typed[1]))
     )) or (e.typed[0] == _EventType.PyCall and "nn.Module:" in e.name)
 
+def get_ancestors_name(e: Optional[_ProfilerEvent]) -> Tuple[str, ...]:
+    ancestors_name: List[str] = []
+    while e:
+        if e.typed[0] in [_EventType.TorchOp, _EventType.PyCall]:
+            ancestors_name.append(e.name)
+        e = e.parent
+    return tuple(ancestors_name)
+
 def is_backward(e: _ProfilerEvent) -> bool:
-    if e.typed[0] == _EventType.TorchOp:
-        return RecordScope.BACKWARD_FUNCTION in get_scopes(e):
-    elif e.typed[0] == _EventType.PyCall:
-        return False
+    ancestors_name = get_ancestors_name(e)
+    for name in ancestors_name:
+        if "autograd::" in name:
+            return True
+    return False
+
+backward_end_time = -1
+
+def get_scope(e: _ProfilerEvent) -> str:
+    if is_backward(e):
+        return "backward"
+    elif backward_end_time > 0 and e.start_time_ns > backward_end_time:
+        return "postprocess"
+    else:
+        return "forward"
 
 def tree_to_json(op_tree: OpTree, graph_id_list: List[int]) -> List[Dict]:
     # 第一步：构建树，省去非module节点
@@ -329,7 +347,7 @@ def tree_to_json(op_tree: OpTree, graph_id_list: List[int]) -> List[Dict]:
                 start_time=event.start_time_ns,
                 end_time=event.end_time_ns,
                 is_leaf=is_leaf(event),
-                is_backward=is_backward(event),
+                scope=get_scope(event),
                 parent=parent_id
             )
             
@@ -353,7 +371,7 @@ def tree_to_json(op_tree: OpTree, graph_id_list: List[int]) -> List[Dict]:
             "start_time": node.start_time,
             "end_time": node.end_time,
             "is_leaf": node.is_leaf,
-            "is_backward": node.is_backward,
+            "scope": node.scope,
             "parent": node.parent,
             "children": node.children,
         })
@@ -364,8 +382,14 @@ def set_id(op_tree: OpTree):
     id = 0
 
     def dfs(events: List[_ProfilerEvent]):
+        global backward_end_time
         nonlocal id
+
         for event in events:
+            # 存储反向节点最晚时间点，用于区分是否属于前向
+            if is_backward(event):
+                backward_end_time = max(backward_end_time, event.end_time_ns)
+
             if is_tree_node(event):
                 node_id_map[event] = id
                 id += 1

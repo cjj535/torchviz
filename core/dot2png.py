@@ -11,3 +11,8 @@ def dot_to_png(dot_path: str, generate_tree: int):
         tree_png_file = f"{dot_path}/tree.png"
         subprocess.run(['dot', '-Tpng', '-Gdpi=300', '-Nfontname=Helvetica', '-Nfontsize=10', tree_dot_file, '-o', tree_png_file], check=True)
         print(f"Transfered {tree_dot_file} to {tree_png_file}.")
+
+        complex_graph_dot_file = f"{dot_path}/complex_graph.dot"
+        complex_graph_png_file = f"{dot_path}/complex_graph.png"
+        subprocess.run(['dot', '-Tpng', '-Gdpi=300', complex_graph_dot_file, '-o', complex_graph_png_file], check=True)
+        print(f"Transfered {complex_graph_dot_file} to {complex_graph_png_file}.")

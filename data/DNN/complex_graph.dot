@@ -1,0 +1,134 @@
+digraph G {
+  rankdir=LR;
+  node [fontname="Arial"];
+    subgraph cluster_31 {
+        label="[forward]";
+        style=rounded;
+        color=blue;
+        "node_1" [label="aten::to", shape=box];
+        "node_3" [label="aten::to", shape=box];
+        subgraph cluster_4 {
+            label="nn.Module: TwoLayerNet_0";
+            style=rounded;
+            color=blue;
+            "node_5" [label="aten::view", shape=box];
+            subgraph cluster_6 {
+                label="nn.Module: Linear_0";
+                style=rounded;
+                color=blue;
+                "node_7" [label="aten::linear", shape=box];
+            }
+            subgraph cluster_8 {
+                label="nn.Module: ReLU_0";
+                style=rounded;
+                color=blue;
+                "node_9" [label="aten::relu", shape=box];
+            }
+            subgraph cluster_10 {
+                label="nn.Module: Linear_1";
+                style=rounded;
+                color=blue;
+                "node_11" [label="aten::linear", shape=box];
+            }
+            "tensor_6_0_cuda:0" [label="[10,128]", shape=ellipse];
+            "node_7" -> "tensor_6_0_cuda:0";
+            "tensor_6_0_cuda:0" -> "node_9";
+        }
+        subgraph cluster_12 {
+            label="nn.Module: CrossEntropyLoss_0";
+            style=rounded;
+            color=blue;
+            "node_13" [label="aten::cross_entropy_loss", shape=box];
+        }
+        "node_14" [label="aten::ones_like", shape=box];
+        "tensor_10_0_cuda:0" [label="[10,10]", shape=ellipse];
+        "node_11" -> "tensor_10_0_cuda:0";
+        "tensor_10_0_cuda:0" -> "node_13";
+        "tensor_12_0_cuda:0" [label="[]", shape=ellipse];
+        "node_13" -> "tensor_12_0_cuda:0";
+        "tensor_12_0_cuda:0" -> "node_14";
+    }
+    subgraph cluster_32 {
+        label="[backward]";
+        style=rounded;
+        color=blue;
+        "node_15" [label="NllLossBackward0", shape=box];
+        "node_16" [label="LogSoftmaxBackward0", shape=box];
+        "node_17" [label="AddmmBackward0", shape=box];
+        "node_18" [label="aten::sum", shape=box];
+        "node_19" [label="aten::view", shape=box];
+        "node_20" [label="torch::autograd::AccumulateGrad", shape=box];
+        "node_21" [label="TBackward0", shape=box];
+        "node_22" [label="torch::autograd::AccumulateGrad", shape=box];
+        "node_23" [label="ReluBackward0", shape=box];
+        "node_24" [label="AddmmBackward0", shape=box];
+        "node_25" [label="aten::sum", shape=box];
+        "node_26" [label="aten::view", shape=box];
+        "node_27" [label="torch::autograd::AccumulateGrad", shape=box];
+        "node_28" [label="TBackward0", shape=box];
+        "node_29" [label="torch::autograd::AccumulateGrad", shape=box];
+        "tensor_15_0_cuda:0" [label="[10,10]", shape=ellipse];
+        "node_15" -> "tensor_15_0_cuda:0";
+        "tensor_15_0_cuda:0" -> "node_16";
+        "tensor_16_0_cuda:0" [label="[10,10]", shape=ellipse];
+        "node_16" -> "tensor_16_0_cuda:0";
+        "tensor_16_0_cuda:0" -> "node_17";
+        "tensor_16_0_cuda:0" -> "node_18";
+        "tensor_17_0_cuda:0" [label="[10,128]", shape=ellipse];
+        "node_17" -> "tensor_17_0_cuda:0";
+        "tensor_17_0_cuda:0" -> "node_23";
+        "tensor_18_0_cuda:0" [label="[128,10]", shape=ellipse];
+        "node_17" -> "tensor_18_0_cuda:0";
+        "tensor_18_0_cuda:0" -> "node_21";
+        "tensor_18_0_cuda:0" -> "node_22";
+        "tensor_19_0_cuda:0" [label="[1,10]", shape=ellipse];
+        "node_18" -> "tensor_19_0_cuda:0";
+        "tensor_19_0_cuda:0" -> "node_19";
+        "tensor_19_0_cuda:0" -> "node_20";
+        "tensor_20_0_cuda:0" [label="[10,128]", shape=ellipse];
+        "node_23" -> "tensor_20_0_cuda:0";
+        "tensor_20_0_cuda:0" -> "node_24";
+        "tensor_20_0_cuda:0" -> "node_25";
+        "tensor_21_0_cuda:0" [label="[784,128]", shape=ellipse];
+        "node_24" -> "tensor_21_0_cuda:0";
+        "tensor_21_0_cuda:0" -> "node_28";
+        "tensor_21_0_cuda:0" -> "node_29";
+        "tensor_22_0_cuda:0" [label="[1,128]", shape=ellipse];
+        "node_25" -> "tensor_22_0_cuda:0";
+        "tensor_22_0_cuda:0" -> "node_26";
+        "tensor_22_0_cuda:0" -> "node_27";
+    }
+    "tensor_1_0_cuda:0" [label="[10,1,28,28]", shape=ellipse];
+    "node_1" -> "tensor_1_0_cuda:0";
+    "tensor_1_0_cuda:0" -> "node_5";
+    "tensor_1_0_cuda:0" -> "node_7";
+    "tensor_1_0_cuda:0" -> "node_24";
+    "tensor_3_0_cuda:0" [label="[10]", shape=ellipse];
+    "node_3" -> "tensor_3_0_cuda:0";
+    "tensor_3_0_cuda:0" -> "node_13";
+    "tensor_3_0_cuda:0" -> "node_15";
+    "tensor_4_0_cuda:0" [label="[128,784]", shape=ellipse];
+    "tensor_4_0_cuda:0" -> "node_7";
+    "tensor_5_0_cuda:0" [label="[128]", shape=ellipse];
+    "tensor_5_0_cuda:0" -> "node_7";
+    "tensor_7_0_cuda:0" [label="[10,128]", shape=ellipse];
+    "node_9" -> "tensor_7_0_cuda:0";
+    "tensor_7_0_cuda:0" -> "node_11";
+    "tensor_7_0_cuda:0" -> "node_17";
+    "tensor_7_0_cuda:0" -> "node_23";
+    "tensor_8_0_cuda:0" [label="[10,128]", shape=ellipse];
+    "tensor_8_0_cuda:0" -> "node_11";
+    "tensor_8_0_cuda:0" -> "node_17";
+    "tensor_9_0_cuda:0" [label="[10]", shape=ellipse];
+    "tensor_9_0_cuda:0" -> "node_11";
+    "tensor_11_0_cuda:0" [label="[10,10]", shape=ellipse];
+    "node_13" -> "tensor_11_0_cuda:0";
+    "tensor_11_0_cuda:0" -> "node_15";
+    "tensor_11_0_cuda:0" -> "node_16";
+    "tensor_13_0_cuda:0" [label="[]", shape=ellipse];
+    "node_13" -> "tensor_13_0_cuda:0";
+    "tensor_13_0_cuda:0" -> "node_15";
+    "tensor_14_0_cuda:0" [label="[]", shape=ellipse];
+    "node_14" -> "tensor_14_0_cuda:0";
+    "tensor_14_0_cuda:0" -> "node_15";
+}

@@ -10,6 +10,7 @@
 # 下一步目标
 1、显示tensor的shape当前还有一个问题：同一个tensor经过view等操作之后shape有变化，此时shape只能显示其中之一
 2、支持分层展示：效果接近tensorboard，支持子图展开折叠。已完成dot文件生成，下一步需要把dot文件在网页中可互动的可视化
+    可视化初步定位三个阶段：分别是forward、backward、postprocess，分别代表前向、反向、模型更新
 3、添加初始数据校验
 4、修改已有功能函数，用类定义代替Dict存储数据
 

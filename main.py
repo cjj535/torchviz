@@ -1,4 +1,3 @@
-import sys
 import json
 from core.json2dot import graph_json_to_dot, tree_json_to_dot
 from core.json_to_complex_dot import json_to_complex_dot
@@ -36,6 +35,15 @@ def main(model = 'DNN', is_train = 1, is_generate_tree = 1, is_graph = 1):
             with open(f'./data/{model}/tree.dot', "w") as dot_file:
                 dot_file.write(dot_content)
                 print(f"Transfered ./data/{model}/tree.json to ./data/{model}/tree.dot")
+        
+        with open(f'./data/{model}/graph.json', 'r') as graph_json_file, open(f'./data/{model}/tree.json', 'r') as tree_json_file:
+            graph_data = json.load(graph_json_file)
+            tree_data = json.load(tree_json_file)
+            dot_content = json_to_complex_dot(graph_data, tree_data)
+
+            with open(f'./data/{model}/complex_graph.dot', "w") as dot_file:
+                dot_file.write(dot_content)
+                print(f"Generated ./data/{model}/complex_graph.dot")
     
     # 将dot文件可视化
     if is_graph:
@@ -51,6 +59,5 @@ if __name__ == '__main__':
     parser.add_argument("--graph", type=int, help="1 generate png, 0 not")
 
     args = parser.parse_args()
-
 
     main(args.model, args.train, args.tree, args.graph)
