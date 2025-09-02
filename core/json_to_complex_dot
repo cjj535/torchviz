@@ -1,3 +1,7 @@
+# 下一步修改：
+# 1、定义两个根节点，一个是forward，一个是backward，forward从左向右，backward从右向左，呈开口向左的U型图
+# 2、tree.json中需要增加一个字段is_backward，用于转dot文件时区分是属于forward还是backward
+# 3、tensor在forward和backward之外的是weight、input、跨前反向的激活值
 import json
 from typing import Dict, List
 
