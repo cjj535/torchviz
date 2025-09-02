@@ -8,6 +8,7 @@ from torch.profiler._memory_profiler import (
     OpTree,
     TensorAndID,
     SchemaMatcher,
+    get_scopes,
 )
 from torch._C._profiler import (
     _EventType,
@@ -177,7 +178,7 @@ def graph_to_json(
         Category.AUTOGRAD_DETAIL: "autograd_detail",
     }
     for node in graph.flow_nodes:
-        # 过滤掉Allocation节点，这些节点基本是free事件
+        # 过滤掉Allocation节点（这些节点基本是free事件）
         if node._event.typed[0] != _EventType.TorchOp:
             continue
 
@@ -221,12 +222,13 @@ def graph_to_json(
 
 
 class Node:
-    def __init__(self, id: int, name: str, start_time: int, end_time: int, is_leaf: bool, parent: Optional[int] = None):
+    def __init__(self, id: int, name: str, start_time: int, end_time: int, is_leaf: bool, is_backward: bool, parent: Optional[int] = None):
         self.id = id
         self.name = name
         self.start_time = start_time
         self.end_time = end_time
         self.is_leaf = is_leaf
+        self.is_backward = is_backward
         self.parent = parent
         self.children = []
 
@@ -278,6 +280,7 @@ def filter_tree(nodes: List[Dict], leaf_id_list: List[int], id_list: List[int]) 
             "start_time": node["start_time"],
             "end_time": node["end_time"],
             "is_leaf": node["is_leaf"],
+            "is_backward": node["is_backward"],
             "parent": node.get("parent"),
             "children": [child_id for child_id in node.get("children", []) 
                     if child_id in valid_nodes],
@@ -299,6 +302,12 @@ def is_tree_node(e: _ProfilerEvent) -> bool:
         # bool(SchemaMatcher.match_schemas(e.typed[1]))
     )) or (e.typed[0] == _EventType.PyCall and "nn.Module:" in e.name)
 
+def is_backward(e: _ProfilerEvent) -> bool:
+    if e.typed[0] == _EventType.TorchOp:
+        return RecordScope.BACKWARD_FUNCTION in get_scopes(e):
+    elif e.typed[0] == _EventType.PyCall:
+        return False
+
 def tree_to_json(op_tree: OpTree, graph_id_list: List[int]) -> List[Dict]:
     # 第一步：构建树，省去非module节点
     nodes: Dict[int, Node] = {}
@@ -316,10 +325,11 @@ def tree_to_json(op_tree: OpTree, graph_id_list: List[int]) -> List[Dict]:
             node_id = node_id_map[event]
             nodes[node_id] = Node(
                 id=node_id,
-                name=event.name,  # 移除前11个字符
+                name=event.name,
                 start_time=event.start_time_ns,
                 end_time=event.end_time_ns,
                 is_leaf=is_leaf(event),
+                is_backward=is_backward(event),
                 parent=parent_id
             )
             
@@ -343,6 +353,7 @@ def tree_to_json(op_tree: OpTree, graph_id_list: List[int]) -> List[Dict]:
             "start_time": node.start_time,
             "end_time": node.end_time,
             "is_leaf": node.is_leaf,
+            "is_backward": node.is_backward,
             "parent": node.parent,
             "children": node.children,
         })
@@ -386,6 +397,10 @@ def my_init(self, *args, **kwargs):
 
     tree_json = tree_to_json(self._op_tree, graph_id_list)
 
+    # validate
+    # 1、校验反向节点的祖先都是反向
+    # 2、校验is_leaf是否正确
+
     # 最后导出为json文件
     global model
     global generate_tree
@@ -406,4 +421,5 @@ def hijack_profiler(model_name: str, is_generate_tree: int):
     generate_tree = True if is_generate_tree == 1 else False
 
     # 替换 __init__
+
     MemoryProfile.__init__ = my_init
