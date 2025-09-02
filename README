@@ -9,7 +9,9 @@
 
 # 下一步目标
 1、显示tensor的shape当前还有一个问题：同一个tensor经过view等操作之后shape有变化，此时shape只能显示其中之一
-2、支持分层展示，目前展示了torch的最小层-aten层，当模型变得复杂时，比如划分block时，需要提供按block显示的方法，block内部再单独展示。思路是重新定义数据流图的节点为block（属于PyCall）
+2、支持分层展示：效果接近tensorboard，支持子图展开折叠。已完成dot文件生成，下一步需要把dot文件在网页中可互动的可视化
+3、添加初始数据校验
+4、修改已有功能函数，用类定义代替Dict存储数据
 
 # 图像内容设计
 1、第一类元素是tensor，相关的信息有category、device、ptr、shape、size、申请释放时间
@@ -20,3 +22,4 @@
 # 使用方法
 graphviz安装包：https://graphviz.org/download/
 python main.py [train_model_name]
+
