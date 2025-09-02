@@ -1,9 +1,8 @@
-# 下一步修改：
-# 1、定义两个根节点，一个是forward，一个是backward，forward从左向右，backward从右向左，呈开口向左的U型图
-# 2、tree.json中需要增加一个字段is_backward，用于转dot文件时区分是属于forward还是backward
-# 3、tensor在forward和backward之外的是weight、input、跨前反向的激活值
 import json
 from typing import Dict, List
+
+forward_node_name = "[forward]"
+backward_node_name = "[backward]"
 
 class TensorInfo:
     producer: int
@@ -21,10 +20,64 @@ def is_leaf(node: Dict) -> bool:
 def get_tensor_key(tensor: Dict) -> str:
     return f'{tensor["id"]}_{tensor["version"]}_{tensor["device"]}'
 
+def preprocess_tree(tree_dict: Dict[int, Dict]) -> None:
+    max_id = -1
+    forward_root_node: Dict = {
+        "id": -1,
+        "name": forward_node_name,
+        "start_time": -1,
+        "end_time": -1,
+        "is_leaf": False,
+        "is_backward": False,
+        "parent": None,
+        "children": []
+    }
+    backward_root_node: Dict = {
+        "id": -1,
+        "name": backward_node_name,
+        "start_time": -1,
+        "end_time": -1,
+        "is_leaf": False,
+        "is_backward": True,
+        "parent": None,
+        "children": []
+    }
+
+    for id, node in tree_dict.items():
+        max_id = max(max_id, id)
+        if node["parent"] is not None:
+            continue
+        if node["is_backward"]:
+            backward_root_node["start_time"] = min(backward_root_node["start_time"], node["start_time"]) if backward_root_node["start_time"] != -1 else node["start_time"]
+            backward_root_node["end_time"] = max(backward_root_node["end_time"], node["end_time"]) if backward_root_node["end_time"] != -1 else node["end_time"]
+            backward_root_node["children"].append(id)
+        elif not node["is_backward"]:
+            forward_root_node["start_time"] = min(forward_root_node["start_time"], node["start_time"]) if forward_root_node["start_time"] != -1 else node["start_time"]
+            forward_root_node["end_time"] = max(forward_root_node["end_time"], node["end_time"]) if forward_root_node["end_time"] != -1 else node["end_time"]
+            forward_root_node["children"].append(id)
+
+    # 增加两个节点的id
+    forward_root_node["id"] = max_id + 1
+    backward_root_node["id"] = max_id + 2
+    for id, node in tree_dict.items():
+        max_id = max(max_id, id)
+        if node["parent"] is not None:
+            continue
+        if node["is_backward"]:
+            node["parent"] = backward_root_node["id"]
+        elif not node["is_backward"]:
+            node["parent"] = forward_root_node["id"]
+
+    # 添加两个根节点
+    tree_dict[forward_root_node["id"]] = forward_root_node
+    tree_dict[backward_root_node["id"]] = backward_root_node
+
 def json_to_dot(graph_data: List[Dict], tree_data: List[Dict]) -> str:
     # 1.每条json数据以id为key
     leaf_node_map: Dict[int, Dict] = {n["id"]: n for n in graph_data}
     node_map: Dict[int, Dict] = {n["id"]: n for n in tree_data}
+
+    preprocess_tree(node_map)
 
     # 对森林设置一个总的虚拟的根节点，id为-1，方便后续算法计算
     virtual_root_id = -1
@@ -113,6 +166,10 @@ def json_to_dot(graph_data: List[Dict], tree_data: List[Dict]) -> str:
             else:
                 # 添加子图
                 sub_dot_lines.append(f'{"    "*depth}subgraph cluster_{node_id} {{')
+                if node_map[node_id]["name"] == forward_node_name:
+                    sub_dot_lines.append(f'{"    "*(depth+1)}rankdir=LR;')
+                elif node_map[node_id]["name"] == backward_node_name:
+                    sub_dot_lines.append(f'{"    "*(depth+1)}rankdir=RL;')
                 sub_dot_lines.append(f'{"    "*(depth+1)}label="{node_map[node_id]["name"]}";')
                 sub_dot_lines.append(f'{"    "*(depth+1)}style=rounded;')
                 sub_dot_lines.append(f'{"    "*(depth+1)}color=blue;')
