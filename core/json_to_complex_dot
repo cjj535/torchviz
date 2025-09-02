@@ -72,7 +72,7 @@ def preprocess_tree(tree_dict: Dict[int, Dict]) -> None:
     tree_dict[forward_root_node["id"]] = forward_root_node
     tree_dict[backward_root_node["id"]] = backward_root_node
 
-def json_to_dot(graph_data: List[Dict], tree_data: List[Dict]) -> str:
+def json_to_complex_dot(graph_data: List[Dict], tree_data: List[Dict]) -> str:
     # 1.每条json数据以id为key
     leaf_node_map: Dict[int, Dict] = {n["id"]: n for n in graph_data}
     node_map: Dict[int, Dict] = {n["id"]: n for n in tree_data}
