@@ -106,6 +106,19 @@ def delete_postprocess_node(tree_dict: Dict[int, Dict], leaf_node_dict: Dict[int
         if key in leaf_node_dict:
             del leaf_node_dict[key]
 
+def delete_backward_node(tree_dict: Dict[int, Dict], leaf_node_dict: Dict[int, Dict]) -> None:
+    backward_node_id: List[int] = []
+    for id, node in tree_dict.items():
+        if node["scope"] == "backward":
+            backward_node_id.append(id)
+
+    for key in backward_node_id:
+        if key in tree_dict:
+            del tree_dict[key]
+    for key in backward_node_id:
+        if key in leaf_node_dict:
+            del leaf_node_dict[key]
+
 def json_to_complex_dot(graph_data: List[Dict], tree_data: List[Dict]) -> str:
     # 1.每条json数据以id为key
     leaf_node_map: Dict[int, Dict] = {n["id"]: n for n in graph_data}
@@ -116,6 +129,9 @@ def json_to_complex_dot(graph_data: List[Dict], tree_data: List[Dict]) -> str:
 
     # 删除图中的postprocess节点
     delete_postprocess_node(node_map, leaf_node_map)
+
+    # 删除图中的backward节点
+    delete_backward_node(node_map, leaf_node_map)
 
     # 对森林设置一个总的虚拟的根节点，id为-1，方便后续算法计算
     virtual_root_id = -1
