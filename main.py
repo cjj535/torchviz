@@ -1,6 +1,7 @@
 import json
 from core.json2dot import graph_json_to_dot, tree_json_to_dot
 from core.json_to_complex_dot import json_to_complex_dot
+from core.json_to_complex_json import json_to_complex_json
 from core.dot2png import dot_to_png
 import argparse
 
@@ -44,6 +45,15 @@ def main(model = 'DNN', is_train = 1, is_generate_tree = 1, is_graph = 1):
             with open(f'./data/{model}/complex_graph.dot', "w") as dot_file:
                 dot_file.write(dot_content)
                 print(f"Generated ./data/{model}/complex_graph.dot")
+        
+        with open(f'./data/{model}/graph.json', 'r') as graph_json_file, open(f'./data/{model}/tree.json', 'r') as tree_json_file:
+            graph_data = json.load(graph_json_file)
+            tree_data = json.load(tree_json_file)
+            json_content = json_to_complex_json(graph_data, tree_data)
+
+            with open(f'./data/{model}/complex_graph.json', "w") as json_file:
+                json.dump(json_content, json_file, indent=4)
+                print(f"Generated ./data/{model}/complex_graph.json")
     
     # 将dot文件可视化
     if is_graph:

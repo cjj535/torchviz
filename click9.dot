@@ -1,0 +1,65 @@
+digraph G {
+    rankdir=LR;
+    node [fontname="Arial"];
+    subgraph cluster_1 {
+        label="[forward]";
+        style=rounded;
+        color=blue;
+        "2" [label="aten::to", shape=box];
+        "3" [label="aten::to", shape=box];
+        subgraph cluster_4 {
+            label="nn.Module: TwoLayerNet_0";
+            style=rounded;
+            color=blue;
+            "5" [label="aten::view", shape=box];
+            "6" [label="nn.Module: Linear_0", shape=box];
+            subgraph cluster_9 {
+                label="nn.Module: ReLU_0";
+                style=rounded;
+                color=blue;
+                "10" [label="aten::relu", shape=box];
+                "11" [label="[10,128]", shape=ellipse];
+            }
+            "12" [label="nn.Module: Linear_1", shape=box];
+            "8" [label="[10,128]", shape=ellipse];
+            "14" [label="[10,10]", shape=ellipse];
+        }
+        subgraph cluster_15 {
+            label="nn.Module: CrossEntropyLoss_0";
+            style=rounded;
+            color=blue;
+            "16" [label="aten::cross_entropy_loss", shape=box];
+            "17" [label="[10,10]", shape=ellipse];
+            "18" [label="[]", shape=ellipse];
+            "19" [label="[]", shape=ellipse];
+        }
+        "20" [label="aten::ones_like", shape=box];
+        "21" [label="[10,1,28,28]", shape=ellipse];
+        "22" [label="[10]", shape=ellipse];
+        "23" [label="[]", shape=ellipse];
+    }
+    "24" [label="[128,784]", shape=ellipse];
+    "25" [label="[128]", shape=ellipse];
+    "26" [label="[10,128]", shape=ellipse];
+    "27" [label="[10]", shape=ellipse];
+    "2" -> "21";
+    "3" -> "22";
+    "6" -> "8";
+    "10" -> "11";
+    "11" -> "12";
+    "12" -> "14";
+    "8" -> "10";
+    "14" -> "16";
+    "16" -> "17";
+    "16" -> "18";
+    "16" -> "19";
+    "18" -> "20";
+    "20" -> "23";
+    "21" -> "5";
+    "21" -> "6";
+    "22" -> "16";
+    "24" -> "6";
+    "25" -> "6";
+    "26" -> "12";
+    "27" -> "12";
+}
