@@ -43,7 +43,7 @@ class Graph:
 
     def __init__(self):
         self.nodes = {}
-    
+
     def get_graph_from_file(self, path: str):
         with open(path, 'r') as graph_json_file:
             nodes_json = json.load(graph_json_file)
@@ -123,8 +123,9 @@ class Graph:
             node.x = layer_x[layer[u]]
 
     def compute_y_layout(self):
+
         return
-    
+
     def compute_layout(self):
         """
         计算布局，包括图形中心坐标点以及图形大小
@@ -141,7 +142,7 @@ class Graph:
         edges_dot_lines: List[str] = []
 
         # dfs遍历函数，每次调用分析一个子图中应有的节点，包括tensor节点、op节点、子图
-        def dfsGenerateDot(children: List[int], depth: int) -> List[str]:
+        def dfs_generate_dot(children: List[int], depth: int) -> List[str]:
             sub_dot_lines: List[str] = []
             for node_id in children:
                 if self.nodes[node_id].isLeaf:
@@ -156,13 +157,12 @@ class Graph:
                     sub_dot_lines.append(f'{"    "*(depth+1)}label="{self.nodes[node_id].label}";')
                     sub_dot_lines.append(f'{"    "*(depth+1)}style=rounded;')
                     sub_dot_lines.append(f'{"    "*(depth+1)}color=blue;')
-                    sub_dot_lines += dfsGenerateDot(self.nodes[node_id].children, depth+1)
+                    sub_dot_lines += dfs_generate_dot(self.nodes[node_id].children, depth+1)
                     sub_dot_lines.append(f'{"    "*depth}}}')
-
             return sub_dot_lines
 
         root_nodes_id = [k for k, v in self.nodes.items() if v.parent is None]
-        node_dot_lines = dfsGenerateDot(root_nodes_id, depth=1)
+        node_dot_lines = dfs_generate_dot(root_nodes_id, depth=1)
 
         # 定义dot文件头尾，完成组装
         root_dot_lines: List[str] = []
@@ -202,7 +202,9 @@ class Graph:
         # 获取根节点
         roots = [i for i, n in self.nodes.items() if n.parent is None]
 
+        # ------------------------------
         # 调整部分tensor在拓扑图和树中的位置，并更改相关属性的值
+        # ------------------------------
         def dfs_build(node_id: int) -> List[int]:
             """
             重新生成拓扑图节点，并更新tensor在拓扑图中的拓扑关系和在树中的从属关系
@@ -249,7 +251,9 @@ class Graph:
             new_graph.nodes[cid].parent = None
             roots.append(cid)
 
+        # ------------------------------
         # 基于新的拓扑关系重新连接边
+        # ------------------------------
         def find_ancestor(nid: Optional[int]) -> Optional[int]:
             """
             从节点开始，在树中向上寻找首个出现在生成的graph的祖先节点，即被折叠的子图
@@ -277,7 +281,6 @@ class Graph:
     def click(self, id: int) -> "Graph":
         if id in self.nodes:
             self.nodes[id].isCollapse = not self.nodes[id].isCollapse
-        
         return self.generate_new_graph()
 
 
