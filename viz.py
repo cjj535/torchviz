@@ -116,7 +116,7 @@ class Graph:
                     queue.append(pred)
 
         if not layer:
-            return
+            return {}
 
         max_layer = max(layer.values())
         for u in layer:
