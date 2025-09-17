@@ -16,10 +16,10 @@ class Node:
     isCollapse: bool
 
     # layout
-    x: int
-    y: int
-    rx: int
-    ry: int
+    x: float
+    y: float
+    rx: float
+    ry: float
 
     def __init__(self, node_json: Dict):
         self.id = node_json["id"]
@@ -32,10 +32,10 @@ class Node:
 
         self.isCollapse = True          # 默认均折叠
 
-        self.x = 0
-        self.y = 0
-        self.rx = 0
-        self.ry = 0
+        self.x = 0.0
+        self.y = 0.0
+        self.rx = 0.0
+        self.ry = 0.0
 
 
 class Graph:
@@ -78,7 +78,7 @@ class Graph:
         path_length = (i + 1) + (j + 1)
         return path_length
 
-    def compute_x_layout(self):
+    def _compute_x_layout(self) -> Dict[int, int]:
         """
         计算有向图节点的横向布局（只计算 x 坐标和 rx）
         """
@@ -102,7 +102,7 @@ class Graph:
         # ==========================================================
         # 3. longest-path 分层 (从叶子往回推)
         # ==========================================================
-        layer = {}
+        layer: Dict[int, int] = {}
         queue = deque([u for u in self.nodes if out_degree[u] == 0])
         for u in queue:
             layer[u] = 0
@@ -140,17 +140,17 @@ class Graph:
         def max_length_between_layers(l: Optional[int]) -> int:
             if l is None:
                 return max(
-                    (self._get_out_tensors_of_collapse_node(None, nid) for nid in layer_nodes[0]),
+                    (self._compute_path_len_between_nodes(None, nid) for nid in layer_nodes[0]),
                     default=0,
                 )
             if l == max_layer:
                 return max(
-                    (self._get_out_tensors_of_collapse_node(nid, None) for nid in layer_nodes[l]),
+                    (self._compute_path_len_between_nodes(nid, None) for nid in layer_nodes[l]),
                     default=0,
                 )
             return max(
                 (
-                    self._get_out_tensors_of_collapse_node(nid, next_id)
+                    self._compute_path_len_between_nodes(nid, next_id)
                     for nid in layer_nodes[l]
                     for next_id in self.nodes[nid].nextNodes
                     if next_id in layer_nodes[l + 1]
@@ -164,7 +164,7 @@ class Graph:
         # ==========================================================
         # 6. 分配每层的横坐标中心
         # ==========================================================
-        layer_x = {}
+        layer_x: Dict[int, float] = {}
         pos = margin_start * self.MARGIN * 2
         for l in range(max_layer + 1):
             rx = layer_width[l]
@@ -208,8 +208,10 @@ class Graph:
         for root_id, root_node in self.nodes.items():
             if root_node.parent is None:
                 dfs_subgraph(root_id)
+        
+        return layer
 
-    def compute_y_layout(self):
+    def _compute_y_layout(self, layer: Dict[int, int]):
 
         return
 
@@ -218,8 +220,8 @@ class Graph:
         计算布局，包括图形中心坐标点以及图形大小
         从左向右布局，暂不支持其他方式
         """
-        self.compute_x_layout()
-        self.compute_y_layout()
+        layer = self._compute_x_layout()
+        self._compute_y_layout(layer)
 
     def generate_dot(self) -> str:
         """
@@ -388,7 +390,7 @@ def draw(graph: Graph, id) -> None:
 
 
 origin_graph = Graph()
-origin_graph.get_graph_from_file("./graph.json")
+origin_graph.get_graph_from_file("./data/DNN/complex_graph.json")
 
 draw(origin_graph.click(-1), 0)
 draw(origin_graph.click(1), 1)
