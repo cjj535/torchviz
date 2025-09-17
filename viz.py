@@ -29,23 +29,9 @@ class Node:
 
 class Graph:
     nodes: Dict[int, Node]
-    CHAR_WIDTH = 1
-    CHAR_HEIGHT = 2
-    STR_X_PADDING = 1
-    STR_Y_PADDING = 1
-    FIGURE_X_PADDING = 4
-    FIGURE_Y_PADDING = 2
-    MARGIN = 2
 
     def __init__(self):
         self.nodes = {}
-
-    def get_graph_from_file(self, path: str):
-        with open(path, 'r') as graph_json_file:
-            nodes_json = json.load(graph_json_file)
-
-        for node in nodes_json:
-            self.nodes[node["id"]] = Node(node)
 
     def generate_dot(self) -> str:
         """
@@ -213,6 +199,16 @@ class Graph:
         return self.generate_new_graph()
 
 
+def get_graph_from_file(path: str):
+    graph = Graph()
+    with open(path, 'r') as graph_json_file:
+        nodes_json = json.load(graph_json_file)
+
+    for node in nodes_json:
+        graph.nodes[node["id"]] = Node(node)
+    return graph
+
+
 def draw(graph: Graph, id) -> None:
     svg_content = graph.generate_svg()
     with open(f'./sample_{id}.svg', "w", encoding="utf-8") as svg_file:
@@ -220,8 +216,7 @@ def draw(graph: Graph, id) -> None:
         print(f"Generated ./sample_{id}.svg")
 
 
-origin_graph = Graph()
-origin_graph.get_graph_from_file("./data/DNN/complex_graph.json")
+origin_graph = get_graph_from_file("./data/DNN/complex_graph.json")
 
 draw(origin_graph.click(-1), 0)
 draw(origin_graph.click(1), 1)
