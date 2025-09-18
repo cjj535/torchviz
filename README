@@ -3,16 +3,16 @@
 
 # 当前进展
 1、已经完成从profiler中取出graph数据，变成json格式
-2、初步完成从json到dot文件转换，并将dot转成png
+2、初步完成从json到svg转换，并支持修改graph
 3、已支持采集tensor的metadata，如shape，device等；已支持采集内存生命周期和算子生命周期
-4、已初步支持简易两层模型和resnet18模型
+4、已支持简易两层模型和resnet18模型，后续增加gpt2模型样例
+5、支持前向、反向、权重更新分隔，目前鉴于反向内容过多，优先支持展示前向
 
 # 下一步目标
 1、显示tensor的shape当前还有一个问题：同一个tensor经过view等操作之后shape有变化，此时shape只能显示其中之一
 2、支持分层展示：效果接近tensorboard，支持子图展开折叠。已完成dot文件生成，下一步需要把dot文件在网页中可互动的可视化
-    可视化初步定位三个阶段：分别是forward、backward、postprocess，分别代表前向、反向、模型更新
-3、添加初始数据校验
-4、修改已有功能函数，用类定义代替Dict存储数据
+3、对json数据进行校验，保证graph为拓扑图，保证非叶子节点组成森林，相关属性值没有异常（非叶子节点没有nextnodes，istensor必定isleaf
+4、支持网页中点击svg时，触发graph调整，重新绘制svg展示
 
 # 图像内容设计
 1、第一类元素是tensor，相关的信息有category、device、ptr、shape、size、申请释放时间
@@ -21,6 +21,6 @@
 4、图中每个时间点可支配的资源有三种，一种是内存资源，同一时间内存在的内存大小总计不能超过内存资源；一种是处理器资源，同一时间一个处理器只运行一个op；一种是带宽资源，两个device之间的信道同一时间只传输一份数据。第三类和第二类在图上的本质是一样的，可以合并。对于单卡内计算，可以把通信算子切断
 
 # 使用方法
-graphviz安装包：https://graphviz.org/download/
-python main.py [train_model_name]
+python main.py --model=DNN --train=1 --tree=1 --graph=1
+
 
