@@ -6,13 +6,12 @@
 2、初步完成从json到dot文件转换，并将dot转成png
 3、已支持采集tensor的metadata，如shape，device等；已支持采集内存生命周期和算子生命周期
 4、已初步支持简易两层模型和resnet18模型
+5、支持互动展示
 
 # 下一步目标
 1、显示tensor的shape当前还有一个问题：同一个tensor经过view等操作之后shape有变化，此时shape只能显示其中之一
-2、支持分层展示：效果接近tensorboard，支持子图展开折叠。已完成dot文件生成，下一步需要把dot文件在网页中可互动的可视化
-    可视化初步定位三个阶段：分别是forward、backward、postprocess，分别代表前向、反向、模型更新
-3、添加初始数据校验
-4、修改已有功能函数，用类定义代替Dict存储数据
+2、添加初始数据校验
+3、优化html排版，增加详细信息展示
 
 # 图像内容设计
 1、第一类元素是tensor，相关的信息有category、device、ptr、shape、size、申请释放时间
@@ -21,6 +20,9 @@
 4、图中每个时间点可支配的资源有三种，一种是内存资源，同一时间内存在的内存大小总计不能超过内存资源；一种是处理器资源，同一时间一个处理器只运行一个op；一种是带宽资源，两个device之间的信道同一时间只传输一份数据。第三类和第二类在图上的本质是一样的，可以合并。对于单卡内计算，可以把通信算子切断
 
 # 使用方法
-graphviz安装包：https://graphviz.org/download/
-python main.py [train_model_name]
+1、生成complex_graph.json:
+python generate_data.py --model=ResNet
 
+2、可视化complex_graph.json
+python app.py
+打开浏览器访问127.0.0.1:5000

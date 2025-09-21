@@ -1,3 +1,6 @@
+flask==3.1.2
+graphviz==0.21
+
 # CPU 版本
 torch==2.5.1
 torchvision==0.20.1

@@ -404,7 +404,6 @@ def set_id(op_tree: OpTree):
 _original_init = MemoryProfile.__init__
 
 model = None
-generate_tree = False
 
 # 定义新的 __init__
 def my_init(self, *args, **kwargs):
@@ -428,22 +427,18 @@ def my_init(self, *args, **kwargs):
 
     # 最后导出为json文件
     global model
-    global generate_tree
     folder_path = Path(f'./data/{model}')
     folder_path.mkdir(parents=True, exist_ok=True)
     if model != '':
         with open(f'./data/{model}/graph.json', 'w') as f:
             json.dump(graph_json, f, indent=4)
-    if generate_tree:
         with open(f'./data/{model}/tree.json', 'w') as f:
             json.dump(tree_json, f, indent=4)
 
 
-def hijack_profiler(model_name: str, is_generate_tree: int):
+def hijack_profiler(model_name: str):
     global model
-    global generate_tree
     model = model_name if model_name != '' else None
-    generate_tree = True if is_generate_tree == 1 else False
 
     # 替换 __init__
 
