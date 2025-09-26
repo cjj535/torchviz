@@ -10,12 +10,23 @@ class TensorInfo:
     producer: int
     comsumers: List[int]
     label: str
+    start_time: int
+    end_time: int
+    info: Dict
 
     def __init__(self, tensor: Dict):
         self.id = -1
         self.producer = -1
         self.comsumers = []
         self.label = f'{tensor["shape"]}'
+        self.start_time = tensor["start_time"]
+        self.end_time = tensor["end_time"]
+        self.info = {
+            "device": tensor["device"],
+            "shape": tensor["shape"],
+            "dtype": tensor["dtype"],
+            "size": tensor["size"],
+        }
 
 def is_leaf(node: Dict) -> bool:
     return node["is_leaf"]
@@ -189,6 +200,8 @@ def json_to_complex_json(graph_data: List[Dict], tree_data: List[Dict]) -> List[
                 id = StepCount()
                 graph_nodes_map[id] = {
                     "id": id,
+                    "start_time": node_map[node_id]["start_time"],
+                    "end_time": node_map[node_id]["end_time"],
                     "isTensor": False,
                     "isLeaf": True,
                     "label": f'{node_map[node_id]["name"]}',
@@ -202,6 +215,8 @@ def json_to_complex_json(graph_data: List[Dict], tree_data: List[Dict]) -> List[
                 id = StepCount()
                 graph_nodes_map[id] = {
                     "id": id,
+                    "start_time": node_map[node_id]["start_time"],
+                    "end_time": node_map[node_id]["end_time"],
                     "isTensor": False,
                     "isLeaf": False,
                     "label": f'{node_map[node_id]["name"]}',
@@ -219,12 +234,15 @@ def json_to_complex_json(graph_data: List[Dict], tree_data: List[Dict]) -> List[
             id = StepCount()
             graph_nodes_map[id] = {
                 "id": id,
+                "start_time": tensor_map[tensor_key].start_time,
+                "end_time": tensor_map[tensor_key].end_time,
                 "isTensor": True,
                 "isLeaf": True,
                 "label": f'{tensor_map[tensor_key].label}',
                 "parent": node_map[root_id]["new_id"] if root_id != virtual_root_id else None,
                 "children": [],
                 "nextNodes": [],
+                "info": tensor_map[tensor_key].info,
             }
             tensor_map[tensor_key].id = id
 
@@ -237,7 +255,6 @@ def json_to_complex_json(graph_data: List[Dict], tree_data: List[Dict]) -> List[
             graph_nodes_map[node["parent"]]["children"].append(id)
 
     # 5.添加边
-    edges: Dict[int, List[int]] = {}
     for subgraph_id, tensor_key_list in tensors_in_subgraph.items():
         for tensor_key in tensor_key_list:
             producer_id = tensor_map[tensor_key].producer
