@@ -24,5 +24,6 @@
 python generate_data.py --model=ResNet
 
 2、可视化complex_graph.json
-python app.py
+python app.py --ip=127.0.0.1
+
 打开浏览器访问127.0.0.1:5000
