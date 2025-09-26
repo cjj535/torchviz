@@ -13,6 +13,85 @@ class Node {
 
 class Graph {
   constructor() { this.nodes = new Map(); }
+  isLegalGraph() {
+    const inDegree = new Map();
+    
+    // 初始化入度表
+    for (const node of this.nodes.values()) {
+      inDegree.set(node.id, 0);
+    }
+
+    // 第一遍遍历：检查各种规则并计算入度
+    for (const [u, node] of this.nodes) {
+      // 规则1: 非叶子节点不应该有 nextNodes
+      if (!node.isLeaf && node.nextNodes.length > 0) {
+        console.log("subgraph should not have next nodes.");
+        return false;
+      }
+
+      // 规则2: 叶子节点不应该有 children
+      if (node.isLeaf && node.children.length > 0) {
+        console.log("leaf node should not have children.");
+        return false;
+      }
+
+      // 规则3: 非叶子节点应该有 children
+      if (!node.isLeaf && node.children.length === 0) {
+        console.log("non leaf node should have children.");
+        return false;
+      }
+
+      // 计算入度并检查规则4
+      for (const v of node.nextNodes) {
+        const nextNode = this.nodes.get(v);
+        if (!nextNode) {
+          console.log(`Next node ${v} not found in graph.`);
+          return false;
+        }
+
+        // 规则4: op节点的输出应该是tensor，tensor应该是op节点的输入
+        if (node.isTensor === nextNode.isTensor) {
+          console.log("op node's output should be tensor, tensor should be input of op node.");
+          return false;
+        }
+
+        // 更新入度
+        inDegree.set(v, (inDegree.get(v) || 0) + 1);
+      }
+    }
+
+    // 检查规则5: tensor节点入度不能超过1
+    for (const [nodeId, degree] of inDegree) {
+      const node = this.nodes.get(nodeId);
+      if (node.isTensor && degree > 1) {
+        console.log("tensor only has one producer.");
+        return false;
+      }
+    }
+
+    // 拓扑排序检查环
+    const queue = [];
+    for (const [nodeId, degree] of inDegree) {
+      if (degree === 0) {
+        queue.push(nodeId);
+      }
+    }
+
+    let count = 0;
+    while (queue.length > 0) {
+      const u = queue.shift();
+      count++;
+      const currentNode = this.nodes.get(u);
+      for (const v of currentNode.nextNodes) {
+        const currentDegree = inDegree.get(v) - 1;
+        inDegree.set(v, currentDegree);
+        if (currentDegree === 0) {
+          queue.push(v);
+        }
+      }
+    }
+    return count === this.nodes.size;
+  }
   generate_dot(rootNodes = null) {
     const node_dot_lines = [], edges_dot_lines = [];
     const dfs_generate_dot = (children, depth) => {
@@ -139,6 +218,8 @@ document.getElementById('jsonFileInput').addEventListener('change', async (event
       const nodes_json=JSON.parse(e.target.result);
       originGraph=new Graph();
       nodes_json.forEach(nj=>{originGraph.nodes.set(nj.id,new Node(nj))});
+      const isValid = originGraph.isLegalGraph();
+      if (!isValid) {console.log("illegal graph, exit!");return;}
       await renderFromOriginGraph();
     }catch(err){console.error(err); status.textContent='解析 JSON 错误: '+err;}
   }
