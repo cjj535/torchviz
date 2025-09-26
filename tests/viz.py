@@ -32,6 +32,170 @@ class Graph:
     def __init__(self):
         self.nodes = {}
 
+        def _compute_path_len_between_nodes(self, pre_node_id: Optional[int], post_node_id: Optional[int]) -> int:
+        def get_ancestors(node_id: Optional[int]) -> List[int]:
+            ancestors: List[int] = []
+            while node_id is not None:
+                ancestors.append(node_id)
+                node_id = self.nodes[node_id].parent
+            return ancestors
+
+        pre_node_ancestors = get_ancestors(pre_node_id)
+        post_node_ancestors = get_ancestors(post_node_id)
+
+        i, j = len(pre_node_ancestors) - 1, len(post_node_ancestors) - 1
+        # 从尾部开始找公共后缀
+        while i >= 0 and j >= 0 and pre_node_ancestors[i] == post_node_ancestors[j]:
+            i -= 1
+            j -= 1
+        # 剩余部分长度之和
+        path_length = (i + 1) + (j + 1)
+        return path_length
+
+    def _compute_x_layout(self):
+        """
+        计算有向图节点的横向布局（只计算 x 坐标和 rx）
+        """
+
+        # ==========================================================
+        # 1. 计算每个节点的宽度 (rx)
+        # ==========================================================
+        for node in self.nodes.values():
+            node.rx = len(node.label) * self.CHAR_WIDTH + 2 * self.STR_X_PADDING
+
+        # ==========================================================
+        # 2. 构建前驱映射 + 出度统计
+        # ==========================================================
+        predecessors = defaultdict(list)
+        out_degree = defaultdict(int)
+        for u, node in self.nodes.items():
+            for v in node.nextNodes:
+                predecessors[v].append(u)
+                out_degree[u] += 1
+
+        # ==========================================================
+        # 3. longest-path 分层 (从叶子往回推)
+        # ==========================================================
+        layer = {}
+        queue = deque([u for u in self.nodes if out_degree[u] == 0])
+        for u in queue:
+            layer[u] = 0
+
+        while queue:
+            u = queue.popleft()
+            for pred in predecessors[u]:
+                layer[pred] = max(layer.get(pred, 0), layer[u] + 1)
+                out_degree[pred] -= 1
+                if out_degree[pred] == 0:
+                    queue.append(pred)
+
+        if not layer:
+            return
+
+        max_layer = max(layer.values())
+        for u in layer:
+            layer[u] = max_layer - layer[u]
+
+        # ==========================================================
+        # 4. 按层收集节点 & 层最大宽度
+        # ==========================================================
+        layer_nodes = defaultdict(list)
+        for u, l in layer.items():
+            layer_nodes[l].append(u)
+
+        layer_width = {
+            l: max(self.nodes[u].rx for u in nodes)
+            for l, nodes in layer_nodes.items()
+        }
+
+        # ==========================================================
+        # 5. 预计算每层的 margin（避免重复调用函数）
+        # ==========================================================
+        def max_length_between_layers(l: Optional[int]) -> int:
+            if l is None:
+                return max(
+                    (self._get_out_tensors_of_collapse_node(None, nid) for nid in layer_nodes[0]),
+                    default=0,
+                )
+            if l == max_layer:
+                return max(
+                    (self._get_out_tensors_of_collapse_node(nid, None) for nid in layer_nodes[l]),
+                    default=0,
+                )
+            return max(
+                (
+                    self._get_out_tensors_of_collapse_node(nid, next_id)
+                    for nid in layer_nodes[l]
+                    for next_id in self.nodes[nid].nextNodes
+                    if next_id in layer_nodes[l + 1]
+                ),
+                default=0,
+            )
+
+        layer_margin = {l: max_length_between_layers(l) for l in range(max_layer + 1)}
+        margin_start = max_length_between_layers(None)
+
+        # ==========================================================
+        # 6. 分配每层的横坐标中心
+        # ==========================================================
+        layer_x = {}
+        pos = margin_start * self.MARGIN * 2
+        for l in range(max_layer + 1):
+            rx = layer_width[l]
+            x_center = pos + self.FIGURE_X_PADDING + rx / 2
+            layer_x[l] = x_center
+            pos += rx + self.FIGURE_X_PADDING * 2 + layer_margin[l] * self.MARGIN * 2
+
+        # ==========================================================
+        # 7. 叶子节点赋值坐标
+        # ==========================================================
+        for u, node in self.nodes.items():
+            if node.isLeaf:
+                node.x = layer_x[layer[u]]
+
+        # ==========================================================
+        # 8. 递归计算子图 (中心点 x, 宽度 rx)
+        # ==========================================================
+        def dfs_subgraph(node_id: int) -> Tuple[float, float]:
+            node = self.nodes[node_id]
+            left, right = None, None
+            for cid in node.children:
+                c_node = self.nodes[cid]
+                if c_node.isLeaf:
+                    c_left = c_node.x - c_node.rx / 2 - self.FIGURE_X_PADDING
+                    c_right = c_node.x + c_node.rx / 2 + self.FIGURE_X_PADDING
+                else:
+                    c_left, c_right = dfs_subgraph(cid)
+
+                left = c_left if left is None else min(left, c_left)
+                right = c_right if right is None else max(right, c_right)
+
+            assert left is not None and right is not None and left <= right
+
+            left -= self.MARGIN * 2
+            right += self.MARGIN * 2
+
+            node.x = (left + right) / 2
+            node.rx = right - left - self.MARGIN * 2
+            return left, right
+
+        for root_id, root_node in self.nodes.items():
+            if root_node.parent is None:
+                dfs_subgraph(root_id)
+
+        return layer
+
+    def _compute_y_layout(self, layer: Dict[int, int]):
+        return
+
+    def compute_layout(self):
+        """
+        计算布局，包括图形中心坐标点以及图形大小
+        从左向右布局，暂不支持其他方式
+        """
+        layer = self._compute_x_layout()
+        self._compute_y_layout(layer)
+
     def generate_dot(self) -> str:
         """
         生成dot文件用于可视化
