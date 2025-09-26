@@ -32,7 +32,7 @@ class Graph:
     def __init__(self):
         self.nodes = {}
 
-        def _compute_path_len_between_nodes(self, pre_node_id: Optional[int], post_node_id: Optional[int]) -> int:
+    def _compute_path_len_between_nodes(self, pre_node_id: Optional[int], post_node_id: Optional[int]) -> int:
         def get_ancestors(node_id: Optional[int]) -> List[int]:
             ancestors: List[int] = []
             while node_id is not None:
