@@ -2,13 +2,40 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <title>Graphviz Viewer</title>
+  <title>Graphviz SVG Viewer — 用户选择 JSON 文件</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 12px; background: #f7f8fb; }
     header { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
     #svgContainer { border: 1px solid #ddd; background: white; padding: 12px; overflow: auto; height: 80vh; }
     .hint { font-size: 13px; color: #666; }
+    .graph-tooltip {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+        max-width: 400px;
+        white-space: pre-wrap;
+        z-index: 10000;
+        pointer-events: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        border: 1px solid #555;
+        line-height: 1.5;
+        backdrop-filter: blur(4px);
+    }
+
+    .graph-node:hover {
+        opacity: 0.8;
+        transition: opacity 0.2s;
+    }
+
+    .graph-cluster:hover > polygon {
+        stroke: #ff6b6b !important;
+        stroke-width: 2px !important;
+    }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
@@ -16,7 +43,7 @@
 </head>
 <body>
 <header>
-  <h2>可视化前向算子执行</h2>
+  <h2>Graph JSON → SVG 可视化（点击折叠/展开）</h2>
   <input type="file" id="jsonFileInput" accept=".json" />
   <span class="hint" id="status"></span>
 </header>
