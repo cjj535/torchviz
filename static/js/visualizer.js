@@ -1,3 +1,12 @@
+// 全局变量
+let maxTime = -1;
+let minTime = -1;
+let relativeMaxTime = -1;
+let relativeMinTime = -1;
+let nsToS = 10000000;
+// *******************************************************************************************
+// node
+// *******************************************************************************************
 class Node {
   constructor(node_json) {
     this.id = node_json.id;
@@ -10,19 +19,30 @@ class Node {
     this.children = Array.isArray(node_json.children) ? [...node_json.children] : [];
     this.nextNodes = Array.isArray(node_json.nextNodes) ? [...node_json.nextNodes] : [];
     this.isCollapse = true;
-    this.info = `${this.start_time},${this.end_time}`;
     if (this.isTensor && node_json?.info) {
-        const device = node_json.info.device ?? 'unknown';
-        const dtype = node_json.info.dtype ?? 'unknown';
-        const size = node_json.info.size ?? 'unknown';
-        const shape = node_json.info.shape ?? 'unknown';
-        this.info += `\n${device}\n${dtype}\n${size}\n${shape}`;
+      const device = node_json.info.device ?? 'unknown';
+      const dtype = node_json.info.dtype ?? 'unknown';
+      const size = node_json.info.size ?? 'unknown';
+      const shape = node_json.info.shape ?? 'unknown';
+      this.info = `${device}\n${dtype}\n${size}\n${shape}`;
+    } else {
+      this.info = "";
     }
+
+    // 相对时间（会在 Graph 初始化时计算）
+    this.relative_start_time = 0;
+    this.relative_end_time = 0;
   }
 }
 
+// *******************************************************************************************
+// graph
+// *******************************************************************************************
 class Graph {
-  constructor() { this.nodes = new Map(); }
+  constructor() {
+    this.nodes = new Map();
+  }
+
   isLegalGraph() {
     const inDegree = new Map();
 
@@ -102,27 +122,102 @@ class Graph {
     }
     return count === this.nodes.size;
   }
-  generate_dot(rootNodes = null) {
+
+  setRelativeTime() {
+    for (const node of this.nodes.values()) {
+      if (node.start_time !== -1) {
+        if (minTime == -1) {
+          minTime = node.start_time;
+        } else {
+          minTime = Math.min(minTime, node.start_time);
+        }
+        maxTime = Math.max(maxTime, node.start_time);
+      }
+      if (node.end_time !== -1) {
+        if (minTime == -1) {
+          minTime = node.end_time;
+        } else {
+          minTime = Math.min(minTime, node.end_time);
+        }
+        maxTime = Math.max(maxTime, node.end_time);
+      }
+    }
+    if (minTime !== -1 && maxTime !== -1) {
+      minTime = minTime - 1;
+      maxTime = maxTime + 1;
+    } else {
+      minTime = 0;
+      maxTime = 1;
+    }
+    for (const node of this.nodes.values()) {
+      if (node.start_time !== -1) {
+        // node.relative_start_time = ((node.start_time - minTime) / nsToS).toFixed(3);
+        node.relative_start_time = node.start_time - minTime;
+      } else {
+        node.relative_start_time = 0;
+      }
+      if (node.end_time !== -1) {
+        // node.relative_end_time = ((node.end_time - minTime) / nsToS).toFixed(3);
+        node.relative_end_time = node.end_time - minTime;
+      } else {
+        // node.relative_end_time = ((maxTime - minTime) / nsToS).toFixed(3);
+        node.relative_end_time = maxTime - minTime;
+      }
+      node.info += `\n${node.relative_start_time},${node.relative_end_time}`;
+    }
+    relativeMinTime = 0;
+    // relativeMaxTime = ((maxTime - minTime) / nsToS).toFixed(3);
+    relativeMaxTime = maxTime - minTime;
+  }
+
+  // 获取在指定时间活跃的节点ID
+  getActiveNodesAtTime(currentTime) {
+    const activeNodes = new Set();
+    for (const [nodeId, node] of this.nodes) {
+      if (currentTime >= node.relative_start_time && currentTime <= node.relative_end_time) {
+        activeNodes.add(nodeId);
+      }
+    }
+    return activeNodes;
+  }
+
+  generate_dot(rootNodes = null, highlightNodes = []) {
     const node_dot_lines = [], edges_dot_lines = [];
+
     const dfs_generate_dot = (children, depth) => {
       const sub = [];
       children.forEach(node_id => {
         const node = this.nodes.get(node_id);
         if (!node) return;
+
+        // 构建包含时间信息的标签
+        let timeInfo = '';
+        if (node.relativeStart !== undefined && node.relativeEnd !== undefined) {
+          timeInfo = `\\n[${node.relativeStart.toFixed(1)}-${node.relativeEnd.toFixed(1)}ms]`;
+        }
+
+        const isHighlighted = highlightNodes.includes(node_id);
+        const colorAttr = isHighlighted ? 'color=green, style=filled, fillcolor=lightgreen' : '';
+
         if (node.isLeaf) {
           const shape = node.isTensor ? "ellipse" : "box";
-          // 添加 tooltip 属性
           const tooltip = `tooltip="${escapeDotLabel(node.info || node.label)}"`;
-          sub.push(`${"    ".repeat(depth)}"${node_id}" [label="${escapeDotLabel(node.label)}", shape=${shape}, ${tooltip}];`);
+          sub.push(`${"    ".repeat(depth)}"${node_id}" [label="${escapeDotLabel(node.label + timeInfo)}", shape=${shape}, ${tooltip}, ${colorAttr}];`);
           node.nextNodes.forEach(id => { 
               edges_dot_lines.push(`${"    "}"${node_id}" -> "${id}";`) 
           });
         } else {
+          const clusterLabel = node.label + timeInfo;
           sub.push(`${"    ".repeat(depth)}subgraph cluster_${node_id} {`);
-          sub.push(`${"    ".repeat(depth+1)}label="${escapeDotLabel(node.label)}";`);
+          sub.push(`${"    ".repeat(depth+1)}label="${escapeDotLabel(clusterLabel)}";`);
           sub.push(`${"    ".repeat(depth+1)}style=rounded;`);
-          sub.push(`${"    ".repeat(depth+1)}color=blue;`);
-          // 为 cluster 也添加 tooltip
+          if (isHighlighted) {
+            sub.push(`${"    ".repeat(depth+1)}color=green;`);
+            sub.push(`${"    ".repeat(depth+1)}style="rounded,filled";`);
+            sub.push(`${"    ".repeat(depth+1)}fillcolor=lightgreen;`);
+          } else {
+            sub.push(`${"    ".repeat(depth+1)}color=blue;`);
+          }
           const clusterTooltip = `tooltip="${escapeDotLabel(node.info || `Cluster: ${node.label}`)}"`;
           sub.push(`${"    ".repeat(depth+1)}${clusterTooltip};`);
           sub.push(...dfs_generate_dot(node.children, depth+1));
@@ -138,7 +233,7 @@ class Graph {
         "digraph G {",
         '    rankdir=LR;',
         '    node [fontname="Arial"];',
-        '    tooltip = "";', // 启用全局 tooltip
+        '    tooltip = "";',
         " }"
     ];
     return [...root_dot_lines.slice(0,-1),...node_dot_lines,...edges_dot_lines,...root_dot_lines.slice(-1)].join("\n");
@@ -168,7 +263,67 @@ class Graph {
     roots.forEach(r=>{if(new_graph.nodes.has(r))dfs_edges(r);});
     return new_graph;
   }
-  click(id){if(this.nodes.has(id)){this.nodes.get(id).isCollapse=!this.nodes.get(id).isCollapse;}return this.generate_new_graph();}
+}
+
+// *******************************************************************************************
+// timeline manager
+// *******************************************************************************************
+class TimelineManager {
+  constructor() {
+    this.slider = document.getElementById('time-slider');
+    this.currentTimeDisplay = document.getElementById('current-time');
+    this.minTimeDisplay = document.getElementById('min-time');
+    this.maxTimeDisplay = document.getElementById('max-time');
+    this.currentTime = 0;
+    this.isDragging = false;
+    
+    this.init();
+  }
+
+  init() {
+    this.slider.addEventListener('input', (e) => {
+      this.currentTime = parseInt(e.target.value);
+      this.updateDisplay();
+      this.onTimeChange(this.currentTime);
+    });
+    
+    this.slider.addEventListener('mousedown', () => {
+      this.isDragging = true;
+    });
+    
+    this.slider.addEventListener('mouseup', () => {
+      this.isDragging = false;
+    });
+  }
+
+  updateTimeRange(min_time, max_time) {
+    this.slider.min = min_time;
+    this.slider.max = max_time;
+    this.slider.value = 0;
+    this.currentTime = 0;
+
+    this.minTimeDisplay.textContent = '0';
+    this.maxTimeDisplay.textContent = max_time;
+
+    this.updateDisplay();
+  }
+
+  updateDisplay() {
+    this.currentTimeDisplay.textContent = `当前时间: ${this.currentTime}`;
+    this.slider.value = this.currentTime;
+  }
+
+  onTimeChange(time) {
+    if (window.highlightNodesAtTime) {
+      window.highlightNodesAtTime(time);
+    }
+  }
+
+  setTime(time) {
+    this.currentTime = Math.max(this.slider.min, Math.min(this.slider.max, time));
+    this.updateDisplay();
+    this.onTimeChange(this.currentTime);
+  }
 }
 
 function addHoverEffects(svgEl) {
@@ -237,7 +392,7 @@ function addHoverEffects(svgEl) {
   svgEl.addEventListener('mouseleave', () => {
       tooltip.style.display = 'none';
   });
-  
+
   // 更新 tooltip 位置
   function updateTooltipPosition(tooltipElement, event) {
     const x = event.clientX + 15;
@@ -252,6 +407,23 @@ function addHoverEffects(svgEl) {
   }
 
   return tooltip;
+}
+
+// 带时间高亮的渲染函数
+async function renderWithTimeHighlight(highlightNodes = []) {
+  if (!currentRenderGraph) return;
+  const dot = currentRenderGraph.generate_dot(null, highlightNodes);
+  try {
+    const svgEl = await viz.renderSVGElement(dot);
+    svgContainer.innerHTML = '';
+    svgContainer.appendChild(svgEl);
+
+    // 重新附加事件
+    attachClickHandlersToRenderedSVG(svgEl);
+    addHoverEffects(svgEl);
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 function escapeDotLabel(s){
@@ -269,6 +441,65 @@ const svgContainer=document.getElementById('svgContainer');
 const status=document.getElementById('status');
 let originGraph=new Graph();
 let currentRenderGraph=null;
+let timelineManager = null;
+
+// 高亮节点的函数
+function highlightNodesAtTime(currentTime) {
+  if (!currentRenderGraph) return;
+
+  // 移除之前的高亮
+  const svgEl = svgContainer.querySelector('svg');
+  if (!svgEl) return;
+
+  const previouslyHighlighted = svgEl.querySelectorAll('.highlighted-node, .highlighted-cluster');
+  previouslyHighlighted.forEach(el => {
+    el.classList.remove('highlighted-node', 'highlighted-cluster');
+  });
+
+  // 获取当前时间活跃的节点
+  const activeNodes = currentRenderGraph.getActiveNodesAtTime(currentTime);
+
+  // 高亮活跃节点
+  activeNodes.forEach(nodeId => {
+    // 查找对应的 SVG 元素
+    const nodeElements = findSvgElementsByTitle(svgEl, nodeId.toString());
+    nodeElements.forEach(element => {
+      if (element.classList.contains('cluster')) {
+        element.classList.add('highlighted-cluster');
+      } else if (element.classList.contains('node')) {
+        element.classList.add('highlighted-node');
+      }
+    });
+  });
+}
+
+// 通过 title 内容查找 SVG 元素的辅助函数
+function findSvgElementsByTitle(svgElement, titleText) {
+  const elements = [];
+  // 查找所有 title 元素
+  const titles = svgElement.querySelectorAll('title');
+  titles.forEach(title => {
+    // 获取 title 的文本内容并清理
+    const titleContent = title.textContent.trim().replace(/^"|"$/g, '');
+
+    // 检查 title 内容是否匹配节点 ID
+    if (titleContent === titleText) {
+      // 找到对应的父元素（node 或 cluster）
+      let parent = title.parentElement;
+      while (parent && parent !== svgElement) {
+        if (parent.classList.contains('node') || parent.classList.contains('cluster')) {
+          elements.push(parent);
+          break;
+        }
+        parent = parent.parentElement;
+      }
+    }
+  });
+  return elements;
+}
+
+// 将高亮函数暴露给全局
+window.highlightNodesAtTime = highlightNodesAtTime;
 
 async function renderFromOriginGraph() {
   currentRenderGraph=originGraph.generate_new_graph();
@@ -281,6 +512,8 @@ async function renderFromOriginGraph() {
     attachClickHandlersToRenderedSVG(svgEl);
     // 添加悬停效果
     addHoverEffects(svgEl);
+    // 初始高亮
+    highlightNodesAtTime(timelineManager ? timelineManager.currentTime : 0);
   }catch(err){
     console.error(err);
   }
@@ -332,13 +565,30 @@ document.getElementById('jsonFileInput').addEventListener('change', async (event
   const reader=new FileReader();
   reader.onload = async function(e){
     try{
+      // 创建原始图
       const nodes_json=JSON.parse(e.target.result);
       originGraph=new Graph();
       nodes_json.forEach(nj=>{originGraph.nodes.set(nj.id,new Node(nj))});
+
+      // 更新时间为相对时间
+      originGraph.setRelativeTime();
+
+      // 判断图是否合法
       const isValid = originGraph.isLegalGraph();
-      if (!isValid) {console.log("illegal graph, exit!");return;}
+      if (!isValid) {
+        console.log("illegal graph, exit!");
+        return;
+      }
+
+      // 初始化时间条管理器
+      if (!timelineManager) {
+        timelineManager = new TimelineManager();
+        timelineManager.updateTimeRange(relativeMinTime, relativeMaxTime)
+      }
       await renderFromOriginGraph();
-    }catch(err){console.error(err); status.textContent='解析 JSON 错误: '+err;}
+    }catch(err){
+      console.error(err);
+    }
   }
   reader.readAsText(file,'utf-8');
 });
