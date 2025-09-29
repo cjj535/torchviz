@@ -7,11 +7,12 @@
 3、已支持采集tensor的metadata，如shape，device等；已支持采集内存生命周期和算子生命周期
 4、已初步支持简易两层模型和resnet18模型
 5、支持互动展示
+6、已支持快照状态查看
 
 # 下一步目标
 1、显示tensor的shape当前还有一个问题：同一个tensor经过view等操作之后shape有变化，此时shape只能显示其中之一
-2、添加初始数据校验
-3、优化html排版，增加详细信息展示
+2、优化细节，如时间信息展示、显示当前时刻内存使用总和
+3、正式给出1.0版本，随后更新图优化结果
 
 # 图像内容设计
 1、第一类元素是tensor，相关的信息有category、device、ptr、shape、size、申请释放时间
@@ -27,3 +28,4 @@ python generate_data.py --model=ResNet
 python app.py --ip=127.0.0.1
 
 打开浏览器访问127.0.0.1:5000
+
