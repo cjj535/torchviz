@@ -5,36 +5,123 @@
   <title>Graphviz SVG Viewer — 用户选择 JSON 文件</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 12px; background: #f7f8fb; }
-    header { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
-    #svgContainer { border: 1px solid #ddd; background: white; padding: 12px; overflow: auto; height: 80vh; }
-    .hint { font-size: 13px; color: #666; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 12px;
+      background: #f7f8fb;
+    }
+    header {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    #svgContainer {
+      border: 1px solid #ddd;
+      background: white;
+      padding: 12px;
+      overflow: auto;
+      height: 80vh;
+    }
+    .hint {
+      font-size: 13px;
+      color: #666;
+    }
     .graph-tooltip {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.85);
-        color: white;
-        padding: 10px 14px;
-        border-radius: 6px;
-        font-size: 12px;
-        font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
-        max-width: 400px;
-        white-space: pre-wrap;
-        z-index: 10000;
-        pointer-events: none;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        border: 1px solid #555;
-        line-height: 1.5;
-        backdrop-filter: blur(4px);
+      position: absolute;
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+      max-width: 400px;
+      white-space: pre-wrap;
+      z-index: 10000;
+      pointer-events: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 1px solid #555;
+      line-height: 1.5;
+      backdrop-filter: blur(4px);
     }
 
     .graph-node:hover {
-        opacity: 0.8;
-        transition: opacity 0.2s;
+      opacity: 0.8;
+      transition: opacity 0.2s;
     }
 
     .graph-cluster:hover > polygon {
-        stroke: #ff6b6b !important;
-        stroke-width: 2px !important;
+      stroke: #ff6b6b !important;
+      stroke-width: 2px !important;
+    }
+
+    #timeline-container {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f5f5f5;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    #timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    #timeline-wrapper {
+      position: relative;
+    }
+
+    #time-slider {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: #ddd;
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    #time-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+      border: 2px solid white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    #time-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+      border: 2px solid white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    #timeline-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .highlighted-node {
+      stroke: #4CAF50;
+      stroke-width: 1px;
+    }
+
+    .highlighted-cluster > polygon {
+      stroke: #4CAF50 !important;
+      stroke-width: 1px !important;
     }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
@@ -48,7 +135,19 @@
   <span class="hint" id="status"></span>
 </header>
 <div id="svgContainer" aria-live="polite"></div>
-
+<div id="timeline-container">
+    <div id="timeline-header">
+        <span>时间轴</span>
+        <span id="current-time">当前时间: 0</span>
+    </div>
+    <div id="timeline-wrapper">
+        <input type="range" id="time-slider" min="0" max="100" value="0" step="1">
+        <div id="timeline-labels">
+            <span id="min-time">0</span>
+            <span id="max-time">100</span>
+        </div>
+    </div>
+</div>
 <script src="{{ url_for('static', filename='js/visualizer.js') }}"></script>
 </body>
 </html>
