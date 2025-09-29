@@ -114,14 +114,15 @@
       color: #666;
     }
 
-    .highlighted-node {
-      stroke: #4CAF50;
-      stroke-width: 1px;
-    }
+    /* 节点高亮样式 - 边框高亮 */
+    .highlighted-node > ellipse,
+    .highlighted-node > polygon,
+    .highlighted-node > path,
 
-    .highlighted-cluster > polygon {
-      stroke: #4CAF50 !important;
-      stroke-width: 1px !important;
+    .highlighted-node > text {
+      /* 文字保持原样，不高亮 */
+      fill: #000000 !important;
+      stroke: none !important;
     }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
