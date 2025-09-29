@@ -143,38 +143,38 @@ class Graph {
       }
     }
     if (minTime !== -1 && maxTime !== -1) {
-      minTime = minTime - 1;
-      maxTime = maxTime + 1;
+      minTime = minTime - 10000000;
+      maxTime = maxTime + 10000000;
     } else {
       minTime = 0;
-      maxTime = 1;
+      maxTime = 10000000;
     }
+    relativeMinTime = 0;
+    // relativeMaxTime = ((maxTime - minTime) / nsToS).toFixed(3);
+    relativeMaxTime = maxTime - minTime;
     for (const node of this.nodes.values()) {
       if (node.start_time !== -1) {
         // node.relative_start_time = ((node.start_time - minTime) / nsToS).toFixed(3);
         node.relative_start_time = node.start_time - minTime;
       } else {
-        node.relative_start_time = 0;
+        node.relative_start_time = relativeMinTime;
       }
       if (node.end_time !== -1) {
         // node.relative_end_time = ((node.end_time - minTime) / nsToS).toFixed(3);
         node.relative_end_time = node.end_time - minTime;
       } else {
-        // node.relative_end_time = ((maxTime - minTime) / nsToS).toFixed(3);
-        node.relative_end_time = maxTime - minTime;
+        // node.relative_end_time = (relativeMaxTime / nsToS).toFixed(3);
+        node.relative_end_time = relativeMaxTime;
       }
       node.info += `\n${node.relative_start_time},${node.relative_end_time}`;
     }
-    relativeMinTime = 0;
-    // relativeMaxTime = ((maxTime - minTime) / nsToS).toFixed(3);
-    relativeMaxTime = maxTime - minTime;
   }
 
   // 获取在指定时间活跃的节点ID
   getActiveNodesAtTime(currentTime) {
     const activeNodes = new Set();
     for (const [nodeId, node] of this.nodes) {
-      if (currentTime >= node.relative_start_time && currentTime <= node.relative_end_time) {
+      if (node.isLeaf && currentTime >= node.relative_start_time && currentTime <= node.relative_end_time) {
         activeNodes.add(nodeId);
       }
     }
@@ -451,9 +451,16 @@ function highlightNodesAtTime(currentTime) {
   const svgEl = svgContainer.querySelector('svg');
   if (!svgEl) return;
 
-  const previouslyHighlighted = svgEl.querySelectorAll('.highlighted-node, .highlighted-cluster');
-  previouslyHighlighted.forEach(el => {
-    el.classList.remove('highlighted-node', 'highlighted-cluster');
+  // 重置所有节点边框样式
+  const nodeShapes = svgEl.querySelectorAll('.highlighted-node > g > a > ellipse, .highlighted-node > g > a > polygon');
+  nodeShapes.forEach(shape => {
+    shape.removeAttribute('style');
+  });
+
+  // 移除所有高亮类名
+  const highlightedElements = svgEl.querySelectorAll('.highlighted-node');
+  highlightedElements.forEach(el => {
+    el.classList.remove('highlighted-node');
   });
 
   // 获取当前时间活跃的节点
@@ -464,10 +471,16 @@ function highlightNodesAtTime(currentTime) {
     // 查找对应的 SVG 元素
     const nodeElements = findSvgElementsByTitle(svgEl, nodeId.toString());
     nodeElements.forEach(element => {
-      if (element.classList.contains('cluster')) {
-        element.classList.add('highlighted-cluster');
-      } else if (element.classList.contains('node')) {
+      if (element.classList.contains('node')) {
         element.classList.add('highlighted-node');
+        
+        const shapes = element.querySelectorAll('ellipse, polygon, path');
+        shapes.forEach(shape => {
+          // 只高亮边框
+          shape.style.stroke = '#4CAF50';
+          shape.style.strokeWidth = '3px';
+          shape.style.filter = 'drop-shadow(0 0 8px rgba(76, 175, 80, 0.6))';
+        });
       }
     });
   });
