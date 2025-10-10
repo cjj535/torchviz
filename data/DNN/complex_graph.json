@@ -1,6 +1,8 @@
 [
     {
         "id": 1,
+        "start_time": 1758443177741323084,
+        "end_time": 1758443177741764684,
         "isTensor": false,
         "isLeaf": false,
         "label": "[forward]",
@@ -19,6 +21,8 @@
     },
     {
         "id": 2,
+        "start_time": 1758443177741323084,
+        "end_time": 1758443177741401584,
         "isTensor": false,
         "isLeaf": true,
         "label": "aten::to",
@@ -30,6 +34,8 @@
     },
     {
         "id": 3,
+        "start_time": 1758443177741428884,
+        "end_time": 1758443177741476184,
         "isTensor": false,
         "isLeaf": true,
         "label": "aten::to",
@@ -41,6 +47,8 @@
     },
     {
         "id": 4,
+        "start_time": 1758443177741485684,
+        "end_time": 1758443177741658984,
         "isTensor": false,
         "isLeaf": false,
         "label": "nn.Module: TwoLayerNet_0",
@@ -55,6 +63,8 @@
     },
     {
         "id": 5,
+        "start_time": 1758443177741499684,
+        "end_time": 1758443177741503184,
         "isTensor": false,
         "isLeaf": true,
         "label": "aten::view",
@@ -64,6 +74,8 @@
     },
     {
         "id": 6,
+        "start_time": 1758443177741514684,
+        "end_time": 1758443177741579784,
         "isTensor": false,
         "isLeaf": false,
         "label": "nn.Module: Linear_0",
@@ -76,6 +88,8 @@
     },
     {
         "id": 7,
+        "start_time": 1758443177741522784,
+        "end_time": 1758443177741577684,
         "isTensor": false,
         "isLeaf": true,
         "label": "aten::linear",
@@ -87,6 +101,8 @@
     },
     {
         "id": 8,
+        "start_time": 1758443177741548084,
+        "end_time": 1758443177741619184,
         "isTensor": true,
         "isLeaf": true,
         "label": "[10,128]",
@@ -94,10 +110,18 @@
         "children": [],
         "nextNodes": [
             10
-        ]
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[10,128]",
+            "dtype": "torch.float32",
+            "size": 5120
+        }
     },
     {
         "id": 9,
+        "start_time": 1758443177741584484,
+        "end_time": 1758443177741618184,
         "isTensor": false,
         "isLeaf": false,
         "label": "nn.Module: ReLU_0",
@@ -110,6 +134,8 @@
     },
     {
         "id": 10,
+        "start_time": 1758443177741601184,
+        "end_time": 1758443177741616384,
         "isTensor": false,
         "isLeaf": true,
         "label": "aten::relu",
@@ -121,6 +147,8 @@
     },
     {
         "id": 11,
+        "start_time": 1758443177741607784,
+        "end_time": 1758443177749570884,
         "isTensor": true,
         "isLeaf": true,
         "label": "[10,128]",
@@ -128,10 +156,18 @@
         "children": [],
         "nextNodes": [
             13
-        ]
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[10,128]",
+            "dtype": "torch.float32",
+            "size": 5120
+        }
     },
     {
         "id": 12,
+        "start_time": 1758443177741622884,
+        "end_time": 1758443177741658384,
         "isTensor": false,
         "isLeaf": false,
         "label": "nn.Module: Linear_1",
@@ -144,6 +180,8 @@
     },
     {
         "id": 13,
+        "start_time": 1758443177741627784,
+        "end_time": 1758443177741656684,
         "isTensor": false,
         "isLeaf": true,
         "label": "aten::linear",
@@ -155,6 +193,8 @@
     },
     {
         "id": 14,
+        "start_time": 1758443177741643684,
+        "end_time": -1,
         "isTensor": true,
         "isLeaf": true,
         "label": "[10,10]",
@@ -162,10 +202,18 @@
         "children": [],
         "nextNodes": [
             16
-        ]
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[10,10]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
     },
     {
         "id": 15,
+        "start_time": 1758443177741663184,
+        "end_time": 1758443177741719684,
         "isTensor": false,
         "isLeaf": false,
         "label": "nn.Module: CrossEntropyLoss_0",
@@ -180,6 +228,8 @@
     },
     {
         "id": 16,
+        "start_time": 1758443177741676684,
+        "end_time": 1758443177741717784,
         "isTensor": false,
         "isLeaf": true,
         "label": "aten::cross_entropy_loss",
@@ -193,15 +243,25 @@
     },
     {
         "id": 17,
+        "start_time": 1758443177741686784,
+        "end_time": 1758443177749356084,
         "isTensor": true,
         "isLeaf": true,
         "label": "[10,10]",
         "parent": 15,
         "children": [],
-        "nextNodes": []
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[10,10]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
     },
     {
         "id": 18,
+        "start_time": 1758443177741704584,
+        "end_time": -1,
         "isTensor": true,
         "isLeaf": true,
         "label": "[]",
@@ -209,19 +269,35 @@
         "children": [],
         "nextNodes": [
             20
-        ]
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
     },
     {
         "id": 19,
+        "start_time": 1758443177741705584,
+        "end_time": 1758443177749318984,
         "isTensor": true,
         "isLeaf": true,
         "label": "[]",
         "parent": 15,
         "children": [],
-        "nextNodes": []
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
     },
     {
         "id": 20,
+        "start_time": 1758443177741749384,
+        "end_time": 1758443177741764684,
         "isTensor": false,
         "isLeaf": true,
         "label": "aten::ones_like",
@@ -233,6 +309,8 @@
     },
     {
         "id": 21,
+        "start_time": 1758443177741334284,
+        "end_time": -1,
         "isTensor": true,
         "isLeaf": true,
         "label": "[10,1,28,28]",
@@ -241,10 +319,18 @@
         "nextNodes": [
             5,
             7
-        ]
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[10,1,28,28]",
+            "dtype": "torch.float32",
+            "size": 31744
+        }
     },
     {
         "id": 22,
+        "start_time": 1758443177741434084,
+        "end_time": -1,
         "isTensor": true,
         "isLeaf": true,
         "label": "[10]",
@@ -252,19 +338,35 @@
         "children": [],
         "nextNodes": [
             16
-        ]
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[10]",
+            "dtype": "torch.int64",
+            "size": 512
+        }
     },
     {
         "id": 23,
+        "start_time": 1758443177741755084,
+        "end_time": 1758443177749714784,
         "isTensor": true,
         "isLeaf": true,
         "label": "[]",
         "parent": 1,
         "children": [],
-        "nextNodes": []
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
     },
     {
         "id": 24,
+        "start_time": -1,
+        "end_time": -1,
         "isTensor": true,
         "isLeaf": true,
         "label": "[128,784]",
@@ -272,10 +374,18 @@
         "children": [],
         "nextNodes": [
             7
-        ]
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128,784]",
+            "dtype": "torch.float32",
+            "size": 401408
+        }
     },
     {
         "id": 25,
+        "start_time": -1,
+        "end_time": -1,
         "isTensor": true,
         "isLeaf": true,
         "label": "[128]",
@@ -283,10 +393,18 @@
         "children": [],
         "nextNodes": [
             7
-        ]
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
     },
     {
         "id": 26,
+        "start_time": -1,
+        "end_time": -1,
         "isTensor": true,
         "isLeaf": true,
         "label": "[10,128]",
@@ -294,10 +412,18 @@
         "children": [],
         "nextNodes": [
             13
-        ]
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[10,128]",
+            "dtype": "torch.float32",
+            "size": 5120
+        }
     },
     {
         "id": 27,
+        "start_time": -1,
+        "end_time": -1,
         "isTensor": true,
         "isLeaf": true,
         "label": "[10]",
@@ -305,6 +431,12 @@
         "children": [],
         "nextNodes": [
             13
-        ]
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[10]",
+            "dtype": "torch.float32",
+            "size": 40
+        }
     }
 ]
