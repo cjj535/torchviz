@@ -4,8 +4,10 @@ let minTime = -1;
 let relativeMaxTime = -1;
 let relativeMinTime = -1;
 let nsToS = 10000000;
+
 // *******************************************************************************************
 // node
+// 仅用于存储字段，不可以添加方法，因为拷贝node时只拷贝字符串
 // *******************************************************************************************
 class Node {
   constructor(node_json) {
@@ -326,6 +328,7 @@ class TimelineManager {
   }
 }
 
+// 增加悬停显示功能，悬停显示tensor或者op的详细信息
 function addHoverEffects(svgEl) {
   // 创建 tooltip 元素
   const tooltip = document.createElement('div');
@@ -409,23 +412,6 @@ function addHoverEffects(svgEl) {
   return tooltip;
 }
 
-// 带时间高亮的渲染函数
-async function renderWithTimeHighlight(highlightNodes = []) {
-  if (!currentRenderGraph) return;
-  const dot = currentRenderGraph.generate_dot(null, highlightNodes);
-  try {
-    const svgEl = await viz.renderSVGElement(dot);
-    svgContainer.innerHTML = '';
-    svgContainer.appendChild(svgEl);
-
-    // 重新附加事件
-    attachClickHandlersToRenderedSVG(svgEl);
-    addHoverEffects(svgEl);
-  } catch (err) {
-    console.error(err);
-  }
-}
-
 function escapeDotLabel(s){
   return String(s)
     .replace(/\\/g,"\\\\")
@@ -443,7 +429,7 @@ let originGraph=new Graph();
 let currentRenderGraph=null;
 let timelineManager = null;
 
-// 高亮节点的函数
+// 增加高亮功能，高亮显示当前时刻存在的tensor和正在运行的op，实时更新高亮节点
 function highlightNodesAtTime(currentTime) {
   if (!currentRenderGraph) return;
 
@@ -514,6 +500,7 @@ function findSvgElementsByTitle(svgElement, titleText) {
 // 将高亮函数暴露给全局
 window.highlightNodesAtTime = highlightNodesAtTime;
 
+// 渲染图，添加交互函数，如点击事件和悬停效果
 async function renderFromOriginGraph() {
   currentRenderGraph=originGraph.generate_new_graph();
   const dot=currentRenderGraph.generate_dot();
@@ -532,6 +519,7 @@ async function renderFromOriginGraph() {
   }
 }
 
+// 增加点击进行折叠或展开功能
 function attachClickHandlersToRenderedSVG(svgEl){
   const nodeGroupList=svgEl.querySelectorAll('g.node');
   nodeGroupList.forEach(g=>{
@@ -572,6 +560,7 @@ function attachClickHandlersToRenderedSVG(svgEl){
   });
 }
 
+// 增加文件导入功能。导入文件后首先创建原始图并校验合法性，然后更新时间信息并初始化时间管理器
 document.getElementById('jsonFileInput').addEventListener('change', async (event)=>{
   const file=event.target.files[0];
   if(!file){return;}
