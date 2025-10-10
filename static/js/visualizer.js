@@ -328,6 +328,13 @@ class TimelineManager {
   }
 }
 
+const viz = new Viz();
+const svgContainer=document.getElementById('svgContainer');
+const status=document.getElementById('status');
+let originGraph=new Graph();
+let currentRenderGraph=null;
+let timelineManager=null;
+
 // 增加悬停显示功能，悬停显示tensor或者op的详细信息
 function addHoverEffects(svgEl) {
   // 创建 tooltip 元素
@@ -421,13 +428,6 @@ function escapeDotLabel(s){
     .replace(/\t/g,'\\t');
 }
 function deepCopyNode(node){return JSON.parse(JSON.stringify(node));}
-
-const viz = new Viz();
-const svgContainer=document.getElementById('svgContainer');
-const status=document.getElementById('status');
-let originGraph=new Graph();
-let currentRenderGraph=null;
-let timelineManager = null;
 
 // 增加高亮功能，高亮显示当前时刻存在的tensor和正在运行的op，实时更新高亮节点
 function highlightNodesAtTime(currentTime) {
