@@ -14,6 +14,9 @@ def main(model = 'DNN'):
     elif model == 'ResNet':
         from examples.ResNet.model import train
         train()
+    elif model == 'GPT2':
+        from examples.GPT2.model import train
+        train()
         
     with open(f'./data/{model}/graph.json', 'r') as graph_json_file, open(f'./data/{model}/tree.json', 'r') as tree_json_file:
         graph_data = json.load(graph_json_file)

@@ -5,7 +5,7 @@
 1、已经完成从profiler中取出graph数据，变成json格式
 2、初步完成从json到dot文件转换，并将dot转成png
 3、已支持采集tensor的metadata，如shape，device等；已支持采集内存生命周期和算子生命周期
-4、已初步支持简易两层模型和resnet18模型
+4、已初步支持简易两层模型和resnet18模型和GPT2模型
 5、支持互动展示
 6、已支持快照状态查看
 

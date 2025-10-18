@@ -1,6 +1,8 @@
 # 忽略所有 __pycache__ 目录
 __pycache__/
 
+gpt2_source/
+
 # 忽略所有 .pyc 文件
 *.pyc
 

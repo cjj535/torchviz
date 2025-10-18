@@ -1,0 +1,4465 @@
+[
+    {
+        "id": 1,
+        "start_time": 1760772405221348008,
+        "end_time": 1760772405224924008,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "[forward]",
+        "parent": null,
+        "children": [
+            2,
+            3,
+            4,
+            182,
+            187,
+            188,
+            189,
+            190
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 2,
+        "start_time": 1760772405221348008,
+        "end_time": 1760772405221637008,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::to",
+        "parent": 1,
+        "children": [],
+        "nextNodes": [
+            188
+        ]
+    },
+    {
+        "id": 3,
+        "start_time": 1760772405221672908,
+        "end_time": 1760772405221750808,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::to",
+        "parent": 1,
+        "children": [],
+        "nextNodes": [
+            189
+        ]
+    },
+    {
+        "id": 4,
+        "start_time": 1760772405221762608,
+        "end_time": 1760772405224286108,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: ResNet_0",
+        "parent": 1,
+        "children": [
+            5,
+            8,
+            15,
+            18,
+            22,
+            52,
+            93,
+            134,
+            175,
+            178,
+            179
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 5,
+        "start_time": 1760772405221777908,
+        "end_time": 1760772405222059108,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_0",
+        "parent": 4,
+        "children": [
+            6,
+            7
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 6,
+        "start_time": 1760772405221903208,
+        "end_time": 1760772405222056008,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 5,
+        "children": [],
+        "nextNodes": [
+            7
+        ]
+    },
+    {
+        "id": 7,
+        "start_time": 1760772405222023508,
+        "end_time": 1760772405235573408,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,32,32]",
+        "parent": 5,
+        "children": [],
+        "nextNodes": [
+            10
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,32,32]",
+            "dtype": "torch.float32",
+            "size": 16777216
+        }
+    },
+    {
+        "id": 8,
+        "start_time": 1760772405222067108,
+        "end_time": 1760772405222488908,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_0",
+        "parent": 4,
+        "children": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 9,
+        "start_time": 1760772405222091808,
+        "end_time": 1760772405222100208,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 8,
+        "children": [],
+        "nextNodes": [
+            11
+        ]
+    },
+    {
+        "id": 10,
+        "start_time": 1760772405222222608,
+        "end_time": 1760772405222486308,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 8,
+        "children": [],
+        "nextNodes": [
+            12,
+            13,
+            14
+        ]
+    },
+    {
+        "id": 11,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 8,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 12,
+        "start_time": 1760772405222401408,
+        "end_time": 1760772405235532708,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,32,32]",
+        "parent": 8,
+        "children": [],
+        "nextNodes": [
+            16
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,32,32]",
+            "dtype": "torch.float32",
+            "size": 16777216
+        }
+    },
+    {
+        "id": 13,
+        "start_time": 1760772405222463408,
+        "end_time": 1760772405235574208,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": 8,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 14,
+        "start_time": 1760772405222467008,
+        "end_time": 1760772405235574508,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": 8,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 15,
+        "start_time": 1760772405222493808,
+        "end_time": 1760772405222521208,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: ReLU_0",
+        "parent": 4,
+        "children": [
+            16,
+            17
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 16,
+        "start_time": 1760772405222505208,
+        "end_time": 1760772405222519608,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::relu_",
+        "parent": 15,
+        "children": [],
+        "nextNodes": [
+            17
+        ]
+    },
+    {
+        "id": 17,
+        "start_time": 1760772405222401408,
+        "end_time": 1760772405235532708,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,32,32]",
+        "parent": 15,
+        "children": [],
+        "nextNodes": [
+            19
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,32,32]",
+            "dtype": "torch.float32",
+            "size": 16777216
+        }
+    },
+    {
+        "id": 18,
+        "start_time": 1760772405222525608,
+        "end_time": 1760772405222650508,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: MaxPool2d_0",
+        "parent": 4,
+        "children": [
+            19,
+            20,
+            21
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 19,
+        "start_time": 1760772405222538008,
+        "end_time": 1760772405222648008,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::max_pool2d",
+        "parent": 18,
+        "children": [],
+        "nextNodes": [
+            20,
+            21
+        ]
+    },
+    {
+        "id": 20,
+        "start_time": 1760772405222640008,
+        "end_time": 1760772405235392008,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,16,16]",
+        "parent": 18,
+        "children": [],
+        "nextNodes": [
+            25,
+            47
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,16,16]",
+            "dtype": "torch.float32",
+            "size": 4194304
+        }
+    },
+    {
+        "id": 21,
+        "start_time": 1760772405222641308,
+        "end_time": 1760772405235509608,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,16,16]",
+        "parent": 18,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,16,16]",
+            "dtype": "torch.int64",
+            "size": 9437184
+        }
+    },
+    {
+        "id": 22,
+        "start_time": 1760772405222653708,
+        "end_time": 1760772405222956208,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Sequential_0",
+        "parent": 4,
+        "children": [
+            23
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 23,
+        "start_time": 1760772405222659908,
+        "end_time": 1760772405222955608,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BasicBlock_0",
+        "parent": 22,
+        "children": [
+            24,
+            27,
+            34,
+            37,
+            40,
+            47,
+            48,
+            51
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 24,
+        "start_time": 1760772405222664908,
+        "end_time": 1760772405222710408,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_1",
+        "parent": 23,
+        "children": [
+            25,
+            26
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 25,
+        "start_time": 1760772405222672808,
+        "end_time": 1760772405222708408,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 24,
+        "children": [],
+        "nextNodes": [
+            26
+        ]
+    },
+    {
+        "id": 26,
+        "start_time": 1760772405222686208,
+        "end_time": 1760772405235296008,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,16,16]",
+        "parent": 24,
+        "children": [],
+        "nextNodes": [
+            29
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,16,16]",
+            "dtype": "torch.float32",
+            "size": 4718592
+        }
+    },
+    {
+        "id": 27,
+        "start_time": 1760772405222714908,
+        "end_time": 1760772405222789108,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_1",
+        "parent": 23,
+        "children": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 28,
+        "start_time": 1760772405222723508,
+        "end_time": 1760772405222730008,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 27,
+        "children": [],
+        "nextNodes": [
+            30
+        ]
+    },
+    {
+        "id": 29,
+        "start_time": 1760772405222742808,
+        "end_time": 1760772405222787208,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 27,
+        "children": [],
+        "nextNodes": [
+            31,
+            32,
+            33
+        ]
+    },
+    {
+        "id": 30,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 27,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 31,
+        "start_time": 1760772405222758208,
+        "end_time": 1760772405235257908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,16,16]",
+        "parent": 27,
+        "children": [],
+        "nextNodes": [
+            35
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,16,16]",
+            "dtype": "torch.float32",
+            "size": 4194304
+        }
+    },
+    {
+        "id": 32,
+        "start_time": 1760772405222768708,
+        "end_time": 1760772405235296708,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": 27,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 33,
+        "start_time": 1760772405222771808,
+        "end_time": 1760772405235297108,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": 27,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 34,
+        "start_time": 1760772405222791308,
+        "end_time": 1760772405222808408,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: ReLU_1",
+        "parent": 23,
+        "children": [
+            35,
+            36
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 35,
+        "start_time": 1760772405222796108,
+        "end_time": 1760772405222806908,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::relu_",
+        "parent": 34,
+        "children": [],
+        "nextNodes": [
+            36
+        ]
+    },
+    {
+        "id": 36,
+        "start_time": 1760772405222758208,
+        "end_time": 1760772405235257908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,16,16]",
+        "parent": 34,
+        "children": [],
+        "nextNodes": [
+            38
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,16,16]",
+            "dtype": "torch.float32",
+            "size": 4194304
+        }
+    },
+    {
+        "id": 37,
+        "start_time": 1760772405222811108,
+        "end_time": 1760772405222859108,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_2",
+        "parent": 23,
+        "children": [
+            38,
+            39
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 38,
+        "start_time": 1760772405222817608,
+        "end_time": 1760772405222857208,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 37,
+        "children": [],
+        "nextNodes": [
+            39
+        ]
+    },
+    {
+        "id": 39,
+        "start_time": 1760772405222828808,
+        "end_time": 1760772405235156708,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,16,16]",
+        "parent": 37,
+        "children": [],
+        "nextNodes": [
+            42
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,16,16]",
+            "dtype": "torch.float32",
+            "size": 4194304
+        }
+    },
+    {
+        "id": 40,
+        "start_time": 1760772405222862608,
+        "end_time": 1760772405222929108,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_2",
+        "parent": 23,
+        "children": [
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 41,
+        "start_time": 1760772405222869808,
+        "end_time": 1760772405222874708,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 40,
+        "children": [],
+        "nextNodes": [
+            43
+        ]
+    },
+    {
+        "id": 42,
+        "start_time": 1760772405222884708,
+        "end_time": 1760772405222927308,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 40,
+        "children": [],
+        "nextNodes": [
+            44,
+            45,
+            46
+        ]
+    },
+    {
+        "id": 43,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 40,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 44,
+        "start_time": 1760772405222899308,
+        "end_time": 1760772405235115608,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,16,16]",
+        "parent": 40,
+        "children": [],
+        "nextNodes": [
+            47
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,16,16]",
+            "dtype": "torch.float32",
+            "size": 4194304
+        }
+    },
+    {
+        "id": 45,
+        "start_time": 1760772405222908808,
+        "end_time": 1760772405235157508,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": 40,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 46,
+        "start_time": 1760772405222912508,
+        "end_time": 1760772405235157908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": 40,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 47,
+        "start_time": 1760772405222931808,
+        "end_time": 1760772405222938308,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 23,
+        "children": [],
+        "nextNodes": [
+            51
+        ]
+    },
+    {
+        "id": 48,
+        "start_time": 1760772405222941208,
+        "end_time": 1760772405222955308,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: ReLU_1",
+        "parent": 23,
+        "children": [
+            49,
+            50
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 49,
+        "start_time": 1760772405222945208,
+        "end_time": 1760772405222953908,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::relu_",
+        "parent": 48,
+        "children": [],
+        "nextNodes": [
+            50
+        ]
+    },
+    {
+        "id": 50,
+        "start_time": 1760772405222899308,
+        "end_time": 1760772405235115608,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,16,16]",
+        "parent": 48,
+        "children": [],
+        "nextNodes": [
+            55,
+            79
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,16,16]",
+            "dtype": "torch.float32",
+            "size": 4194304
+        }
+    },
+    {
+        "id": 51,
+        "start_time": 1760772405222899308,
+        "end_time": 1760772405235115608,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,16,16]",
+        "parent": 23,
+        "children": [],
+        "nextNodes": [
+            49
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,16,16]",
+            "dtype": "torch.float32",
+            "size": 4194304
+        }
+    },
+    {
+        "id": 52,
+        "start_time": 1760772405222958208,
+        "end_time": 1760772405223372508,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Sequential_1",
+        "parent": 4,
+        "children": [
+            53
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 53,
+        "start_time": 1760772405222961208,
+        "end_time": 1760772405223372008,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BasicBlock_1",
+        "parent": 52,
+        "children": [
+            54,
+            57,
+            64,
+            67,
+            70,
+            77,
+            88,
+            89,
+            92
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 54,
+        "start_time": 1760772405222964908,
+        "end_time": 1760772405223007508,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_3",
+        "parent": 53,
+        "children": [
+            55,
+            56
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 55,
+        "start_time": 1760772405222970708,
+        "end_time": 1760772405223005708,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 54,
+        "children": [],
+        "nextNodes": [
+            56
+        ]
+    },
+    {
+        "id": 56,
+        "start_time": 1760772405222982208,
+        "end_time": 1760772405235004208,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,128,8,8]",
+        "parent": 54,
+        "children": [],
+        "nextNodes": [
+            59
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,128,8,8]",
+            "dtype": "torch.float32",
+            "size": 2359296
+        }
+    },
+    {
+        "id": 57,
+        "start_time": 1760772405223015008,
+        "end_time": 1760772405223111808,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_3",
+        "parent": 53,
+        "children": [
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 58,
+        "start_time": 1760772405223051108,
+        "end_time": 1760772405223055408,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 57,
+        "children": [],
+        "nextNodes": [
+            60
+        ]
+    },
+    {
+        "id": 59,
+        "start_time": 1760772405223067808,
+        "end_time": 1760772405223110208,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 57,
+        "children": [],
+        "nextNodes": [
+            61,
+            62,
+            63
+        ]
+    },
+    {
+        "id": 60,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 57,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 61,
+        "start_time": 1760772405223081408,
+        "end_time": 1760772405234969108,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,128,8,8]",
+        "parent": 57,
+        "children": [],
+        "nextNodes": [
+            65
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,128,8,8]",
+            "dtype": "torch.float32",
+            "size": 2621440
+        }
+    },
+    {
+        "id": 62,
+        "start_time": 1760772405223091108,
+        "end_time": 1760772405235005008,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": 57,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 63,
+        "start_time": 1760772405223094108,
+        "end_time": 1760772405235005208,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": 57,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 64,
+        "start_time": 1760772405223115608,
+        "end_time": 1760772405223130408,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: ReLU_2",
+        "parent": 53,
+        "children": [
+            65,
+            66
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 65,
+        "start_time": 1760772405223119608,
+        "end_time": 1760772405223129008,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::relu_",
+        "parent": 64,
+        "children": [],
+        "nextNodes": [
+            66
+        ]
+    },
+    {
+        "id": 66,
+        "start_time": 1760772405223081408,
+        "end_time": 1760772405234969108,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,128,8,8]",
+        "parent": 64,
+        "children": [],
+        "nextNodes": [
+            68
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,128,8,8]",
+            "dtype": "torch.float32",
+            "size": 2621440
+        }
+    },
+    {
+        "id": 67,
+        "start_time": 1760772405223132708,
+        "end_time": 1760772405223179308,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_4",
+        "parent": 53,
+        "children": [
+            68,
+            69
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 68,
+        "start_time": 1760772405223139208,
+        "end_time": 1760772405223177408,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 67,
+        "children": [],
+        "nextNodes": [
+            69
+        ]
+    },
+    {
+        "id": 69,
+        "start_time": 1760772405223150408,
+        "end_time": 1760772405234819808,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,128,8,8]",
+        "parent": 67,
+        "children": [],
+        "nextNodes": [
+            72
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,128,8,8]",
+            "dtype": "torch.float32",
+            "size": 3145728
+        }
+    },
+    {
+        "id": 70,
+        "start_time": 1760772405223182408,
+        "end_time": 1760772405223245108,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_4",
+        "parent": 53,
+        "children": [
+            71,
+            72,
+            73,
+            74,
+            75,
+            76
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 71,
+        "start_time": 1760772405223189308,
+        "end_time": 1760772405223193408,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 70,
+        "children": [],
+        "nextNodes": [
+            73
+        ]
+    },
+    {
+        "id": 72,
+        "start_time": 1760772405223203108,
+        "end_time": 1760772405223243408,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 70,
+        "children": [],
+        "nextNodes": [
+            74,
+            75,
+            76
+        ]
+    },
+    {
+        "id": 73,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 70,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 74,
+        "start_time": 1760772405223217008,
+        "end_time": 1760772405234640608,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,128,8,8]",
+        "parent": 70,
+        "children": [],
+        "nextNodes": [
+            88
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,128,8,8]",
+            "dtype": "torch.float32",
+            "size": 2097152
+        }
+    },
+    {
+        "id": 75,
+        "start_time": 1760772405223226308,
+        "end_time": 1760772405234820608,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": 70,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 76,
+        "start_time": 1760772405223229408,
+        "end_time": 1760772405234821008,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": 70,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 77,
+        "start_time": 1760772405223247908,
+        "end_time": 1760772405223345408,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Sequential_2",
+        "parent": 53,
+        "children": [
+            78,
+            81
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 78,
+        "start_time": 1760772405223251708,
+        "end_time": 1760772405223283308,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_5",
+        "parent": 77,
+        "children": [
+            79,
+            80
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 79,
+        "start_time": 1760772405223258108,
+        "end_time": 1760772405223281608,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 78,
+        "children": [],
+        "nextNodes": [
+            80
+        ]
+    },
+    {
+        "id": 80,
+        "start_time": 1760772405223269208,
+        "end_time": 1760772405234684408,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,128,8,8]",
+        "parent": 78,
+        "children": [],
+        "nextNodes": [
+            83
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,128,8,8]",
+            "dtype": "torch.float32",
+            "size": 2097152
+        }
+    },
+    {
+        "id": 81,
+        "start_time": 1760772405223285308,
+        "end_time": 1760772405223344808,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_5",
+        "parent": 77,
+        "children": [
+            82,
+            83,
+            84,
+            85,
+            86,
+            87
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 82,
+        "start_time": 1760772405223291708,
+        "end_time": 1760772405223295608,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 81,
+        "children": [],
+        "nextNodes": [
+            84
+        ]
+    },
+    {
+        "id": 83,
+        "start_time": 1760772405223304608,
+        "end_time": 1760772405223343108,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 81,
+        "children": [],
+        "nextNodes": [
+            85,
+            86,
+            87
+        ]
+    },
+    {
+        "id": 84,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 81,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 85,
+        "start_time": 1760772405223316908,
+        "end_time": 1760772405223371508,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,128,8,8]",
+        "parent": 81,
+        "children": [],
+        "nextNodes": [
+            88
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,128,8,8]",
+            "dtype": "torch.float32",
+            "size": 2097152
+        }
+    },
+    {
+        "id": 86,
+        "start_time": 1760772405223326208,
+        "end_time": 1760772405234685208,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": 81,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 87,
+        "start_time": 1760772405223329608,
+        "end_time": 1760772405234685608,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": 81,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 88,
+        "start_time": 1760772405223347608,
+        "end_time": 1760772405223353608,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 53,
+        "children": [],
+        "nextNodes": [
+            92
+        ]
+    },
+    {
+        "id": 89,
+        "start_time": 1760772405223356508,
+        "end_time": 1760772405223370108,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: ReLU_2",
+        "parent": 53,
+        "children": [
+            90,
+            91
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 90,
+        "start_time": 1760772405223360608,
+        "end_time": 1760772405223368408,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::relu_",
+        "parent": 89,
+        "children": [],
+        "nextNodes": [
+            91
+        ]
+    },
+    {
+        "id": 91,
+        "start_time": 1760772405223217008,
+        "end_time": 1760772405234640608,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,128,8,8]",
+        "parent": 89,
+        "children": [],
+        "nextNodes": [
+            96,
+            120
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,128,8,8]",
+            "dtype": "torch.float32",
+            "size": 2097152
+        }
+    },
+    {
+        "id": 92,
+        "start_time": 1760772405223217008,
+        "end_time": 1760772405234640608,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,128,8,8]",
+        "parent": 53,
+        "children": [],
+        "nextNodes": [
+            90
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,128,8,8]",
+            "dtype": "torch.float32",
+            "size": 2097152
+        }
+    },
+    {
+        "id": 93,
+        "start_time": 1760772405223374508,
+        "end_time": 1760772405223757708,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Sequential_3",
+        "parent": 4,
+        "children": [
+            94
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 94,
+        "start_time": 1760772405223377008,
+        "end_time": 1760772405223757408,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BasicBlock_2",
+        "parent": 93,
+        "children": [
+            95,
+            98,
+            105,
+            108,
+            111,
+            118,
+            129,
+            130,
+            133
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 95,
+        "start_time": 1760772405223380708,
+        "end_time": 1760772405223423108,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_6",
+        "parent": 94,
+        "children": [
+            96,
+            97
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 96,
+        "start_time": 1760772405223386408,
+        "end_time": 1760772405223421308,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 95,
+        "children": [],
+        "nextNodes": [
+            97
+        ]
+    },
+    {
+        "id": 97,
+        "start_time": 1760772405223397108,
+        "end_time": 1760772405234535808,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,256,4,4]",
+        "parent": 95,
+        "children": [],
+        "nextNodes": [
+            100
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,256,4,4]",
+            "dtype": "torch.float32",
+            "size": 1048576
+        }
+    },
+    {
+        "id": 98,
+        "start_time": 1760772405223425808,
+        "end_time": 1760772405223487608,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_6",
+        "parent": 94,
+        "children": [
+            99,
+            100,
+            101,
+            102,
+            103,
+            104
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 99,
+        "start_time": 1760772405223432208,
+        "end_time": 1760772405223436108,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 98,
+        "children": [],
+        "nextNodes": [
+            101
+        ]
+    },
+    {
+        "id": 100,
+        "start_time": 1760772405223445508,
+        "end_time": 1760772405223485908,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 98,
+        "children": [],
+        "nextNodes": [
+            102,
+            103,
+            104
+        ]
+    },
+    {
+        "id": 101,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 98,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 102,
+        "start_time": 1760772405223460408,
+        "end_time": 1760772405234500508,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,256,4,4]",
+        "parent": 98,
+        "children": [],
+        "nextNodes": [
+            106
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,256,4,4]",
+            "dtype": "torch.float32",
+            "size": 1048576
+        }
+    },
+    {
+        "id": 103,
+        "start_time": 1760772405223469308,
+        "end_time": 1760772405234536508,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": 98,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 104,
+        "start_time": 1760772405223472408,
+        "end_time": 1760772405234536808,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": 98,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 105,
+        "start_time": 1760772405223489508,
+        "end_time": 1760772405223504208,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: ReLU_3",
+        "parent": 94,
+        "children": [
+            106,
+            107
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 106,
+        "start_time": 1760772405223493608,
+        "end_time": 1760772405223502708,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::relu_",
+        "parent": 105,
+        "children": [],
+        "nextNodes": [
+            107
+        ]
+    },
+    {
+        "id": 107,
+        "start_time": 1760772405223460408,
+        "end_time": 1760772405234500508,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,256,4,4]",
+        "parent": 105,
+        "children": [],
+        "nextNodes": [
+            109
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,256,4,4]",
+            "dtype": "torch.float32",
+            "size": 1048576
+        }
+    },
+    {
+        "id": 108,
+        "start_time": 1760772405223506308,
+        "end_time": 1760772405223543008,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_7",
+        "parent": 94,
+        "children": [
+            109,
+            110
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 109,
+        "start_time": 1760772405223512108,
+        "end_time": 1760772405223541208,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 108,
+        "children": [],
+        "nextNodes": [
+            110
+        ]
+    },
+    {
+        "id": 110,
+        "start_time": 1760772405223523308,
+        "end_time": 1760772405234401408,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,256,4,4]",
+        "parent": 108,
+        "children": [],
+        "nextNodes": [
+            113
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,256,4,4]",
+            "dtype": "torch.float32",
+            "size": 1048576
+        }
+    },
+    {
+        "id": 111,
+        "start_time": 1760772405223545708,
+        "end_time": 1760772405223606408,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_7",
+        "parent": 94,
+        "children": [
+            112,
+            113,
+            114,
+            115,
+            116,
+            117
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 112,
+        "start_time": 1760772405223551808,
+        "end_time": 1760772405223555608,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 111,
+        "children": [],
+        "nextNodes": [
+            114
+        ]
+    },
+    {
+        "id": 113,
+        "start_time": 1760772405223564408,
+        "end_time": 1760772405223604708,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 111,
+        "children": [],
+        "nextNodes": [
+            115,
+            116,
+            117
+        ]
+    },
+    {
+        "id": 114,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 111,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 115,
+        "start_time": 1760772405223577708,
+        "end_time": 1760772405234241708,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,256,4,4]",
+        "parent": 111,
+        "children": [],
+        "nextNodes": [
+            129
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,256,4,4]",
+            "dtype": "torch.float32",
+            "size": 1048576
+        }
+    },
+    {
+        "id": 116,
+        "start_time": 1760772405223587408,
+        "end_time": 1760772405234402308,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": 111,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 117,
+        "start_time": 1760772405223590908,
+        "end_time": 1760772405234402708,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": 111,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 118,
+        "start_time": 1760772405223608908,
+        "end_time": 1760772405223730908,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Sequential_4",
+        "parent": 94,
+        "children": [
+            119,
+            122
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 119,
+        "start_time": 1760772405223616308,
+        "end_time": 1760772405223662208,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_8",
+        "parent": 118,
+        "children": [
+            120,
+            121
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 120,
+        "start_time": 1760772405223622108,
+        "end_time": 1760772405223660508,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 119,
+        "children": [],
+        "nextNodes": [
+            121
+        ]
+    },
+    {
+        "id": 121,
+        "start_time": 1760772405223633008,
+        "end_time": 1760772405234285108,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,256,4,4]",
+        "parent": 119,
+        "children": [],
+        "nextNodes": [
+            124
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,256,4,4]",
+            "dtype": "torch.float32",
+            "size": 1048576
+        }
+    },
+    {
+        "id": 122,
+        "start_time": 1760772405223664208,
+        "end_time": 1760772405223730308,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_8",
+        "parent": 118,
+        "children": [
+            123,
+            124,
+            125,
+            126,
+            127,
+            128
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 123,
+        "start_time": 1760772405223670608,
+        "end_time": 1760772405223674708,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 122,
+        "children": [],
+        "nextNodes": [
+            125
+        ]
+    },
+    {
+        "id": 124,
+        "start_time": 1760772405223683708,
+        "end_time": 1760772405223728608,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 122,
+        "children": [],
+        "nextNodes": [
+            126,
+            127,
+            128
+        ]
+    },
+    {
+        "id": 125,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 122,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 126,
+        "start_time": 1760772405223698408,
+        "end_time": 1760772405223756908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,256,4,4]",
+        "parent": 122,
+        "children": [],
+        "nextNodes": [
+            129
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,256,4,4]",
+            "dtype": "torch.float32",
+            "size": 1048576
+        }
+    },
+    {
+        "id": 127,
+        "start_time": 1760772405223707108,
+        "end_time": 1760772405234285908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": 122,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 128,
+        "start_time": 1760772405223710208,
+        "end_time": 1760772405234286508,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": 122,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 129,
+        "start_time": 1760772405223733008,
+        "end_time": 1760772405223738908,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 94,
+        "children": [],
+        "nextNodes": [
+            133
+        ]
+    },
+    {
+        "id": 130,
+        "start_time": 1760772405223741908,
+        "end_time": 1760772405223755508,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: ReLU_3",
+        "parent": 94,
+        "children": [
+            131,
+            132
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 131,
+        "start_time": 1760772405223745808,
+        "end_time": 1760772405223754008,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::relu_",
+        "parent": 130,
+        "children": [],
+        "nextNodes": [
+            132
+        ]
+    },
+    {
+        "id": 132,
+        "start_time": 1760772405223577708,
+        "end_time": 1760772405234241708,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,256,4,4]",
+        "parent": 130,
+        "children": [],
+        "nextNodes": [
+            137,
+            161
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,256,4,4]",
+            "dtype": "torch.float32",
+            "size": 1048576
+        }
+    },
+    {
+        "id": 133,
+        "start_time": 1760772405223577708,
+        "end_time": 1760772405234241708,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,256,4,4]",
+        "parent": 94,
+        "children": [],
+        "nextNodes": [
+            131
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,256,4,4]",
+            "dtype": "torch.float32",
+            "size": 1048576
+        }
+    },
+    {
+        "id": 134,
+        "start_time": 1760772405223762508,
+        "end_time": 1760772405224154208,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Sequential_5",
+        "parent": 4,
+        "children": [
+            135
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 135,
+        "start_time": 1760772405223765108,
+        "end_time": 1760772405224153808,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BasicBlock_3",
+        "parent": 134,
+        "children": [
+            136,
+            139,
+            146,
+            149,
+            152,
+            159,
+            170,
+            171,
+            174
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 136,
+        "start_time": 1760772405223768408,
+        "end_time": 1760772405223806408,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_9",
+        "parent": 135,
+        "children": [
+            137,
+            138
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 137,
+        "start_time": 1760772405223774708,
+        "end_time": 1760772405223804808,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 136,
+        "children": [],
+        "nextNodes": [
+            138
+        ]
+    },
+    {
+        "id": 138,
+        "start_time": 1760772405223785708,
+        "end_time": 1760772405234129108,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,512,2,2]",
+        "parent": 136,
+        "children": [],
+        "nextNodes": [
+            141
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,512,2,2]",
+            "dtype": "torch.float32",
+            "size": 524288
+        }
+    },
+    {
+        "id": 139,
+        "start_time": 1760772405223808808,
+        "end_time": 1760772405223868308,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_9",
+        "parent": 135,
+        "children": [
+            140,
+            141,
+            142,
+            143,
+            144,
+            145
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 140,
+        "start_time": 1760772405223815108,
+        "end_time": 1760772405223818908,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 139,
+        "children": [],
+        "nextNodes": [
+            142
+        ]
+    },
+    {
+        "id": 141,
+        "start_time": 1760772405223828308,
+        "end_time": 1760772405223866708,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 139,
+        "children": [],
+        "nextNodes": [
+            143,
+            144,
+            145
+        ]
+    },
+    {
+        "id": 142,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 139,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 143,
+        "start_time": 1760772405223841108,
+        "end_time": 1760772405234092908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,512,2,2]",
+        "parent": 139,
+        "children": [],
+        "nextNodes": [
+            147
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,512,2,2]",
+            "dtype": "torch.float32",
+            "size": 524288
+        }
+    },
+    {
+        "id": 144,
+        "start_time": 1760772405223850208,
+        "end_time": 1760772405234129808,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": 139,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 145,
+        "start_time": 1760772405223853408,
+        "end_time": 1760772405234130108,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": 139,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 146,
+        "start_time": 1760772405223870008,
+        "end_time": 1760772405223883608,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: ReLU_4",
+        "parent": 135,
+        "children": [
+            147,
+            148
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 147,
+        "start_time": 1760772405223873608,
+        "end_time": 1760772405223882208,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::relu_",
+        "parent": 146,
+        "children": [],
+        "nextNodes": [
+            148
+        ]
+    },
+    {
+        "id": 148,
+        "start_time": 1760772405223841108,
+        "end_time": 1760772405234092908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,512,2,2]",
+        "parent": 146,
+        "children": [],
+        "nextNodes": [
+            150
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,512,2,2]",
+            "dtype": "torch.float32",
+            "size": 524288
+        }
+    },
+    {
+        "id": 149,
+        "start_time": 1760772405223885808,
+        "end_time": 1760772405223932008,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_10",
+        "parent": 135,
+        "children": [
+            150,
+            151
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 150,
+        "start_time": 1760772405223891308,
+        "end_time": 1760772405223930308,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 149,
+        "children": [],
+        "nextNodes": [
+            151
+        ]
+    },
+    {
+        "id": 151,
+        "start_time": 1760772405223902608,
+        "end_time": 1760772405233976208,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,512,2,2]",
+        "parent": 149,
+        "children": [],
+        "nextNodes": [
+            154
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,512,2,2]",
+            "dtype": "torch.float32",
+            "size": 524288
+        }
+    },
+    {
+        "id": 152,
+        "start_time": 1760772405223935008,
+        "end_time": 1760772405224001508,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_10",
+        "parent": 135,
+        "children": [
+            153,
+            154,
+            155,
+            156,
+            157,
+            158
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 153,
+        "start_time": 1760772405223941508,
+        "end_time": 1760772405223945508,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 152,
+        "children": [],
+        "nextNodes": [
+            155
+        ]
+    },
+    {
+        "id": 154,
+        "start_time": 1760772405223958708,
+        "end_time": 1760772405223999808,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 152,
+        "children": [],
+        "nextNodes": [
+            156,
+            157,
+            158
+        ]
+    },
+    {
+        "id": 155,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 152,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 156,
+        "start_time": 1760772405223972608,
+        "end_time": 1760772405233634908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,512,2,2]",
+        "parent": 152,
+        "children": [],
+        "nextNodes": [
+            170
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,512,2,2]",
+            "dtype": "torch.float32",
+            "size": 524288
+        }
+    },
+    {
+        "id": 157,
+        "start_time": 1760772405223982308,
+        "end_time": 1760772405233977408,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": 152,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 158,
+        "start_time": 1760772405223985608,
+        "end_time": 1760772405233977708,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": 152,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 159,
+        "start_time": 1760772405224003908,
+        "end_time": 1760772405224126908,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Sequential_6",
+        "parent": 135,
+        "children": [
+            160,
+            163
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 160,
+        "start_time": 1760772405224007508,
+        "end_time": 1760772405224063008,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Conv2d_11",
+        "parent": 159,
+        "children": [
+            161,
+            162
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 161,
+        "start_time": 1760772405224013108,
+        "end_time": 1760772405224061408,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::conv2d",
+        "parent": 160,
+        "children": [],
+        "nextNodes": [
+            162
+        ]
+    },
+    {
+        "id": 162,
+        "start_time": 1760772405224041408,
+        "end_time": 1760772405233795708,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,512,2,2]",
+        "parent": 160,
+        "children": [],
+        "nextNodes": [
+            165
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,512,2,2]",
+            "dtype": "torch.float32",
+            "size": 524288
+        }
+    },
+    {
+        "id": 163,
+        "start_time": 1760772405224065108,
+        "end_time": 1760772405224126208,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: BatchNorm2d_11",
+        "parent": 159,
+        "children": [
+            164,
+            165,
+            166,
+            167,
+            168,
+            169
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 164,
+        "start_time": 1760772405224071408,
+        "end_time": 1760772405224075708,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 163,
+        "children": [],
+        "nextNodes": [
+            166
+        ]
+    },
+    {
+        "id": 165,
+        "start_time": 1760772405224084808,
+        "end_time": 1760772405224124608,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::batch_norm",
+        "parent": 163,
+        "children": [],
+        "nextNodes": [
+            167,
+            168,
+            169
+        ]
+    },
+    {
+        "id": 166,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 163,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 167,
+        "start_time": 1760772405224097708,
+        "end_time": 1760772405224153408,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,512,2,2]",
+        "parent": 163,
+        "children": [],
+        "nextNodes": [
+            170
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,512,2,2]",
+            "dtype": "torch.float32",
+            "size": 524288
+        }
+    },
+    {
+        "id": 168,
+        "start_time": 1760772405224107608,
+        "end_time": 1760772405233797408,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": 163,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 169,
+        "start_time": 1760772405224111108,
+        "end_time": 1760772405233797808,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": 163,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 170,
+        "start_time": 1760772405224129108,
+        "end_time": 1760772405224135308,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::add_",
+        "parent": 135,
+        "children": [],
+        "nextNodes": [
+            174
+        ]
+    },
+    {
+        "id": 171,
+        "start_time": 1760772405224137808,
+        "end_time": 1760772405224152008,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: ReLU_4",
+        "parent": 135,
+        "children": [
+            172,
+            173
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 172,
+        "start_time": 1760772405224142008,
+        "end_time": 1760772405224150508,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::relu_",
+        "parent": 171,
+        "children": [],
+        "nextNodes": [
+            173
+        ]
+    },
+    {
+        "id": 173,
+        "start_time": 1760772405223972608,
+        "end_time": 1760772405233634908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,512,2,2]",
+        "parent": 171,
+        "children": [],
+        "nextNodes": [
+            176
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,512,2,2]",
+            "dtype": "torch.float32",
+            "size": 524288
+        }
+    },
+    {
+        "id": 174,
+        "start_time": 1760772405223972608,
+        "end_time": 1760772405233634908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,512,2,2]",
+        "parent": 135,
+        "children": [],
+        "nextNodes": [
+            172
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,512,2,2]",
+            "dtype": "torch.float32",
+            "size": 524288
+        }
+    },
+    {
+        "id": 175,
+        "start_time": 1760772405224163808,
+        "end_time": 1760772405224200208,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: AdaptiveAvgPool2d_0",
+        "parent": 4,
+        "children": [
+            176,
+            177
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 176,
+        "start_time": 1760772405224180308,
+        "end_time": 1760772405224198408,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::adaptive_avg_pool2d",
+        "parent": 175,
+        "children": [],
+        "nextNodes": [
+            177
+        ]
+    },
+    {
+        "id": 177,
+        "start_time": 1760772405224188508,
+        "end_time": 1760772405233218508,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,512,1,1]",
+        "parent": 175,
+        "children": [],
+        "nextNodes": [
+            178,
+            180
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,512,1,1]",
+            "dtype": "torch.float32",
+            "size": 131072
+        }
+    },
+    {
+        "id": 178,
+        "start_time": 1760772405224219708,
+        "end_time": 1760772405224226208,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::flatten",
+        "parent": 4,
+        "children": [],
+        "nextNodes": []
+    },
+    {
+        "id": 179,
+        "start_time": 1760772405224232408,
+        "end_time": 1760772405224285408,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: Linear_0",
+        "parent": 4,
+        "children": [
+            180,
+            181
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 180,
+        "start_time": 1760772405224239208,
+        "end_time": 1760772405224283708,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::linear",
+        "parent": 179,
+        "children": [],
+        "nextNodes": [
+            181
+        ]
+    },
+    {
+        "id": 181,
+        "start_time": 1760772405224258908,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,10]",
+        "parent": 179,
+        "children": [],
+        "nextNodes": [
+            183
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,10]",
+            "dtype": "torch.float32",
+            "size": 2560
+        }
+    },
+    {
+        "id": 182,
+        "start_time": 1760772405224289908,
+        "end_time": 1760772405224864008,
+        "isTensor": false,
+        "isLeaf": false,
+        "label": "nn.Module: CrossEntropyLoss_0",
+        "parent": 1,
+        "children": [
+            183,
+            184,
+            185,
+            186
+        ],
+        "nextNodes": []
+    },
+    {
+        "id": 183,
+        "start_time": 1760772405224489508,
+        "end_time": 1760772405224861308,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::cross_entropy_loss",
+        "parent": 182,
+        "children": [],
+        "nextNodes": [
+            184,
+            185,
+            186
+        ]
+    },
+    {
+        "id": 184,
+        "start_time": 1760772405224502408,
+        "end_time": 1760772405233124408,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,10]",
+        "parent": 182,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,10]",
+            "dtype": "torch.float32",
+            "size": 2560
+        }
+    },
+    {
+        "id": 185,
+        "start_time": 1760772405224740308,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 182,
+        "children": [],
+        "nextNodes": [
+            187
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 186,
+        "start_time": 1760772405224741708,
+        "end_time": 1760772405233070808,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 182,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 187,
+        "start_time": 1760772405224908008,
+        "end_time": 1760772405224924008,
+        "isTensor": false,
+        "isLeaf": true,
+        "label": "aten::ones_like",
+        "parent": 1,
+        "children": [],
+        "nextNodes": [
+            190
+        ]
+    },
+    {
+        "id": 188,
+        "start_time": 1760772405221485908,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,3,32,32]",
+        "parent": 1,
+        "children": [],
+        "nextNodes": [
+            6
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,3,32,32]",
+            "dtype": "torch.float32",
+            "size": 786432
+        }
+    },
+    {
+        "id": 189,
+        "start_time": 1760772405221678908,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": 1,
+        "children": [],
+        "nextNodes": [
+            183
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.int64",
+            "size": 512
+        }
+    },
+    {
+        "id": 190,
+        "start_time": 1760772405224913808,
+        "end_time": 1760772405235672908,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": 1,
+        "children": [],
+        "nextNodes": [],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 191,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,3,3,3]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            6
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,3,3,3]",
+            "dtype": "torch.float32",
+            "size": 6912
+        }
+    },
+    {
+        "id": 192,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            9
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 193,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            10
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 194,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            10
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 195,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            10
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 196,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            10
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 197,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,3,3]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            25
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,3,3]",
+            "dtype": "torch.float32",
+            "size": 147456
+        }
+    },
+    {
+        "id": 198,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            28
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 199,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            29
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 200,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            29
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 201,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            29
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 202,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            29
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 203,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64,64,3,3]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            38
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64,64,3,3]",
+            "dtype": "torch.float32",
+            "size": 147456
+        }
+    },
+    {
+        "id": 204,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            41
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 205,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            42
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 206,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            42
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 207,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            42
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 208,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[64]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            42
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[64]",
+            "dtype": "torch.float32",
+            "size": 256
+        }
+    },
+    {
+        "id": 209,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128,64,3,3]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            55
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128,64,3,3]",
+            "dtype": "torch.float32",
+            "size": 294912
+        }
+    },
+    {
+        "id": 210,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            58
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 211,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            59
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 212,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            59
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 213,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            59
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 214,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            59
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 215,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128,128,3,3]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            68
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128,128,3,3]",
+            "dtype": "torch.float32",
+            "size": 589824
+        }
+    },
+    {
+        "id": 216,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            71
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 217,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            72
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 218,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            72
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 219,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            72
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 220,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            72
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 221,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128,64,1,1]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            79
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128,64,1,1]",
+            "dtype": "torch.float32",
+            "size": 32768
+        }
+    },
+    {
+        "id": 222,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            82
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 223,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            83
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 224,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            83
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 225,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            83
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 226,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[128]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            83
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[128]",
+            "dtype": "torch.float32",
+            "size": 512
+        }
+    },
+    {
+        "id": 227,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256,128,3,3]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            96
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256,128,3,3]",
+            "dtype": "torch.float32",
+            "size": 1179648
+        }
+    },
+    {
+        "id": 228,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            99
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 229,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            100
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 230,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            100
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 231,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            100
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 232,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            100
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 233,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256,256,3,3]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            109
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256,256,3,3]",
+            "dtype": "torch.float32",
+            "size": 2359296
+        }
+    },
+    {
+        "id": 234,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            112
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 235,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            113
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 236,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            113
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 237,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            113
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 238,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            113
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 239,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256,128,1,1]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            120
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256,128,1,1]",
+            "dtype": "torch.float32",
+            "size": 131072
+        }
+    },
+    {
+        "id": 240,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            123
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 241,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            124
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 242,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            124
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 243,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            124
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 244,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[256]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            124
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[256]",
+            "dtype": "torch.float32",
+            "size": 1024
+        }
+    },
+    {
+        "id": 245,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512,256,3,3]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            137
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512,256,3,3]",
+            "dtype": "torch.float32",
+            "size": 4718592
+        }
+    },
+    {
+        "id": 246,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            140
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 247,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            141
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 248,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            141
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 249,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            141
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 250,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            141
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 251,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512,512,3,3]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            150
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512,512,3,3]",
+            "dtype": "torch.float32",
+            "size": 9437184
+        }
+    },
+    {
+        "id": 252,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            153
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 253,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            154
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 254,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            154
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 255,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            154
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 256,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            154
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 257,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512,256,1,1]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            161
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512,256,1,1]",
+            "dtype": "torch.float32",
+            "size": 524288
+        }
+    },
+    {
+        "id": 258,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            164
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[]",
+            "dtype": "torch.int64",
+            "size": 8
+        }
+    },
+    {
+        "id": 259,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            165
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 260,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            165
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 261,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            165
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 262,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            165
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[512]",
+            "dtype": "torch.float32",
+            "size": 2048
+        }
+    },
+    {
+        "id": 263,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[10,512]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            180
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[10,512]",
+            "dtype": "torch.float32",
+            "size": 20480
+        }
+    },
+    {
+        "id": 264,
+        "start_time": -1,
+        "end_time": -1,
+        "isTensor": true,
+        "isLeaf": true,
+        "label": "[10]",
+        "parent": null,
+        "children": [],
+        "nextNodes": [
+            180
+        ],
+        "info": {
+            "device": "cuda:0",
+            "shape": "[10]",
+            "dtype": "torch.float32",
+            "size": 40
+        }
+    }
+]
