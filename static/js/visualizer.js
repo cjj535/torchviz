@@ -328,7 +328,6 @@ class TimelineManager {
   }
 }
 
-const viz = new Viz();
 const svgContainer=document.getElementById('svgContainer');
 const status=document.getElementById('status');
 let originGraph=new Graph();
@@ -505,7 +504,13 @@ async function renderFromOriginGraph() {
   currentRenderGraph=originGraph.generate_new_graph();
   const dot=currentRenderGraph.generate_dot();
   try{
-    const svgEl=await viz.renderSVGElement(dot);
+    // 渲染 SVG 字符串
+    const svgString = await viz.renderString(dot, { format: "svg" });
+    // 将字符串转为 DOM 元素
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(svgString, "image/svg+xml");
+    const svgEl = doc.documentElement;
+    // svg添加到container中
     svgContainer.innerHTML='';
     svgContainer.appendChild(svgEl);
     // 添加点击事件

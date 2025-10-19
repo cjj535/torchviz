@@ -125,8 +125,11 @@
       stroke: none !important;
     }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
+  <script type="module">
+    // 使用3以上版本，可以不限制渲染内存
+    import { instance } from "https://cdn.jsdelivr.net/npm/@viz-js/viz@3.7.0/+esm";
+    window.viz = await instance();// 将 Viz 实例挂到全局，方便旧代码访问
+  </script>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
